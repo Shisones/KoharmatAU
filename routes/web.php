@@ -6,8 +6,8 @@ Route::get('/', function () {
     return view('index',['title' => 'Beranda']);
 });
 
-Route::get('/tentangkami', function () {
-    return view('tentangKami',['title' => 'Tentang Kami']);
+Route::get('/profil', function () {
+    return view('profil',['title' => 'Profil Koharmat']);
 });
 
 Route::get('/informasi', function () {
