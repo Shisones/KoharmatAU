@@ -4,7 +4,7 @@
     <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Welcome to <span>BizLand</span></h1>
+      <h1>Selamat Datang di <span>KoharmatAU</span></h1>
       <h2>We are team of talented designers making websites with Bootstrap</h2>
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
@@ -63,7 +63,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <h3>Find Out More <span>About Us</span></h3>
+          <h3>Tentang <span>KoharmatAU</span></h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
@@ -503,6 +503,11 @@
 
       </div>
     </section><!-- End Portfolio Section -->
+
+    <!-- ======= YouTube Section ======= -->
+    <section id="youtube" class="youtube">
+
+    </section>
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">

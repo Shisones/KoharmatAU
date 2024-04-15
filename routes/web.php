@@ -21,3 +21,15 @@ Route::get('/galeri', function () {
 Route::get('/kontak', function () {
     return view('kontak',['title' => 'Kontak']);
 });
+
+Route::get('/kasau', function () {
+    return view('kasau',['title' => 'kasau']);
+});
+
+Route::get('/strukturorganisasi', function () {
+    return view('strukturorganisasi',['title' => 'strukturorganisasi']);
+});
+
+Route::get('/berita', function () {
+    return view('berita',['title' => 'berita']);
+});
