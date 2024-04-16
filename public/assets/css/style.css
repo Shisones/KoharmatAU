@@ -2054,6 +2054,13 @@ section {
     width: 100%;
     padding: 5px;
 }
+.berita .dropdown-with-icon {
+  background-image: url('path_to_your_icon.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px; /* Sesuaikan ukuran ikon dengan kebutuhan */
+  padding-right: 40px; /* Tambahkan ruang tambahan di sebelah kanan dropdown untuk ikon */
+}
 
 .berita .search-bar {
     width: 100%;
