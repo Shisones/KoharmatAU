@@ -1169,16 +1169,28 @@ section {
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  display: flex; /* Menjadikan item portofolio menjadi flex */
+  justify-content: center; /* Menjadikan item portofolio menjadi flex */
+  align-items: center; /* Menjadikan item portofolio menjadi flex */
+  /* position: relative;
+  margin-bottom: 30px; */
+}
+.portfolio .portfolio-item .img-fluid {
+  width: 300px; /* Set the width */
+  height: 300px; /* Set the height */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  /* align-items: center; */
 }
 
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
-  left: 30px;
-  right: 30px;
+  left: 50px;
+  right: 50px;
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
+  /* background: rgba(117, 55, 55, 0.9); */
   background: rgba(255, 255, 255, 0.9);
   padding: 15px;
 }
@@ -2068,4 +2080,179 @@ section {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+
+/*--------------------------------------------------------------
+# Galeri
+--------------------------------------------------------------*/
+.galeri #galeri-flters {
+  padding: 0;
+  margin: 0 auto 15px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.galeri #galeri-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444444;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.galeri #galeri-flters li:hover,
+.galeri #galeri-flters li.filter-active {
+  color: #106eea;
+}
+
+.galeri #galeri-flters li:last-child {
+  margin-right: 0;
+}
+
+.galeri .galeri-item {
+  margin-bottom: 30px;
+}
+
+
+.galeri .galeri-item .galeri-info {
+  opacity: 0;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+}
+
+.galeri .galeri-item .galeri-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #222222;
+}
+
+.galeri .galeri-item .galeri-info p {
+  color: #555555;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.galeri .galeri-item .galeri-info .preview-link,
+.galeri .galeri-item .galeri-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #3c3c3c;
+}
+
+.galeri .galeri-item .galeri-info .preview-link:hover,
+.galeri .galeri-item .galeri-info .details-link:hover {
+  color: #106eea;
+}
+
+.galeri .galeri-item .galeri-info .details-link {
+  right: 10px;
+}
+
+.galeri .galeri-item .galeri-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.galeri .galeri-item .galeri-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.galeri .galeri-item .galeri-links a:hover {
+  color: #6ba7f5;
+}
+
+.galeri .galeri-item:hover .galeri-info {
+  opacity: 1;
+  bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Galeri Details
+--------------------------------------------------------------*/
+.galeri-details {
+  padding-top: 40px;
+}
+
+.galeri-details .galeri-details-slider img {
+  width: 100%;
+}
+
+.galeri-details .galeri-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.galeri-details .galeri-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #106eea;
+}
+
+.galeri-details .galeri-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #106eea;
+}
+
+.galeri-details .galeri-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
+}
+
+.galeri-details .galeri-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.galeri-details .galeri-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.galeri-details .galeri-info ul li+li {
+  margin-top: 10px;
+}
+
+.galeri-details .galeri-description {
+  padding-top: 30px;
+}
+
+.galeri-details .galeri-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.galeri-details .galeri-description p {
+  padding: 0;
 }
