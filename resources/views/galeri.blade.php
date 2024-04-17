@@ -15,8 +15,8 @@
           <div class="row" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-12 d-flex justify-content-center">
               <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-foto">Foto</li>
+                {{-- <li data-filter="*" class="filter-active">All</li> --}}
+                <li data-filter=".filter-foto" class="filter-active">Foto</li>
                 <li data-filter=".filter-video">Video</li>
               </ul>
             </div>
@@ -35,7 +35,10 @@
             </div>
   
             <div class="col-lg-4 col-md-6 portfolio-item filter-video">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                <video  controls>
+                    <source src="assets/video/1.mp4" type="video/mp4">
+                </video>
+              {{-- <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""> --}}
               <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
@@ -54,7 +57,7 @@
               </div>
             </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-foto">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 2</h4>
@@ -64,7 +67,7 @@
               </div>
             </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-foto">
               <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 2</h4>
@@ -84,7 +87,7 @@
               </div>
             </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-foto">
               <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 1</h4>
@@ -94,7 +97,7 @@
               </div>
             </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-foto">
               <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Card 3</h4>
@@ -104,7 +107,7 @@
               </div>
             </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-foto">
               <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 3</h4>
