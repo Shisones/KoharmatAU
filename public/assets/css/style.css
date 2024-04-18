@@ -2348,22 +2348,3 @@ section {
     text-align: center;
     margin-bottom: 30px;
 }
-
-.section-title h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #106eea;
-    margin-bottom: 10px;
-}
-
-.section-title h3 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #333;
-}
-
-.section-title p {
-    font-size: 16px;
-    color: #666;
-    line-height: 24px;
-}
