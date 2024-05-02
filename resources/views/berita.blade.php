@@ -11,28 +11,18 @@
         </div>
     </div>
 
-    <div class="container mb-5" style="padding-left: 120px; padding-right: 120px;">
+    <div class="container mb-5 mt-4" style="padding-left: 50px; padding-right: 80px;">
         <div class="row">
             <!-- Left column -->
             <div class="col-md-6 mb-md-0 mb-4">
-                <div class="card text-left" style="width: 27rem;">
-                    <img src="assets/img/tentangkami/1.png" class="card-img-top" alt="..." style="height: auto;">
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title mb-1" style="font-size: 14px">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-1" style="font-size: 10px">Kategori</div>
-                                <p class="card-text mb-1" style="font-size: 12px">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 15px">
-                                </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted" style="font-size: 8px">Tanggal</small></p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card mb-4">
+                    <a href="#!"><img class="card-img-top" src="assets/img/tentangkami/1.png" alt="..." style="height: 353px"/></a>
+                    <div class="card-body">
+                        <p class="mb-1">1 Januari 2023</p>
+                        <h2 class="card-title">Featured Post Title</h2>
+                        <div class="category mb-3">Kategori</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                        <a class="button" href="" style="text-align: right">Read more →</a>
                     </div>
                 </div>
             </div>
@@ -41,98 +31,84 @@
             <!-- Right column -->
             <div class="col-md-6">
                 <div class="row mb-2">
-                    <h3 style="font-size: 38px">Hot News</h3>
+                    <h3 style="font-size: 38px">Berita Terkini</h3>
                 </div>
-                <div class="row mb-2">
-                    <div class="d-flex" style="height: 7rem">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-                        <div class="card flex-grow-1" style="border-radius: 5px;">
+                <div class="row mb-3">
+                    <div class="d-flex">
+                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
-                                    <h5 class="card-title mb-1" style="font-size: 14px">Judul Berita</h5>
-                                    <div class="badge bg-secondary mb-1" style="font-size: 10px">Kategori</div>
-                                    <p class="card-text mb-1" style="font-size: 12px">Deskripsi</p>
-                                </div>
-                                <div class="d-flex align-items-center">
+                                <div class="child">
                                     <div>
-                                        <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 15px">
+                                        <p class="mb-1">1 Januari 2023</p>
+                                        <h2 class="card-title mb-1">Judul Berita</h2>
+                                        <div class="category mb-2">Kategori</div>
+                                        <p class="card-text mb-1">Deskripsi</p>
                                     </div>
-                                    <div class="ms-2">
-                                        <p class="card-text mb-0"><small class="text-muted" style="font-size: 8px">Tanggal</small></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-2">
-                    <div class="d-flex" style="height: 7rem">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-                        <div class="card flex-grow-1" style="border-radius: 5px;">
+                <div class="row mb-3">
+                    <div class="d-flex">
+                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
-                                    <h5 class="card-title mb-1" style="font-size: 14px">Judul Berita</h5>
-                                    <div class="badge bg-secondary mb-1" style="font-size: 10px">Kategori</div>
-                                    <p class="card-text mb-1" style="font-size: 12px">Deskripsi</p>
-                                </div>
-                                <div class="d-flex align-items-center">
+                                <div class="child">
                                     <div>
-                                        <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 15px">
+                                        <p class="mb-1">1 Januari 2023</p>
+                                        <h2 class="card-title mb-1">Judul Berita</h2>
+                                        <div class="category mb-2">Kategori</div>
+                                        <p class="card-text mb-1">Deskripsi</p>
                                     </div>
-                                    <div class="ms-2">
-                                        <p class="card-text mb-0"><small class="text-muted" style="font-size: 8px">Tanggal</small></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-2">
-                    <div class="d-flex" style="height: 7rem">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-                        <div class="card flex-grow-1" style="border-radius: 5px;">
+                <div class="row mb-3">
+                    <div class="d-flex">
+                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
-                                    <h5 class="card-title mb-1" style="font-size: 14px">Judul Berita</h5>
-                                    <div class="badge bg-secondary mb-1" style="font-size: 10px">Kategori</div>
-                                    <p class="card-text mb-1" style="font-size: 12px">Deskripsi</p>
-                                </div>
-                                <div class="d-flex align-items-center">
+                                <div class="child">
                                     <div>
-                                        <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 15px">
+                                        <p class="mb-1">1 Januari 2023</p>
+                                        <h2 class="card-title mb-1">Judul Berita</h2>
+                                        <div class="category mb-2">Kategori</div>
+                                        <p class="card-text mb-1">Deskripsi</p>
                                     </div>
-                                    <div class="ms-2">
-                                        <p class="card-text mb-0"><small class="text-muted" style="font-size: 8px">Tanggal</small></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-2">
-                    <div class="d-flex" style="height: 7rem">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-                        <div class="card flex-grow-1" style="border-radius: 5px;">
+                <div class="row mb-3">
+                    <div class="d-flex">
+                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
-                                    <h5 class="card-title mb-1" style="font-size: 14px">Judul Berita</h5>
-                                    <div class="badge bg-secondary mb-1" style="font-size: 10px">Kategori</div>
-                                    <p class="card-text mb-1" style="font-size: 12px">Deskripsi</p>
-                                </div>
-                                <div class="d-flex align-items-center">
+                                <div class="child">
                                     <div>
-                                        <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 15px">
+                                        <p class="mb-1">1 Januari 2023</p>
+                                        <h2 class="card-title mb-1">Judul Berita</h2>
+                                        <div class="category mb-2">Kategori</div>
+                                        <p class="card-text mb-1">Deskripsi</p>
                                     </div>
-                                    <div class="ms-2">
-                                        <p class="card-text mb-0"><small class="text-muted" style="font-size: 8px">Tanggal</small></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
+        
     </div>
 
     
@@ -140,8 +116,8 @@
     <div class="container mb-3" style="padding-left: 120px; padding-right: 120px;">
         <div class="row">
             <div class="col-md-6 mb-3">
-                <select class="form-select" style="border-radius: 10px;">
-                    <option value="semua">Semua</option>
+                <select class="form-select">
+                    <option value="all">Pilih Kategori Berita</option>
                     <option value="option1">Option 1</option>
                     <option value="option2">Option 2</option>
                     <option value="option3">Option 3</option>
@@ -150,34 +126,33 @@
             </div>
 
             <div class="col-md-6">
-                <div class="input-group">
-                    <input type="text" class="form-control search-bar" placeholder="Search..." style="border-radius: 10px;">
+                <div class="card mb-4">
+                    
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Cari berita" aria-label="Cari berita" aria-describedby="button-search" />
+                            <button class="btn btn-primary" id="button-search" type="button">Cari</button>
+                        </div>
                 </div>
             </div>
         </div>
     </div>
 
     
-    <div class="container" style="padding-left: 120px; padding-right: 120px;">
+    <div class="container" style="padding-left: 50px; padding-right: 50px;">
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -186,22 +161,17 @@
             
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -212,22 +182,17 @@
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -236,22 +201,17 @@
             
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -262,22 +222,17 @@
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -286,22 +241,17 @@
             
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -312,22 +262,17 @@
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -336,22 +281,17 @@
             
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 150px; height: auto;">
-            
-                    <div class="card flex-grow-1" style="border-radius: 5px;">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h5 class="card-title">Judul Berita</h5>
-                                <div class="badge bg-secondary mb-2">Kategori</div>
-                                <p class="card-text">Deskripsi</p>
-                            </div>
-                            <div class="d-flex align-items-center">
+                            <div class="child">
                                 <div>
-                                    <img src="/assets/img/icon/calendar.png" alt="Calendar Icon" style="height: 20px">
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
                                 </div>
-                                <div class="ms-2">
-                                    <p class="card-text mb-0"><small class="text-muted">Tanggal</small></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -359,12 +299,24 @@
             </div>
             
         </div>
-
+        <br>
+        <!-- Pagination-->
+        <nav aria-label="Pagination">
+            {{-- <hr class="my-0" /> --}}
+            <ul class="pagination justify-content-center my-4 mt-6">
+                
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+                <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+                <li class="page-item"><a class="page-link" href="#!">15</a></li>
+            </ul>
+        </nav>
         <!-- More card elements can be added here -->
     </div>
 
     <!-- Page content-->
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <!-- Blog entries-->
             <div class="col-lg-8">
@@ -485,7 +437,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </section>
 
                 

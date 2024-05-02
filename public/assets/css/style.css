@@ -2160,7 +2160,6 @@ section {
     transform: scale(1.1); /* Memperbesar node saat dihover */
     z-index: 1; /* Mengatur node yang dihover menjadi paling atas */
   }
-  
   .berita .content h3 {
     padding-top: 15px;
     font-weight: 600;
@@ -2194,6 +2193,115 @@ section {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.berita .card {
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.berita .card .card-body h2{
+  font-size: 24px;
+
+}
+.berita .card .card-body  p{
+  font-size: 14px;
+
+}
+
+.berita .card .card-body .child h2{
+  font-size: 14px;
+  
+}
+.berita .card .card-body .child  p{
+  font-size: 12px;
+
+}
+
+.berita .card .card-body  .category{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 10px;
+  width: 80px;
+  background-color: #97B789;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+.berita .card .card-body .child  .category{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 7px;
+  width: 60px;
+  background-color: #97B789;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+}
+
+.berita .form-select {
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.berita .input-group {
+  border-radius: 10px;
+  border-color: transparent;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.berita .input-group button{
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: #97B789;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.berita .input-group button:hover{
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: #B5CCAB;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.berita .input-group .form-control{
+  /* border-radius: 10px; */
+  border-color: transparent;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+}
+.berita .card .card-body .button{
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  width: 120px;
+  background-color: #97B789;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.berita .card .card-body .button:hover{
+  background-color: #B5CCAB;
+}
+
+.berita .pagination .page-item.active .page-link
+{
+  background-color: #97B789;
+  border-color: transparent;
+  color: #fff;
+
+}
+.berita .pagination .page-item .page-link
+{
+  color: #000000;
 }
 
 
