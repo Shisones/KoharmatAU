@@ -7,7 +7,6 @@
             <div class="container" data-aos="fade-up">
     
                 <div class="section-title">
-                <h2>Struktur</h2>
                 <h3>Struktur Organisasi <span>KoharmatAU</span></h3>
                 <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
                 </div>
