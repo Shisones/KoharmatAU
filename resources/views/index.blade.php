@@ -242,7 +242,7 @@
               </div>
               <div class="member-info">
                 <h4>Nama</h4>
-                <span>Jabatan</span>
+                <span>Masa Jabatan</span>
               </div>
             </div>
           </div>
@@ -260,7 +260,7 @@
               </div>
               <div class="member-info">
                 <h4>Nama</h4>
-                <span>Jabatan</span>
+                <span>Masa Jabatan</span>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@
               </div>
               <div class="member-info">
                 <h4>Nama</h4>
-                <span>Jabatan</span>
+                <span>Masa Jabatan</span>
               </div>
             </div>
           </div>
@@ -296,7 +296,7 @@
               </div>
               <div class="member-info">
                 <h4>Nama</h4>
-                <span>Jabatan</span>
+                <span>Masa Jabatan</span>
               </div>
             </div>
           </div>
