@@ -187,7 +187,7 @@ h6 {
 }
 
 #header .logo a span {
-  color: #97B789;
+  color: #37721e
 }
 
 #header .logo img {
@@ -253,7 +253,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #97B789;
+  background-color: #37721e;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -270,7 +270,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #B5CCAB;
+  color: #37721e;
 }
 
 .navbar .dropdown ul {
