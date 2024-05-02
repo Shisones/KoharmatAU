@@ -8,7 +8,7 @@
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
-            <h3>Tentang <span>KoharmatAU</span></h3>
+            <h3>Galeri <span>KoharmatAU</span></h3>
             <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
           </div>
           <div class="row py-4" data-aos="fade-up" data-aos-delay="100">
@@ -20,7 +20,7 @@
                     <li data-filter=".filter-tugas">Tugas</li>
                 </ul>
             </div>
-        </div>
+          </div>
         <!-- About section one-->
         <section class="detail py-4 bg-light">
           <div class="container px-5 my-50">
