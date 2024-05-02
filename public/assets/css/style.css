@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: #106eea;
+  color: #97B789;
   text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #106eea;
+  border: 6px solid #97B789;
   border-top-color: #e2eefd;
   border-radius: 50%;
   width: 60px;
@@ -80,7 +80,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #106eea;
+  background: #97B789;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -94,7 +94,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #3284f1;
+  background: #B5CCAB;
   color: #fff;
 }
 
@@ -116,7 +116,7 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #106eea;
+  background: #97B789;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -187,7 +187,7 @@ h6 {
 }
 
 #header .logo a span {
-  color: #106eea;
+  color: #97B789;
 }
 
 #header .logo img {
@@ -253,7 +253,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #106eea;
+  background-color: #97B789;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -270,7 +270,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .navbar .dropdown ul {
@@ -304,7 +304,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .navbar .dropdown:hover>ul {
@@ -413,7 +413,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .navbar-mobile .getstarted,
@@ -448,7 +448,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -461,7 +461,7 @@ h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/beranda/beranda1.jpg") top left;
   background-size: cover;
   position: relative;
 }
@@ -474,6 +474,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+  opacity: 60%;
 }
 
 #hero .container {
@@ -490,7 +491,7 @@ h6 {
 }
 
 #hero h1 span {
-  color: #106eea;
+  color: #37721e;
 }
 
 #hero h2 {
@@ -511,11 +512,11 @@ h6 {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #106eea;
+  background: #97B789;
 }
 
 #hero .btn-get-started:hover {
-  background: #247cf0;
+  background: #B5CCAB;
 }
 
 #hero .btn-watch-video {
@@ -529,7 +530,7 @@ h6 {
 }
 
 #hero .btn-watch-video i {
-  color: #106eea;
+  color: #97B789;
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -537,11 +538,11 @@ h6 {
 }
 
 #hero .btn-watch-video:hover {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 #hero .btn-watch-video:hover i {
-  color: #3b8af2;
+  color: #B5CCAB;
 }
 
 @media (min-width: 1024px) {
@@ -601,11 +602,14 @@ section {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: #e7f1fd;
-  color: #106eea;
+  background: #97B789;
+  color: #fff;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
+}
+.section-title h2:hover {
+  background: #B5CCAB;
 }
 
 .section-title h3 {
@@ -615,7 +619,7 @@ section {
 }
 
 .section-title h3 span {
-  color: #106eea;
+  color: #37721e;
 }
 
 .section-title p {
@@ -696,25 +700,34 @@ section {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+  width: 900px;
+  height: 300px;
+}
+.featured-services .icon-box img {
+  width: 100%; /* Gambar mengambil lebar penuh dari parent (.icon-box) */
+  height: 50%; /* Tinggi gambar 30% dari tinggi parent (.icon-box) */
+  object-fit: cover; /* Membuat gambar tetap proporsional */
+  padding-bottom: 15px;
+  /* object-position: center; Posisikan gambar di tengah */
 }
 
-.featured-services .icon-box::before {
+/* .featured-services .icon-box::before {
   content: "";
   position: absolute;
-  background: #cbe0fb;
-  right: 0;
+  /* background: #898989; */
+  /* right: -100%;
   left: 0;
   bottom: 0;
-  top: 100%;
+  top: 0;
   transition: all 0.3s;
   z-index: -1;
 }
 
 .featured-services .icon-box:hover::before {
-  background: #106eea;
-  top: 0;
+  background: #B5CCAB;
+  right: 0%;
   border-radius: 0px;
-}
+} */ */
 
 .featured-services .icon {
   margin-bottom: 15px;
@@ -723,13 +736,13 @@ section {
 .featured-services .icon i {
   font-size: 48px;
   line-height: 1;
-  color: #106eea;
+  color: #898989;
   transition: all 0.3s ease-in-out;
 }
 
 .featured-services .title {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 18px;
 }
 
@@ -738,23 +751,43 @@ section {
 }
 
 .featured-services .description {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 28px;
   margin-bottom: 0;
+  margin-top: -10px;
 }
 
-.featured-services .icon-box:hover .title a,
+.featured-services button {
+  background: #97B789;
+  border: 0;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.featured-services button:hover {
+  background: #B5CCAB;
+}
+
+/* .featured-services .icon-box:hover .title a,
 .featured-services .icon-box:hover .description {
   color: #fff;
 }
 
 .featured-services .icon-box:hover .icon i {
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .section-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .about #about-flters {
   padding: 0;
   margin: 0 auto 15px auto;
@@ -783,7 +816,7 @@ section {
 
 .about #about-flters li:hover,
 .about #about-flters li.filter-active {
-  background: #B0B0B0;
+  background: #B5CCAB;
 }
 /* 
 .about .container {
@@ -839,11 +872,11 @@ section {
 
 .about .content ul i {
   background: #fff;
-  box-shadow: 0px 6px 15px rgba(16, 110, 234, 0.12);
+  box-shadow: 0px 6px 15px #c7d7c0;
   font-size: 24px;
   padding: 20px;
   margin-right: 15px;
-  color: #106eea;
+  color: #97B789;
   border-radius: 50px;
 }
 
@@ -894,7 +927,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #106eea;
+  background-color: #97B789;
 }
 
 /*--------------------------------------------------------------
@@ -918,7 +951,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #106eea;
+  background: #97B789;
   color: #fff;
   width: 56px;
   height: 56px;
@@ -1024,11 +1057,11 @@ section {
 
 .services .icon-box:hover h4 a,
 .services .icon-box:hover .icon i {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .services .icon-box:hover .icon {
-  border-color: #106eea;
+  border-color: #B5CCAB;
 }
 
 /*--------------------------------------------------------------
@@ -1124,7 +1157,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
+  background-color: #97B789;
 }
 
 @media (min-width: 992px) {
@@ -1161,7 +1194,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active,
 .portfolio #portfolio-flters li.filter-active:hover {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1267,7 +1300,7 @@ section {
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1293,7 +1326,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-links a:hover {
-  color: #6ba7f5;
+  color: #B5CCAB;
 }
 
 .portfolio .portfolio-item:hover .portfolio-info {
@@ -1322,11 +1355,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #106eea;
+  border: 1px solid #97B789;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
+  background-color: #97B789;
 }
 
 .portfolio-details .portfolio-info {
@@ -1384,6 +1417,19 @@ section {
   padding: 60px 0;
 }
 
+.team .section-title {
+  margin-bottom: 15px; /* Mengurangi margin bawah pada judul */
+}
+
+/* .team .row {
+  margin-top: 30px;
+} */
+
+.team h2 {
+  margin-top: 25px; /* Menghilangkan margin atas pada judul "Lihat Semua" */
+}
+
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1422,7 +1468,7 @@ section {
 }
 
 .team .member .social a:hover {
-  background: #3b8af2;
+  background: #B5CCAB;
 }
 
 .team .member .social i {
@@ -1484,7 +1530,7 @@ section {
 
 .pricing .box h4 {
   font-size: 36px;
-  color: #106eea;
+  color: #97B789;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1516,7 +1562,7 @@ section {
 }
 
 .pricing .box ul i {
-  color: #106eea;
+  color: #97B789;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1534,7 +1580,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #106eea;
+  background: #97B789;
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 4px;
@@ -1548,12 +1594,12 @@ section {
 }
 
 .pricing .btn-buy:hover {
-  background: #3b8af2;
+  background: #B5CCAB;
 }
 
 .pricing .featured h3 {
   color: #fff;
-  background: #106eea;
+  background: #97B789;
 }
 
 .pricing .advanced {
@@ -1565,7 +1611,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #106eea;
+  background: #97B789;
   color: #fff;
 }
 
@@ -1574,6 +1620,7 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding: 60px 0;
+  background-color: #fff;
 }
 
 .faq .faq-list {
@@ -1590,13 +1637,13 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #106eea;
-  font-size: 18px;
+  /* font-family: #97B789; */
+  font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: bold;
   padding-left: 25px;
   cursor: pointer;
-  color: #0d58ba;
+  /* color: #0d58ba; */
   transition: 0.3s;
 }
 
@@ -1609,6 +1656,7 @@ section {
 
 .faq .faq-list p {
   margin-bottom: 0;
+  font-size: 13px;
   padding: 10px 0 0 25px;
 }
 
@@ -1617,11 +1665,13 @@ section {
 }
 
 .faq .faq-list .collapsed {
-  color: black;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .faq .faq-list .collapsed:hover {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .faq .faq-list .collapsed .icon-show {
@@ -1637,6 +1687,9 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background-color: #f1f6fe;
+}
 .contact .info-box {
   color: #444444;
   text-align: center;
@@ -1646,7 +1699,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #106eea;
+  color: #97B789;
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #b3d1fa;
@@ -1669,6 +1722,16 @@ section {
 .contact .php-email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
   padding: 30px;
+}
+
+.contact .php-email-form .row {
+  margin-bottom: -20px; /* Mengurangi margin bawah pada setiap baris */
+}
+
+.contact .php-email-form label {
+  margin-bottom: 5px; 
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .contact .php-email-form .error-message {
@@ -1725,7 +1788,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #106eea;
+  border-color: #97B789;
 }
 
 .contact .php-email-form input {
@@ -1737,16 +1800,17 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #106eea;
+  background: #97B789;
   border: 0;
   padding: 10px 30px;
   color: #fff;
+  font-weight: bold;
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 30px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #3b8af2;
+  background: #B5CCAB;
 }
 
 @keyframes animate-loading {
@@ -1810,7 +1874,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #106eea;
+  background: #97B789;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1818,7 +1882,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #0d58ba;
+  background: #B5CCAB;
 }
 
 #footer .footer-top {
@@ -1839,7 +1903,7 @@ section {
 }
 
 #footer .footer-top .footer-contact h3 span {
-  color: #106eea;
+  color: #97B789;
 }
 
 #footer .footer-top .footer-contact p {
@@ -1870,7 +1934,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #106eea;
+  color: #97B789;
   font-size: 18px;
   line-height: 1;
 }
@@ -1894,13 +1958,13 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #106eea;
+  background: #97B789;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1913,7 +1977,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #3b8af2;
+  background: #B5CCAB;
   color: #fff;
   text-decoration: none;
 }
@@ -2158,7 +2222,7 @@ section {
 
 .galeri #galeri-flters li:hover,
 .galeri #galeri-flters li.filter-active {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .galeri #galeri-flters li:last-child {
@@ -2206,7 +2270,7 @@ section {
 
 .galeri .galeri-item .galeri-info .preview-link:hover,
 .galeri .galeri-item .galeri-info .details-link:hover {
-  color: #106eea;
+  color: #B5CCAB;
 }
 
 .galeri .galeri-item .galeri-info .details-link {
@@ -2232,7 +2296,7 @@ section {
 }
 
 .galeri .galeri-item .galeri-links a:hover {
-  color: #6ba7f5;
+  color: #B5CCAB;
 }
 
 .galeri .galeri-item:hover .galeri-info {
@@ -2261,11 +2325,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #106eea;
+  border: 1px solid #97B789;
 }
 
 .galeri-details .galeri-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
+  background-color: #97B789;
 }
 
 .galeri-details .galeri-info {
@@ -2323,7 +2387,7 @@ section {
 
 .contact form input[type="text"]:focus,
 .contact form textarea:focus {
-    border-color: #106eea;
+    border-color: #97B789;
 }
 
 .contact form textarea {
@@ -2331,7 +2395,7 @@ section {
 }
 
 .contact form button {
-    background: #106eea;
+    background: #97B789;
     color: #fff;
     border: 0;
     padding: 10px 20px;
@@ -2341,7 +2405,7 @@ section {
 }
 
 .contact form button:hover {
-    background: #0a4bf7;
+    background: #B5CCAB;
 }
 
 .section-title {
