@@ -593,7 +593,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .section-title h2 {
@@ -784,10 +784,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .section-title {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+
 .about #about-flters {
   padding: 0;
   margin: 0 auto 15px auto;
@@ -839,10 +836,10 @@ section {
 
 
 /* Sembunyikan semua konten kecuali yang sedang ditargetkan */
-.about .row {
+/* .about .row {
   padding-top: 50px;
   /* display: none; */
-}
+/* } */
 
 /* Tampilkan konten yang sedang ditargetkan */
 /* .about .row:target {
@@ -1416,10 +1413,10 @@ section {
 .team {
   padding: 60px 0;
 }
-
+/* 
 .team .section-title {
-  margin-bottom: 15px; /* Mengurangi margin bawah pada judul */
-}
+  margin-bottom: 15px; 
+} */
 
 /* .team .row {
   margin-top: 30px;
@@ -2408,7 +2405,7 @@ section {
     background: #B5CCAB;
 }
 
-.section-title {
+/* .section-title {
     text-align: center;
-    margin-bottom: 30px;
-}
+    margin-bottom: 0;
+} */

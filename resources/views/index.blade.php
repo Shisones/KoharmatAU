@@ -65,7 +65,7 @@
           <p>Text</p>
         </div>
 
-        <div class="row">
+        <div class="row mt-3">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
             <img src="assets/img/tentangkami/2.png" class="img-fluid" alt="">
           </div>
@@ -227,7 +227,7 @@
           <h2>Lihat Semua</h2>
         </div>
         
-        <div class="row">
+        <div class="row mt-3">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
