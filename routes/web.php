@@ -33,3 +33,7 @@ Route::get('/strukturorganisasi', function () {
 Route::get('/berita', function () {
     return view('berita',['title' => 'berita']);
 });
+
+Route::get('/pesanmasyarakat', function () {
+    return view('pesanmasyarakat',['title' => 'pesanmasyarakat']);
+});
