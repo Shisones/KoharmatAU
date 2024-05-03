@@ -81,9 +81,12 @@
           <div class="col-lg-6 col-md-6 footer-contact">
             <h3>KoharmatAU<span>.</span></h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
+              Jl. Kapten Tata Natanegara No.55, RT.10/RW.12 <br>
+              Husen Sastranegara <br>
+              Kec. Cicendo <br>
+              Kota Bandung <br>
+              Jawa Barat <br>
+              40174 <br><br>
               <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
