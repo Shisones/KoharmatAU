@@ -1636,6 +1636,13 @@ section {
   padding-bottom: 20px;
 }
 
+
+/* .pesanmasyarakat .pesanmasyarakat-list .question {
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
 .faq .faq-list .question {
   display: block;
   position: relative;
@@ -1670,6 +1677,7 @@ section {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 14px;
+  
 }
 
 .faq .faq-list .collapsed:hover {
@@ -1685,6 +1693,7 @@ section {
   display: none;
   transition: 0.6s;
 }
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -2275,6 +2284,7 @@ section {
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 
 }
+
 .berita .card .card-body .button{
   text-align: right;
   padding-top: 5px;
@@ -2518,7 +2528,130 @@ section {
     background: #B5CCAB;
 }
 
-/* .section-title {
-    text-align: center;
-    margin-bottom: 0;
-} */
+/* Pesan dari Masyarakat Section */
+.pesanmasyarakat .card {
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pesanmasyarakat .pesanmasyarakat-list {
+  padding: 0;
+  list-style: none;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list li {
+  /* border-bottom: 1px solid #d4e5fc; */
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.pesanmasyarakat .pesanmasyarakat-list .question {
+  display: block;
+  position: relative;
+  /* font-family: #97B789; */
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  padding-left: 25px;
+  cursor: pointer;
+  /* color: #0d58ba; */
+  transition: 0.3s;
+  
+}
+
+.pesanmasyarakat .pesanmasyarakat-list i {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list h2 {
+  margin-bottom: 0;
+  font-size: 16px;
+  padding: 10px 0 0 25px;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list p {
+  margin-bottom: 0;
+  font-size: 13px;
+  padding: 10px 0 0 25px;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list .icon-show {
+  display: none;
+}
+.pesanmasyarakat {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list .collapsed {
+  /* color: rgb(0, 0, 0); */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* height: 100px; */
+  
+}
+
+.pesanmasyarakat .pesanmasyarakat-list li .question h2 {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 0 0 0;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list li .question p {
+  font-weight: 500;
+  font-size: 12px;
+  padding: 10px 0 0 0;
+}
+
+
+.pesanmasyarakat .pesanmasyarakat-list .collapsed:hover {
+  color: #B5CCAB;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list .collapsed .icon-show {
+  display: inline-block;
+  transition: 0.6s;
+}
+
+.pesanmasyarakat .pesanmasyarakat-list .collapsed .icon-close {
+  display: none;
+  transition: 0.6s;
+}
+
+.pesanmasyarakat .search-bar {
+  padding-left: 0;
+  padding-right: 0;
+}
+.pesanmasyarakat .search-bar .input-group {
+  border-radius: 100px;
+  font-size: 120px;
+  /* border-color: cadetblue; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pesanmasyarakat .search-bar .input-group button{
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: #97B789;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.pesanmasyarakat .search-bar .input-group button:hover{
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: #B5CCAB;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.pesanmasyarakat .search-bar .input-group .form-control{
+  /* border-radius: 10px; */
+  border-color: transparent;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+}
