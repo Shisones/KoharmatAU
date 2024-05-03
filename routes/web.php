@@ -23,13 +23,13 @@ Route::get('/kontak', function () {
 });
 
 Route::get('/kasau', function () {
-    return view('kasau',['title' => 'kasau']);
+    return view('kasau',['title' => 'Kasau']);
 });
 
 Route::get('/strukturorganisasi', function () {
-    return view('strukturorganisasi',['title' => 'strukturorganisasi']);
+    return view('strukturorganisasi',['title' => 'Struktur Organisasi']);
 });
 
 Route::get('/berita', function () {
-    return view('berita',['title' => 'berita']);
+    return view('berita',['title' => 'Berita']);
 });
