@@ -26,7 +26,7 @@
               <img src="assets/img/tentangkami/2.png" class="img-fluid" alt="">
               <h4 class="title"><a href="">Berita Utama</a></h4>
               <p class="description mb-3">Text</p>
-              <button>Baca Berita</button>
+              <a href="/berita"><button>Baca Berita</button></a>
             </div>
           </div>
           
@@ -36,7 +36,7 @@
               <img src="assets/img/tentangkami/2.png" class="img-fluid" alt="">
               <h4 class="title"><a href="">Berita KoharmatAU</a></h4>
               <p class="description mb-3">Text</p>
-              <button>Baca Berita</button>
+              <a href="/berita"><button>Baca Berita</button></a>
             </div>
           </div>
           
@@ -46,7 +46,7 @@
               <img src="assets/img/tentangkami/2.png" class="img-fluid" alt="">
               <h4 class="title"><a href="">Berita Lainnya</a></h4>
               <p class="description mb-3">Text</p>
-              <button>Baca Berita</button>
+              <a href="/berita"><button>Baca Berita</button></a>
             </div>
           </div>
 
@@ -224,7 +224,7 @@
         <div class="section-title">
           <h3><span>KASAU</span> dari masa ke masa</h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-          <h2>Lihat Semua</h2>
+          <a href="/kasau"><h2>Lihat Semua</h2></a>
         </div>
         
         <div class="row mt-3">

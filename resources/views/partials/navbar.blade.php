@@ -11,8 +11,8 @@
           <li><a class="nav-link scrollto {{ ($title == "Beranda") ? "active" : "" }}" href="/">Beranda</a></li>
           <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              {{-- <li><a class="nav-link {{ ($title == "Profil Koharmat") ? "active" : "" }}" href="/profil">Profil Koharmat</a></li> --}}
-              <li class="dropdown"><a href="#"><span>Profil Koharmat</span> <i class="bi bi-chevron-down"></i></a>
+              {{-- <li class="dropdown"><a href="#"><span>Profil Koharmat</span> <i class="bi bi-chevron-down"></i></a> --}}
+              <li><a class="nav-link {{ ($title == "Profil Koharmat") ? "active" : "" }}" href="/profil">Profil Koharmat</a></li>
               <li class="dropdown"><a href="#"><span>Sejarah</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -22,7 +22,8 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a class="nav-link {{ ($title == "Struktur Organisasi") ? "active" : "" }}" href="/strukturorganisasi">Struktur Organisasi</a></li>
+              {{-- <li class="dropdown"><a href="#"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -30,14 +31,14 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li>
+              </li> --}}
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Berita Utama</a></li>
-              <li><a href="#">Berita Koharmat</a></li>
-              <li><a href="#">Berita Lainnya</a></li>
+              <li><a href="/berita">Berita Utama</a></li>
+              <li><a href="/berita">Berita Koharmat</a></li>
+              <li><a href="/berita">Berita Lainnya</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto {{ ($title == "Galeri") ? "active" : "" }}" href="/galeri">Galeri</a></li>
