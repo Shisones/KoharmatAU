@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="container mb-5 mt-4" style="padding-left: 50px; padding-right: 80px;">
+    <div class="container mb-5 mt-4" style="padding-left: 50px; padding-right: 80px;" data-aos="fade-up">
         <div class="row">
             <!-- Left column -->
             <div class="col-md-6 mb-md-0 mb-4">
