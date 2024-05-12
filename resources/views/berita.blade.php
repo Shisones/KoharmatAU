@@ -33,17 +33,18 @@
                 <div class="row mb-2">
                     <h3 style="font-size: 38px">Berita Terkini</h3>
                 </div>
+                @foreach($berita as $b)
                 <div class="row mb-3">
                     <div class="d-flex">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <img src="{{$b->berita_img}}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
                         <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <div class="child">
                                     <div>
-                                        <p class="mb-1">1 Januari 2023</p>
-                                        <h2 class="card-title mb-1">Judul Berita</h2>
-                                        <div class="category mb-2">Kategori</div>
-                                        <p class="card-text mb-1">Deskripsi</p>
+                                        <p class="mb-1">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y')}}</p>
+                                        <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
+                                        <div class="category mb-2">{{ $b->kategori_nama }}</div>
+                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p>
                                     </div>
                                     
                                 </div>
@@ -51,60 +52,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="d-flex">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
-                        <div class="card flex-grow-1">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div class="child">
-                                    <div>
-                                        <p class="mb-1">1 Januari 2023</p>
-                                        <h2 class="card-title mb-1">Judul Berita</h2>
-                                        <div class="category mb-2">Kategori</div>
-                                        <p class="card-text mb-1">Deskripsi</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="d-flex">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
-                        <div class="card flex-grow-1">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div class="child">
-                                    <div>
-                                        <p class="mb-1">1 Januari 2023</p>
-                                        <h2 class="card-title mb-1">Judul Berita</h2>
-                                        <div class="category mb-2">Kategori</div>
-                                        <p class="card-text mb-1">Deskripsi</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="d-flex">
-                        <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
-                        <div class="card flex-grow-1">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div class="child">
-                                    <div>
-                                        <p class="mb-1">1 Januari 2023</p>
-                                        <h2 class="card-title mb-1">Judul Berita</h2>
-                                        <div class="category mb-2">Kategori</div>
-                                        <p class="card-text mb-1">Deskripsi</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 
             </div>
         </div>
