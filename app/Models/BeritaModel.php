@@ -11,7 +11,7 @@ class BeritaModel extends Model
     use HasFactory;
 
     public function readBerita(){
-        $query = DB::select("SELECT * FROM berita
+        $query = DB::select("SELECT berita.*, kategori.kategori_nama FROM berita
         INNER JOIN kategori
         ON berita.kategori_id = kategori.kategori_id
         ");

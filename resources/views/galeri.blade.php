@@ -23,60 +23,27 @@
   
           <div class="row portfolio-containergaleri d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200" style="align-content: center;">
             
+          @foreach($image as $img)
             <div class="col-lg-4 col-md-6 portfolio-item filter-foto" style="width: 300px; height: 300px;">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="{{ $img->galeri_path }}" class="img-fluid" alt="">
               <div class="details-container">
-                <h2>Nama</h2>
-                <p>Tanggal</p>
+                <h2>{{ $img->galeri_judul }}</h2>
+                <p>{{ \Carbon\Carbon::parse($img->galeri_tanggal)->format('d/m/Y')}}</p>
               </div>
             </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-foto" style="width: 300px; height: 300px;">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="details-container">
-                <h2>Nama</h2>
-                <p>Tanggal</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-foto" style="width: 300px; height: 300px;">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="details-container">
-                <h2>Nama</h2>
-                <p>Tanggal</p>
-              </div>
-            </div>
+            @endforeach
 
+            @foreach($video as $v)
             <div class="col-lg-4 col-md-6 portfolio-item filter-video" style="width: 300px; height: 300px;">
                 <video controls>
-                    <source src="assets/video/1.mp4" type="video/mp4">
+                    <source src="{{$v->galeri_path}}" type="video/mp4">
                 </video>
                 <div class="details-container">
-                    <h2>Nama</h2>
-                    <p>Tanggal</p>
+                    <h2>{{$v->galeri_judul}}</h2>
+                    <p>{{ \Carbon\Carbon::parse($v->galeri_tanggal)->format('d/m/Y')}}</p>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video" style="width: 300px; height: 300px;">
-                <video controls>
-                    <source src="assets/video/2.mp4" type="video/mp4">
-                </video>
-                <div class="details-container">
-                    <h2>Nama</h2>
-                    <p>Tanggal</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-video" style="width: 300px; height: 300px;">
-                <video controls>
-                    <source src="assets/video/3.mp4" type="video/mp4">
-                </video>
-                <div class="details-container">
-                    <h2>Nama</h2>
-                    <p>Tanggal</p>
-                </div>
-            </div>
-          </div>
+            @endforeach
             
   
         </div>
