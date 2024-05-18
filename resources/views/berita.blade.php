@@ -16,12 +16,12 @@
             <!-- Left column -->
             <div class="col-md-6 mb-md-0 mb-4">
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="assets/img/tentangkami/1.png" alt="..." style="height: 353px"/></a>
+                    <a href="#!"><img class="card-img-top" src="{{ $featured->berita_img }}" alt="..." style="height: 353px"/></a>
                     <div class="card-body">
-                        <p class="mb-1">1 Januari 2023</p>
-                        <h2 class="card-title">Featured Post Title</h2>
-                        <div class="category mb-3">Kategori</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                        <p class="mb-1">{{ \Carbon\Carbon::parse($featured->created_at)->format('d/m/Y')}}</p>
+                        <h2 class="card-title">{{ $featured->berita_judul }}</h2>
+                        <div class="category mb-3">{{ $featured->kategori_nama }}</div>
+                        <p>{{ $featured->berita_isi }}</p>
                         <a class="button" href="" style="text-align: right">Read more →</a>
                     </div>
                 </div>
@@ -87,6 +87,62 @@
 
     
     <div class="container" style="padding-left: 50px; padding-right: 50px;">
+        @php
+            $count = 0;
+        @endphp
+        @foreach ($berita as $b)
+            @if ($count%2==0)
+                <div class="row mb-3">
+            @endif
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <img src="{{ $b->berita_img }}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <div class="card flex-grow-1">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div class="child">
+                                    <div>
+                                        <p class="mb-1">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y')}}</p>
+                                        <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
+                                        <div class="category mb-2">{{ $b->kategori_nama }}</div>
+                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @if ($count%2==0)
+                @php
+                    $count++;   
+                @endphp
+            @else
+                </div>
+                @php
+                    $count = 0;     
+                @endphp
+            @endif
+        @endforeach
+            
+            {{-- <div class="col-md-6">
+                <div class="d-flex">
+                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div class="child">
+                                <div>
+                                    <p class="mb-1">1 Januari 2023</p>
+                                    <h2 class="card-title mb-1">Judul Berita</h2>
+                                    <div class="category mb-2">Kategori</div>
+                                    <p class="card-text mb-1">Deskripsi</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         <div class="row mb-3">
             <div class="col-md-6">
                 <div class="d-flex">
@@ -204,47 +260,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
-                    <div class="card flex-grow-1">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="child">
-                                <div>
-                                    <p class="mb-1">1 Januari 2023</p>
-                                    <h2 class="card-title mb-1">Judul Berita</h2>
-                                    <div class="category mb-2">Kategori</div>
-                                    <p class="card-text mb-1">Deskripsi</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6">
-                <div class="d-flex">
-                    <img src="assets/img/tentangkami/1.png" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
-                    <div class="card flex-grow-1">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="child">
-                                <div>
-                                    <p class="mb-1">1 Januari 2023</p>
-                                    <h2 class="card-title mb-1">Judul Berita</h2>
-                                    <div class="category mb-2">Kategori</div>
-                                    <p class="card-text mb-1">Deskripsi</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> --}}
             
         </div>
         <br>

@@ -18,4 +18,14 @@ class BeritaModel extends Model
 
         return $query;
     }
+
+    public function readFeatured(){
+        $query = DB::select("SELECT berita.*, kategori.kategori_nama FROM berita
+        INNER JOIN kategori
+        ON berita.kategori_id = kategori.kategori_id
+        WHERE is_featured = 1
+        ");
+
+        return $query;
+    }
 }

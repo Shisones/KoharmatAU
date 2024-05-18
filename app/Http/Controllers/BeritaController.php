@@ -17,7 +17,8 @@ class BeritaController extends Controller
     
     public function index(){
         $berita = $this->beritaModel->readBerita();
-
-        return view('berita',['title' => 'Berita', 'berita' => $berita]);
+        $featured = $this->beritaModel->readFeatured();
+        
+        return view('berita',['title' => 'Berita', 'berita' => $berita, 'featured' => $featured]);
     }
 }
