@@ -15,70 +15,90 @@
           <div class="tree overflow-scroll">
             <ul>
               <li>
-                <a href="#" class="tree-node">
-                  <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                  <span class="tree-text">Nama</span>
-                </a>
+                <div class="tree-node">
+                  <a href="#">
+                    <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                    <span class="tree-text">Nama</span>
+                  </a>
+                </div>
                 <ul>
                   <li>
-                    <a href="#" class="tree-node">
-                      <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                      <span class="tree-text">Nama</span>
-                    </a>
+                    <div class="tree-node">
+                      <a href="#">
+                        <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                        <span class="tree-text">Nama</span>
+                      </a>
+                    </div>
                     <ul>
                       <li>
-                        <a href="#" class="tree-node">
-                          <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                          <span class="tree-text">Nama</span>
-                        </a>
+                        <div class="tree-node">
+                          <a href="#">
+                            <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                            <span class="tree-text">Nama</span>
+                          </a>
+                        </div>
                       </li>
                       <li>
-                        <a href="#" class="tree-node">
-                          <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                          <span class="tree-text">Nama</span>
-                        </a>
+                        <div class="tree-node">
+                          <a href="#">
+                            <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                            <span class="tree-text">Nama</span>
+                          </a>
+                        </div>
                         <ul>
                           <li>
-                            <a href="#" class="tree-node">
-                              <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                              <span class="tree-text">Nama</span>
-                            </a>
+                            <div class="tree-node">
+                              <a href="#">
+                                <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                                <span class="tree-text">Nama</span>
+                              </a>
+                            </div>
                           </li>
                           <li>
-                            <a href="#" class="tree-node">
-                              <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                              <span class="tree-text">Nama</span>
-                            </a>
+                            <div class="tree-node">
+                              <a href="#">
+                                <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                                <span class="tree-text">Nama</span>
+                              </a>
+                            </div>
                           </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#" class="tree-node">
-                      <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                      <span class="tree-text">Nama</span>
-                    </a>
+                    <div class="tree-node">
+                      <a href="#">
+                        <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                        <span class="tree-text">Nama</span>
+                      </a>
+                    </div>
                     <ul>
                       <li>
-                        <a href="#" class="tree-node">
-                          <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                          <span class="tree-text">Nama</span>
-                        </a>
+                        <div class="tree-node">
+                          <a href="#">
+                            <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                            <span class="tree-text">Nama</span>
+                          </a>
+                        </div>
                         <ul>
                           <li>
-                            <a href="#" class="tree-node">
-                              <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                              <span class="tree-text">Nama</span>
-                            </a>
+                            <div class="tree-node">
+                              <a href="#">
+                                <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                                <span class="tree-text">Nama</span>
+                              </a>
+                            </div>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#" class="tree-node">
-                          <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                          <span class="tree-text">Nama</span>
-                        </a>
+                        <div class="tree-node">
+                          <a href="#">
+                            <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                            <span class="tree-text">Nama</span>
+                          </a>
+                        </div>
                       </li>
                     </ul>
                   </li>

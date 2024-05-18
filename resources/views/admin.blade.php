@@ -16,7 +16,7 @@
                         <hr>
                         <a href="" class="text-decoration-none link-black">Kasau</a>
                         <hr>
-                        <a href="" class="text-decoration-none link-black">Struktur Organisasi</a>
+                        <a href="/adminstrukturorganisasi" class="text-decoration-none link-black">Struktur Organisasi</a>
                         <hr>
                         <a href="" class="text-decoration-none link-black">Galeri</a>
                         <hr>

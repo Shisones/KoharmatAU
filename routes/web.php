@@ -39,3 +39,7 @@ Route::get('/pesanmasyarakat', function () {
 Route::get('/admin', function () {
     return view('admin',['title' => 'Admin Page']);
 });
+
+Route::get('/adminstrukturorganisasi', function () {
+    return view('adminStrukturOrganisasi',['title' => 'Admin Page']);
+});
