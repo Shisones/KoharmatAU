@@ -35,3 +35,7 @@ Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/pesanmasyarakat', function () {
     return view('pesanmasyarakat',['title' => 'pesanmasyarakat']);
 });
+
+Route::get('/admin', function () {
+    return view('admin',['title' => 'Admin Page']);
+});

@@ -9,19 +9,65 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+  --primary-color: #97B789;
+  --primary-color-hover: #56704b;
+}
+
+.background-primary{
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+button.background-primary:hover{
+  background-color: var(--primary-color-hover);
+  color: #ffffff;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: #97B789;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #3b8af2;
+  color: var(--primary-color-hover);
   text-decoration: none;
+}
+
+a.link-black{
+  color : #000000;
+  text-decoration: none;
+}
+
+a.link-black:hover{
+  color : var(--primary-color-hover);
+  text-decoration: none;
+}
+
+.side-menu-container {
+  transition: margin-left 0.3s;
+}
+
+.toggle-button {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.menu-content {
+  transition: max-height 0.3s;
 }
 
 h1,
@@ -52,7 +98,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #97B789;
+  border: 6px solid var(--primary-color);
   border-top-color: #e2eefd;
   border-radius: 50%;
   width: 60px;
@@ -80,7 +126,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #97B789;
+  background: var(--primary-color);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -116,7 +162,7 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #97B789;
+  background: var(--primary-color);
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -512,7 +558,7 @@ h6 {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #97B789;
+  background: var(--primary-color);
 }
 
 #hero .btn-get-started:hover {
@@ -530,7 +576,7 @@ h6 {
 }
 
 #hero .btn-watch-video i {
-  color: #97B789;
+  color: var(--primary-color);
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -602,7 +648,7 @@ section {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: #97B789;
+  background: var(--primary-color);
   color: #fff;
   display: inline-block;
   text-transform: uppercase;
@@ -758,7 +804,7 @@ section {
 }
 
 .featured-services button {
-  background: #97B789;
+  background: var(--primary-color);
   border: 0;
   padding: 5px 10px;
   color: #fff;
@@ -810,7 +856,7 @@ section {
   color: #fff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  background: #97B789; /*warna container sebelum diselect*/
+  background: var(--primary-color); /*warna container sebelum diselect*/
   border-radius: 15px;
   margin-right: 15px; /*mengatur jarak setiap kontainer*/
   width: 170px; /*mengatur lebar*/
@@ -878,7 +924,7 @@ section {
   font-size: 24px;
   padding: 20px;
   margin-right: 15px;
-  color: #97B789;
+  color: var(--primary-color);
   border-radius: 50px;
 }
 
@@ -929,7 +975,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #97B789;
+  background-color: var(--primary-color);
 }
 
 /*--------------------------------------------------------------
@@ -953,7 +999,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #97B789;
+  background: var(--primary-color);
   color: #fff;
   width: 56px;
   height: 56px;
@@ -1159,7 +1205,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #97B789;
+  background-color: var(--primary-color);
 }
 
 @media (min-width: 992px) {
@@ -1191,7 +1237,7 @@ section {
   color: #fff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  background: #97B789; /*warna container sebelum diselect*/
+  background: var(--primary-color); /*warna container sebelum diselect*/
   border-radius: 15px;
   margin-right: 15px; /*mengatur jarak setiap kontainer*/
   width: 170px; /*mengatur lebar*/
@@ -1357,11 +1403,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #97B789;
+  border: 1px solid var(--primary-color);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #97B789;
+  background-color: var(--primary-color);
 }
 
 .portfolio-details .portfolio-info {
@@ -1532,7 +1578,7 @@ section {
 
 .pricing .box h4 {
   font-size: 36px;
-  color: #97B789;
+  color: var(--primary-color);
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1564,7 +1610,7 @@ section {
 }
 
 .pricing .box ul i {
-  color: #97B789;
+  color: var(--primary-color);
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1582,7 +1628,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #97B789;
+  background: var(--primary-color);
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 4px;
@@ -1601,7 +1647,7 @@ section {
 
 .pricing .featured h3 {
   color: #fff;
-  background: #97B789;
+  background: var(--primary-color);
 }
 
 .pricing .advanced {
@@ -1613,7 +1659,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #97B789;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -1646,7 +1692,7 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  /* font-family: #97B789; */
+  /* font-family: var(--primary-color); */
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -1710,7 +1756,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #97B789;
+  color: var(--primary-color);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #b3d1fa;
@@ -1799,7 +1845,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #97B789;
+  border-color: var(--primary-color);
 }
 
 .contact .php-email-form input {
@@ -1811,7 +1857,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #97B789;
+  background: var(--primary-color);
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1885,7 +1931,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #97B789;
+  background: var(--primary-color);
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1914,7 +1960,7 @@ section {
 }
 
 #footer .footer-top .footer-contact h3 span {
-  color: #97B789;
+  color: var(--primary-color);
 }
 
 #footer .footer-top .footer-contact p {
@@ -1945,7 +1991,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #97B789;
+  color: var(--primary-color);
   font-size: 18px;
   line-height: 1;
 }
@@ -1975,7 +2021,7 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #97B789;
+  background: var(--primary-color);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -2235,7 +2281,7 @@ section {
   padding-right: 1px;
   border-radius: 10px;
   width: 80px;
-  background-color: #97B789;
+  background-color: var(--primary-color);
   text-align: center;
   font-size: 12px;
   color: #fff;
@@ -2248,7 +2294,7 @@ section {
   padding-right: 1px;
   border-radius: 7px;
   width: 60px;
-  background-color: #97B789;
+  background-color: var(--primary-color);
   text-align: center;
   font-size: 10px;
   color: #fff;
@@ -2269,7 +2315,7 @@ section {
 .berita .input-group button{
   border-radius: 10px;
   border-color: transparent;
-  background-color: #97B789;
+  background-color: var(--primary-color);
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 .berita .input-group button:hover{
@@ -2293,7 +2339,7 @@ section {
   padding-right: 10px;
   border-radius: 10px;
   width: 120px;
-  background-color: #97B789;
+  background-color: var(--primary-color);
   text-align: center;
   font-size: 14px;
   color: #fff;
@@ -2304,7 +2350,7 @@ section {
 
 .berita .pagination .page-item.active .page-link
 {
-  background-color: #97B789;
+  background-color: var(--primary-color);
   border-color: transparent;
   color: #fff;
 
@@ -2445,11 +2491,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #97B789;
+  border: 1px solid var(--primary-color);
 }
 
 .galeri-details .galeri-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #97B789;
+  background-color: var(--primary-color);
 }
 
 .galeri-details .galeri-info {
@@ -2507,7 +2553,7 @@ section {
 
 .contact form input[type="text"]:focus,
 .contact form textarea:focus {
-    border-color: #97B789;
+    border-color: var(--primary-color);
 }
 
 .contact form textarea {
@@ -2515,7 +2561,7 @@ section {
 }
 
 .contact form button {
-    background: #97B789;
+    background: var(--primary-color);
     color: #fff;
     border: 0;
     padding: 10px 20px;
@@ -2548,7 +2594,7 @@ section {
 .pesanmasyarakat .pesanmasyarakat-list .question {
   display: block;
   position: relative;
-  /* font-family: #97B789; */
+  /* font-family: var(--primary-color); */
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -2640,7 +2686,7 @@ section {
 .pesanmasyarakat .search-bar .input-group button{
   border-radius: 10px;
   border-color: transparent;
-  background-color: #97B789;
+  background-color: var(--primary-color);
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 .pesanmasyarakat .search-bar .input-group button:hover{
