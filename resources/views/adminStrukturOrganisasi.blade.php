@@ -43,10 +43,9 @@
             childNodeForm.setAttribute('id', `node-item-${id}`);
             childNodeForm.innerHTML = `
                 <div class="tree-node">
-                    <a href="#"> 
-                        <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
-                        <span class="tree-text">Nama ${id}</span>
-                    </a>
+                    <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                    <span class="tree-text"><input type="text" class="form-control w-50 d-inline" placeholder="Masukkan nama"></input></span>
+                    <button type="button" class="btn btn-success save-btn">Simpan</button>
                 </div>
                 <ul>
                     <li data-node-predecessor='${id}' id="add-node-${id}">
@@ -58,18 +57,18 @@
 
             // Add event listener to the new button
             childNodeForm.querySelector('.add-node-btn').addEventListener('click', addNode);
-            // childNodeForm.querySelector('.save-btn').addEventListener('click', () => {
-            //         document.querySelectorAll('.add-node-btn').forEach(button => {
-            //         button.disabled = false;
-            //     });
-            // });
+            childNodeForm.querySelector('.save-btn').addEventListener('click', () => {
+                    document.querySelectorAll('.add-node-btn').forEach(button => {
+                    button.disabled = false;
+                });
+            });
             itemParentNode.appendChild(nodeContainer);
 
             id += 1;
 
-            // document.querySelectorAll('.add-node-btn').forEach(button => {
-            //     button.disabled = true;
-            // });
+            document.querySelectorAll('.add-node-btn').forEach(button => {
+                button.disabled = true;
+            });
         }
 
         // Attach the event listener to the existing button(s)
@@ -77,13 +76,13 @@
             button.addEventListener('click', addNode);
         });
 
-        // document.querySelectorAll('.save-btn').forEach(button => {
-        //     button.addEventListener('click', () => {
-        //         document.querySelectorAll('.add-node-btn').forEach(button => {
-        //         button.disabled = false;
-        //     });
-        //     });
-        // });
+        document.querySelectorAll('.save-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.add-node-btn').forEach(button => {
+                button.disabled = false;
+            });
+            });
+        });
     });
 </script>
 
