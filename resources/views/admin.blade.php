@@ -4,7 +4,7 @@
 <main id="main">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 h-100 shadow-lg sticky-top side-menu-container" style="top:70px;">
+            <div class="col-3 h-100 shadow-lg sticky-top side-menu-container" style="top:70px;z-index:1">
                 <div class="side-menu my-3" style="height:100vh;">
                     <button id="toggle-button" class="btn btn-secondary toggle-button"><i class='bx bx-chevron-left'></i></button>
                     <div id="menu-content">
