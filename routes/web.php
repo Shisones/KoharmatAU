@@ -41,5 +41,6 @@ Route::get('/pesanmasyarakat', function () {
 });
 
 Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasView']);
 
-Route::get('/adminstrukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
+Route::get('/admin/strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
