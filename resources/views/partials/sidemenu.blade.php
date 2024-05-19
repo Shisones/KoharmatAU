@@ -8,7 +8,7 @@
                         <hr>
                         <a href="" class="text-decoration-none {{ ($title == "Admin | Berita") ? "active" : "link-black" }}">Berita</a>
                         <hr>
-                        <a href="" class="text-decoration-none l{{ ($title == "Admin | Kasau") ? "active" : "link-black" }}ink-black">Kasau</a>
+                        <a href="" class="text-decoration-none {{ ($title == "Admin | Kasau") ? "active" : "link-black" }}">Kasau</a>
                         <hr>
                         <a href="/adminstrukturorganisasi" class="text-decoration-none {{ ($title == "Admin | Struktur Organisasi") ? "active" : "link-black" }}">Struktur Organisasi</a>
                         <hr>
