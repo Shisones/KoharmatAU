@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <p class="mb-1">{{ \Carbon\Carbon::parse($featured[0]->created_at)->format('d/m/Y')}}</p>
                         <h2 class="card-title">{{ $featured[0]->berita_judul }}</h2>
-                        <div class="category mb-3">{{ $featured[0]->kategori_nama }}</div>
+                        <div class="category mb-3">{{ $featured[0]->kategori->kategori_nama }}</div>
                         <p>{{ $featured[0]->berita_isi }}</p>
                         <a class="button" href="" style="text-align: right">Read more →</a>
                     </div>
@@ -43,7 +43,7 @@
                                     <div>
                                         <p class="mb-1">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y')}}</p>
                                         <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
-                                        <div class="category mb-2">{{ $b->kategori_nama }}</div>
+                                        <div class="category mb-2">{{ $b->kategori->kategori_nama }}</div>
                                         <p class="card-text mb-1">{{ $b->berita_isi }}</p>
                                     </div>
                                     
@@ -103,7 +103,7 @@
                                     <div>
                                         <p class="mb-1">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y')}}</p>
                                         <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
-                                        <div class="category mb-2">{{ $b->kategori_nama }}</div>
+                                        <div class="category mb-2">{{ $b->kategori->kategori_nama }}</div>
                                         <p class="card-text mb-1">{{ $b->berita_isi }}</p>
                                     </div>
                                     

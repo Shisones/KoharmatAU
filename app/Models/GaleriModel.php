@@ -4,25 +4,28 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 
 class GaleriModel extends Model
 {
     use HasFactory;
 
+    protected $table = "galeri";
+    protected $primaryKey = "galeri_id";
+    public $timestamps = false;
+
     public function readGaleri(){
-        $query = DB::select("SELECT * FROM galeri");
-        return $query;
+        $galeri = self::all();
+        return $galeri;
     }
 
     public function readImage(){
-        $query = DB::select("SELECT * FROM galeri WHERE is_video = 0");
-        return $query;
+        $image = self::where("is_video",0)->get();
+        return $image;
     }
 
     public function readVideo(){
-        $query = DB::select("SELECT * FROM galeri WHERE is_video = 1");
-        return $query;
+        $video = self::where("is_video",1)->get();
+        return $video;
     }
 }

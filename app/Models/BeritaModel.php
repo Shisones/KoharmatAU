@@ -4,28 +4,32 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class BeritaModel extends Model
 {
     use HasFactory;
 
-    public function readBerita(){
-        $query = DB::select("SELECT berita.*, kategori.kategori_nama FROM berita
-        INNER JOIN kategori
-        ON berita.kategori_id = kategori.kategori_id
-        ");
+    protected $table = "berita";
+    protected $primaryKey = "berita_id";
+    public $timestamps = false;
 
-        return $query;
+    public function kategori() {
+        return $this->belongsTo(KategoriModel::class, 'kategori_id');
     }
 
-    public function readFeatured(){
-        $query = DB::select("SELECT berita.*, kategori.kategori_nama FROM berita
-        INNER JOIN kategori
-        ON berita.kategori_id = kategori.kategori_id
-        WHERE is_featured = 1
-        ");
-
-        return $query;
+    public function readBerita() {
+        $berita = self::with('kategori')
+                        ->get();
+        
+        return $berita;
     }
+
+    public function readFeatured() {
+        $featuredBeritas = self::with('kategori')
+                                ->where('is_featured', 1)
+                                ->get();
+
+        return $featuredBeritas;
+    }
+
 }
