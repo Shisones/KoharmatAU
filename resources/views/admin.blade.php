@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-3 h-100 shadow-lg sticky-top side-menu-container" style="top:70px;z-index:1">
                 <div class="side-menu my-3" style="height:100vh;">
-                    <button id="toggle-button" class="btn btn-secondary toggle-button"><i class='bx bx-chevron-left'></i></button>
+                    <button id="toggle-button" class="btn background-primary toggle-button"><i class='bx bx-chevron-left'></i></button>
                     <div id="menu-content">
                         <a href="" class="text-decoration-none link-active">Pertanyaan yang belum dibalas</a>
                         <hr>
@@ -94,7 +94,7 @@
             } else {
                 menuContent.style.display = 'none';
                 toggleButton.innerHTML = '<i class="bx bx-chevron-right"></i>';
-                sideMenuContainer.style.marginLeft = '-250px'; // Adjust based on the width of your side menu
+                sideMenuContainer.style.marginLeft = (sideMenuContainer.offsetWidth*-1 + 15) + "px"; // Adjust based on the width of your side menu
             }
         });
 
