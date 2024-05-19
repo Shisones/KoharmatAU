@@ -19,10 +19,10 @@ class AdminController extends Controller
     public function index(){
         $messages = $this->pesanModel->getPesan();
 
-        return view('admin',['title' => 'Admin Page', 'messages' => $messages]);
+        return view('admin',['title' => 'Admin | Pertanyaan yang belum dibalas', 'messages' => $messages]);
     }
 
     public function strukturOrganisasiView(){
-        return view('adminStrukturOrganisasi',['title' => 'Admin Page']);
+        return view('adminStrukturOrganisasi',['title' => 'Admin | Struktur Organisasi']);
     }
 }

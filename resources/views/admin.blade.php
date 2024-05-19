@@ -4,25 +4,7 @@
 <main id="main">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 h-100 shadow-lg sticky-top side-menu-container" style="top:70px;z-index:1">
-                <div class="side-menu my-3" style="height:100vh;">
-                    <button id="toggle-button" class="btn background-primary toggle-button"><i class='bx bx-chevron-left'></i></button>
-                    <div id="menu-content">
-                        <a href="" class="text-decoration-none link-active">Pertanyaan yang belum dibalas</a>
-                        <hr>
-                        <a href="" class="text-decoration-none link-black">Pertanyaan yang sudah dibalas</a>
-                        <hr>
-                        <a href="" class="text-decoration-none link-black">Berita</a>
-                        <hr>
-                        <a href="" class="text-decoration-none link-black">Kasau</a>
-                        <hr>
-                        <a href="/adminstrukturorganisasi" class="text-decoration-none link-black">Struktur Organisasi</a>
-                        <hr>
-                        <a href="" class="text-decoration-none link-black">Galeri</a>
-                        <hr>
-                    </div>
-                </div>
-            </div>
+            @include('partials.sidemenu')
             <div class="col my-5" id="message-container">
                 <div class="container">
                     <div class="row">
