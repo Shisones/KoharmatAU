@@ -511,29 +511,30 @@
           </div>
 
           <div class="col-lg-6 col-sm-12 my-2">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="/kirimPesan" method="post" role="form" class="php-email-form">
+              @csrf
               <div class="row">
                 <div class="col form-group">
                   <label>Nama</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Masukkan nama" required>
+                  <input type="text" name="pesan_nama" class="form-control" id="name" placeholder="Masukkan nama" required>
                 </div>
                 <div class="col form-group">
                   <label>Email</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Masukkan email" required>
+                  <input type="email" class="form-control" name="pesan_email" id="email" placeholder="Masukkan email" required>
                 </div>
               </div>
               <div class="form-group">
                 <label>Subjek</label>
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Masukkan subjek pesan" required>
+                <input type="text" class="form-control" name="pesan_subjek" id="subject" placeholder="Masukkan subjek pesan" required>
               </div>
               <div class="form-group">
                 <label>Pesan</label>
-                <textarea class="form-control" name="message" rows="5" placeholder="Ketikkan pesan Anda" required></textarea>
+                <textarea class="form-control" name="pesan_isi" rows="5" placeholder="Ketikkan pesan Anda" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Pesan anda berhasil dikirim!.</div>
               </div>
               <div class="text-center"><button type="submit">Kirim Pesan</button></div>
             </form>

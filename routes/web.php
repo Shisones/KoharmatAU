@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\PesanController;
 
 Route::get('/', function () {
     return view('index',['title' => 'Beranda']);
 });
+
+Route::post('/kirimPesan', [PesanController::class, 'addPesan']);
 
 Route::get('/profil', function () {
     return view('profil',['title' => 'Profil Koharmat']);

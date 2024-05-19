@@ -16,12 +16,12 @@
             <!-- Left column -->
             <div class="col-md-6 mb-md-0 mb-4">
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="{{ $featured->berita_img }}" alt="..." style="height: 353px"/></a>
+                    <a href="#!"><img class="card-img-top" src="{{ $featured[0]->berita_img }}" alt="..." style="height: 353px"/></a>
                     <div class="card-body">
-                        <p class="mb-1">{{ \Carbon\Carbon::parse($featured->created_at)->format('d/m/Y')}}</p>
-                        <h2 class="card-title">{{ $featured->berita_judul }}</h2>
-                        <div class="category mb-3">{{ $featured->kategori_nama }}</div>
-                        <p>{{ $featured->berita_isi }}</p>
+                        <p class="mb-1">{{ \Carbon\Carbon::parse($featured[0]->created_at)->format('d/m/Y')}}</p>
+                        <h2 class="card-title">{{ $featured[0]->berita_judul }}</h2>
+                        <div class="category mb-3">{{ $featured[0]->kategori_nama }}</div>
+                        <p>{{ $featured[0]->berita_isi }}</p>
                         <a class="button" href="" style="text-align: right">Read more →</a>
                     </div>
                 </div>
