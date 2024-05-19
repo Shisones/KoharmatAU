@@ -14,7 +14,7 @@
                                     Filter <i class='bx bx-slider-alt'></i>
                                 </button>
                             </div>
-                            @foreach($messages as $message) 
+                            @foreach($messages as $message)
                             <div class="row my-2">
                                 <div class="col-2"></div>
                                 <div class="col-8">
@@ -34,6 +34,20 @@
                                                         <p class="text">{{ $message->pesan_isi }}</p>
                                                     </div>
                                                 </div>
+                                                <div class="reply-section border border-2 rounded px-3 py-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p class="fw-bold">Balasan:</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            @foreach($message->balasan as $balasan)
+                                                            <p class="text">{{ $balasan->balasan_isi }} <span class="fw-bold">({{ \Carbon\Carbon::parse($balasan->created_at)->format('d/m/Y h:m:s')}})</span></p>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="row">
                                                     <div class="col d-flex justify-content-end">
                                                         <button class="btn reply-btn" data-message-id="{{ $message->pesan_id }}">
@@ -51,13 +65,13 @@
                                     </div>
                                 </div>
                                 <div class="col-2"></div>
+                            </div>
+                            @endforeach
                         </div>
-                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 <script>
@@ -77,7 +91,7 @@
             } else {
                 menuContent.style.display = 'none';
                 toggleButton.innerHTML = '<i class="bx bx-chevron-right"></i>';
-                sideMenuContainer.style.marginLeft = (sideMenuContainer.offsetWidth*-1 + 15) + "px"; // Adjust based on the width of your side menu
+                sideMenuContainer.style.marginLeft = (sideMenuContainer.offsetWidth * -1 + 15) + "px"; // Adjust based on the width of your side menu
             }
         });
 

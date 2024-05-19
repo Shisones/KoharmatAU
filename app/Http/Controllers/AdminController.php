@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\PesanModel;
 
 class AdminController extends Controller
@@ -17,9 +16,15 @@ class AdminController extends Controller
     }
 
     public function index(){
-        $messages = $this->pesanModel->getPesan();
+        $messages = $this->pesanModel->getPesanWithoutBalasan();
 
         return view('admin',['title' => 'Admin | Pertanyaan yang belum dibalas', 'messages' => $messages]);
+    }
+
+    public function pesanSudahDibalasView(){
+        $messages = $this->pesanModel->getPesanWithBalasan();
+
+        return view('adminPesanSudahDibalas',['title' => 'Admin | Pertanyaan yang sudah dibalas', 'messages' => $messages]);
     }
 
     public function strukturOrganisasiView(){

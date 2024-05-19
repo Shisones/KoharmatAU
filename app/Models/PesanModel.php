@@ -21,6 +21,10 @@ class PesanModel extends Model
         'pesan_isi'
     ];
 
+    public function balasan() {
+        return $this->hasMany(BalasanModel::class, 'pesan_id');
+    }
+
     public function addPesan($request){
         $pesan = self::create([
             'pesan_nama' => $request->pesan_nama,
@@ -37,8 +41,17 @@ class PesanModel extends Model
         return $pesan;
     }
 
+
+    public function getPesanWithoutBalasan(){
+        $pesan = self::where('is_replied',0)
+        ->get();
+        return $pesan;
+    }
+
     public function getPesanWithBalasan(){
-        $pesan = self::all();
+        $pesan = self::with('balasan')
+        ->where('is_replied',1)
+        ->get();
         return $pesan;
     }
     
