@@ -8,7 +8,7 @@
                 <div class="side-menu my-3" style="height:100vh;">
                     <button id="toggle-button" class="btn btn-secondary toggle-button"><i class='bx bx-chevron-left'></i></button>
                     <div id="menu-content">
-                        <a href="" class="text-decoration-none link-black">Pertanyaan yang belum dibalas</a>
+                        <a href="" class="text-decoration-none link-active">Pertanyaan yang belum dibalas</a>
                         <hr>
                         <a href="" class="text-decoration-none link-black">Pertanyaan yang sudah dibalas</a>
                         <hr>
@@ -32,48 +32,49 @@
                                     Filter <i class='bx bx-slider-alt'></i>
                                 </button>
                             </div>
-                            @for($i = 1;$i <= 10;$i++) <div class="row my-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <div class="card rounded-4 shadow">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="fw-bold">Oleh: Muhamad Furqon Al-Haqqi (iniEmail@email.com)</p>
-                                    <p>Subjek: El Psy Kongroo</p>
-                                    <hr>
+                            @foreach($messages as $message) 
+                            <div class="row my-2">
+                                <div class="col-2"></div>
+                                <div class="col-8">
+                                    <div class="card rounded-4 shadow">
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="fw-bold">Oleh: {{ $message->pesan_nama }} ({{$message->pesan_email }})</p>
+                                                        <p>Subjek: {{ $message->pesan_subjek }}</p>
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="text">{{ $message->pesan_isi }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-end">
+                                                        <button class="btn reply-btn" data-message-id="{{ $message->pesan_id }}">
+                                                            <i class='bx bx-message-add' style="font-size:20px;"></i>
+                                                        </button>
+                                                        <button class="btn">
+                                                            <i class='bx bx-trash text-danger' style="font-size:20px;"></i>
+                                                        </button>
+                                                    </div>
+                                                    <!-- Container for the dynamically added form -->
+                                                    <div class="reply-form-container" id="reply-form-container-{{ $message->pesan_id }}"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eos nam ipsa, non nihil corrupti at reiciendis, minima obcaecati, enim consectetur dolores iste maiores sint sapiente necessitatibus veniam temporibus quos.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col d-flex justify-content-end">
-                                    <button class="btn reply-btn" data-message-id="{{$i}}">
-                                        <i class='bx bx-message-add' style="font-size:20px;"></i>
-                                    </button>
-                                    <button class="btn">
-                                        <i class='bx bx-trash text-danger' style="font-size:20px;"></i>
-                                    </button>
-                                </div>
-                                <!-- Container for the dynamically added form -->
-                                <div class="reply-form-container" id="reply-form-container-{{$i}}"></div>
-                            </div>
+                                <div class="col-2"></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
-    </div>
-    @endfor
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </main>
 <script>

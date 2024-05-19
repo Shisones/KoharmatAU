@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\PesanController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('index',['title' => 'Beranda']);
@@ -39,10 +40,6 @@ Route::get('/pesanmasyarakat', function () {
     return view('pesanmasyarakat',['title' => 'pesanmasyarakat']);
 });
 
-Route::get('/admin', function () {
-    return view('admin',['title' => 'Admin Page']);
-});
+Route::get('/admin', [AdminController::class, 'index']);
 
-Route::get('/adminstrukturorganisasi', function () {
-    return view('adminStrukturOrganisasi',['title' => 'Admin Page']);
-});
+Route::get('/adminstrukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);

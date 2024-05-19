@@ -31,5 +31,10 @@ class PesanModel extends Model
     
         return $pesan ? 1 : 0;
     }
+
+    public function getPesan(){
+        $pesan = self::all();
+        return $pesan;
+    }
     
 }
