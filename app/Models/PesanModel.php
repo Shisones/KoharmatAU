@@ -54,5 +54,16 @@ class PesanModel extends Model
         ->get();
         return $pesan;
     }
+
+    public function updateReplied($id){
+        $pesan = self::find($id);
+        if ($pesan) {
+            $pesan->is_replied = 1;
+            $isSaved = $pesan->save();
+            return $isSaved ? 1 : 0;
+        }
+        return 0;
+    }
+    
     
 }
