@@ -93,7 +93,7 @@
             childNodeForm.setAttribute('id', `node-item-${id}`);
             childNodeForm.innerHTML = `
                 <div class="tree-node">
-                    <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                    <img src="{{ asset('assets/img/strukturorganisasi/1.png') }}" class="tree-image">
                     <span class="tree-text"><input type="text" class="form-control w-50 d-inline" placeholder="Masukkan nama"></input></span>
                     <button type="button" class="btn btn-success save-btn">Simpan</button>
                 </div>
