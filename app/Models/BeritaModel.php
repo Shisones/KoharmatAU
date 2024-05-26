@@ -17,6 +17,10 @@ class BeritaModel extends Model
         return $this->belongsTo(KategoriModel::class, 'kategori_id');
     }
 
+    public function berita_tag() {
+        return $this->hasMany(BeritaTagModel::class, 'berita_id');
+    }
+
     public function readBerita() {
         $berita = self::with('kategori')
                         ->get();
@@ -30,6 +34,12 @@ class BeritaModel extends Model
                                 ->get();
 
         return $featuredBeritas;
+    }
+
+    public function readBeritaBySlug($slug){
+        $berita = self::with('kategori')
+                        ->firstWhere('berita_slug', $slug);
+        return $berita;
     }
 
 }
