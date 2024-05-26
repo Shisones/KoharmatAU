@@ -2276,14 +2276,14 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.berita .card .card-body h2{
+/* .berita .card .card-body h2{
   font-size: 24px;
 
 }
 .berita .card .card-body  p{
   font-size: 14px;
 
-}
+} */
 
 
 .berita .card .card-body  .category{
@@ -2380,13 +2380,12 @@ section {
   color: #000000;
 }
 
-.berita .image-container {
+.berita .image-container-terkini {
   position: relative;
-  width: 110px; /* Set the desired width */
-  height: 110px; /* Set the height equal to the width to maintain 1:1 aspect ratio */
+  width: 120px; /* Set the desired width */
 }
 
-.berita .image-container img {
+.berita .image-container-terkini img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2395,15 +2394,21 @@ section {
   object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
-.berita .card .card-body-populer .child h2{
+
+.berita .card .card-body-terkini {
+  /* font-size: 14px; */
+  padding: 20px;
+}
+  
+.berita .card .card-body-terkini .child h2{
   font-size: 14px;
   
 }
-.berita .card .card-body-populer .child  p{
+.berita .card .card-body-terkini .child  p{
   font-size: 12px;
 
 }
-.berita .card .card-body-populer .child  .category{
+.berita .card .card-body-terkini .child  .category{
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 1px;
@@ -2414,6 +2419,48 @@ section {
   text-align: center;
   font-size: 10px;
   color: #fff;
+}
+.berita .card .card-body .child h2{
+  font-size: 14px;
+  
+}
+.berita .card .card-body .child  p{
+  font-size: 12px;
+
+}
+.berita .image-container {
+  position: relative;
+  width: 130px; /* Set the desired width */
+  height: 130px; /* Set the height equal to the width to maintain 1:1 aspect ratio */
+}
+
+.berita .image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+.berita .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.berita .card .card-body .child  .category{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 7px;
+  width: 60px;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+}
+.berita  i {
+
+  color: #37721e;
 }
 /* .berita .img-1-1 {
   width: 180px;

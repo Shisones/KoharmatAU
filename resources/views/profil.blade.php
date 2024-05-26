@@ -21,6 +21,7 @@
                 </ul>
             </div>
           </div>
+        </div>
         <!-- About section one-->
         <section class="detail py-1 bg-light">
           <div class="container px-1 my-3">
@@ -48,7 +49,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <h2 class="fw-bolder">Visi &amp; Misi</h2>
+                        <h2 class="fw-bolder">Tugas &amp; Visi Misi</h2>
                         <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
                     </div>
                 </div>
