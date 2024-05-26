@@ -22,7 +22,7 @@
                         <h2 class="card-title">{{ $featured[0]->berita_judul }}</h2>
                         <div class="category mb-3">{{ $featured[0]->kategori->kategori_nama }}</div>
                         <p>{{ $featured[0]->berita_isi }}</p>
-                        <a class="button" href="" style="text-align: right">Read more →</a>
+                        <a class="button" href="" >Read more →</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,11 @@
                 @foreach($berita as $b)
                 <div class="row mb-3">
                     <div class="d-flex">
-                        <img src="{{$b->berita_img}}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                        <div class="image-container me-3">
+                            {{-- <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1" alt="..."> --}}
+                            {{-- <img src="{{ $b->berita_img }}" class="img-fluid me-3 img-1-1" alt="..." style=""> --}}
+                            <img src="{{$b->berita_img}}" class="img-fluid me-3 img-1-1" alt="..." style="max-width: 130px; height: auto;">
+                        </div>
                         <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <div class="child">
@@ -96,7 +100,10 @@
             @endif
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="{{ $b->berita_img }}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="image-container me-3">
+                        {{-- <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1" alt="..."> --}}
+                        <img src="{{ $b->berita_img }}" class="img-fluid me-3 img-1-1" alt="..." style="">
+                    </div>
                     <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="child">

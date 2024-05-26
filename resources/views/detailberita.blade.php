@@ -8,7 +8,10 @@
                     <!-- Main Content -->
                     <div class="col-md-8">
                         <div class="card mb-4">
-                            <img src="assets/img/tentangkami/2.png" class="card-img-top" alt="Berita Image">
+                            <div class="image-container-current me-3">
+                                <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                            </div>
+                            {{-- <img src="assets/img/tentangkami/3.png" class="card-img-top" alt="Berita Image"> --}}
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
                                     <i class="bi bi-calendar2 me-2"></i>
@@ -47,7 +50,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -67,7 +72,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -87,7 +94,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -107,7 +116,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -127,7 +138,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -152,7 +165,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -172,7 +187,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -192,7 +209,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -212,7 +231,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
@@ -232,7 +253,9 @@
                         </div>
                         <div class="row mb-3">
                             <div class="d-flex">
-                                <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                <div class="image-container me-3">
+                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                </div>
                                 <div class="card flex-grow-1">
                                     <div class="card-body-populer d-flex flex-column justify-content-between">
                                         <div class="child">
