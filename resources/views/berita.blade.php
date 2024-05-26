@@ -100,7 +100,10 @@
             @endif
             <div class="col-md-6">
                 <div class="d-flex">
-                    <img src="{{ $b->berita_img }}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="image-container me-3">
+                        {{-- <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1" alt="..."> --}}
+                        <img src="{{ $b->berita_img }}" class="img-fluid me-3 img-1-1" alt="..." style="">
+                    </div>
                     <div class="card flex-grow-1">
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="child">
