@@ -1,4 +1,4 @@
-@extends('layouts.main')
+div@extends('layouts.main')
 
 @section('content')
     <main id="main">
@@ -27,19 +27,46 @@
                 </div>
             </div>
 
-
+            
             <!-- Right column -->
             <div class="col-md-6">
                 <div class="row mb-2">
-                    <h3 style="font-size: 38px">Berita Terkini</h3>
+                    <h3 style="font-size: 24px">Berita Terkini</h3>
                 </div>
-                @foreach($berita as $b)
+                {{-- @foreach($berita as $b) --}}
                 <div class="row mb-3">
                     <div class="d-flex">
                         <div class="image-container me-3">
-                            {{-- <img src="assets/img/tentangkami/2.png" class="img-fluid img-1-1" alt="..."> --}}
-                            {{-- <img src="{{ $b->berita_img }}" class="img-fluid me-3 img-1-1" alt="..." style=""> --}}
-                            <img src="{{$b->berita_img}}" class="img-fluid me-3 img-1-1" alt="..." style="max-width: 130px; height: auto;">
+                            <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                            {{-- <img src="{{$b->berita_img}}" class="img-fluid me-3 img-1-1" alt="..." style=""> --}}
+                        </div>
+                        <div class="card flex-grow-1">
+                            <div class="card-body-populer d-flex flex-column justify-content-between">
+                                <div class="child">
+                                    <div>
+                                        <div class="d-flex align-items-center mb-1">
+                                            <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
+                                            <p class="mb-1">Tanggal</p>
+                                            {{-- <p class="mb-1">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y')}}</p>
+                                            <div class="category mb-2">{{ $b->kategori->kategori_nama }}</div> --}}
+                                            <div class="category mb-1 ms-auto">Kategori</div>
+                                        </div>
+                                        <h2 class="card-title mb-1">Judul</h2>
+                                        <p class="card-text mb-1">Deskripsi</p>
+                                        {{-- <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
+                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- @endforeach  --}}
+                {{-- @foreach($berita as $b)
+                <div class="row mb-3">
+                    <div class="d-flex">
+                        <div class="image-container me-3">
+                            <img src="{{$b->berita_img}}" class="img-fluid me-3 img-1-1" alt="..." style="">
                         </div>
                         <div class="card flex-grow-1">
                             <div class="card-body d-flex flex-column justify-content-between">
@@ -56,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @endforeach --}}
                 
             </div>
         </div>

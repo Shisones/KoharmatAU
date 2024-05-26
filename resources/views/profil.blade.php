@@ -17,27 +17,36 @@
                     <li data-filter="*" class="filter-active">All</li>
                     <li data-filter=".filter-sejarahsingkat">Sejarah Singkat</li>
                     <li data-filter=".filter-visimisi">Visi Misi</li>
-                    <li data-filter=".filter-tugas">Tugas</li>
+                    {{-- <li data-filter=".filter-tugas">Tugas</li> --}}
                 </ul>
             </div>
           </div>
         <!-- About section one-->
-        <section class="detail py-4 bg-light">
-          <div class="container px-5 my-50">
+        <section class="detail py-1 bg-light">
+          <div class="container px-1 my-3">
               <div class="row gx-5 align-items-center">
-                  <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/500x500/343a40/6c757d" alt="..." /></div>
+                  <div class="col-lg-6 d-flex justify-content-start">
+                    <div class="image-container me-3">
+                        <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                    </div>
+                    {{-- <img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/300x300/343a40/6c757d" alt="..." /> --}}
+                  </div>
                   <div class="col-lg-6">
                       <h2 class="fw-bolder">Sejarah Singkat</h2>
                       <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
-                  </div>
-              </div>
-          </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- About section two-->
-        <section class="detail py-5">
-            <div class="container px-5 my-50">
+        <section class="detail py-1">
+            <div class="container px-1 my-3">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/500x500/343a40/6c757d" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-last d-flex justify-content-end">
+                        <div class="image-container">
+                            <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1" alt="...">
+                        </div>
+                    </div>
                     <div class="col-lg-6">
                         <h2 class="fw-bolder">Visi &amp; Misi</h2>
                         <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
@@ -45,8 +54,9 @@
                 </div>
             </div>
         </section>
+        
         <!-- About section three-->
-        <section class="detail py-5 bg-light">
+        {{-- <section class="detail py-5 bg-light">
           <div class="container px-5 my-50">
               <div class="row gx-5 align-items-center">
                   <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://dummyimage.com/500x500/343a40/6c757d" alt="..." /></div>
@@ -56,7 +66,7 @@
                   </div>
               </div>
           </div>
-      </section>
+      </section> --}}
     </section><!-- End About Section -->
     
     

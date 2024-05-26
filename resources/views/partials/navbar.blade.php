@@ -9,6 +9,13 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto {{ ($title == "Beranda") ? "active" : "" }}" href="/">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/berita">Berita Utama</a></li>
+              <li><a href="/berita">Berita Koharmat</a></li>
+              <li><a href="/berita">Berita Lainnya</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               {{-- <li class="dropdown"><a href="#"><span>Profil Koharmat</span> <i class="bi bi-chevron-down"></i></a> --}}
@@ -32,13 +39,6 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li> --}}
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="/berita">Berita Utama</a></li>
-              <li><a href="/berita">Berita Koharmat</a></li>
-              <li><a href="/berita">Berita Lainnya</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto {{ ($title == "Galeri") ? "active" : "" }}" href="/galeri">Galeri</a></li>

@@ -846,6 +846,20 @@ section {
   padding: 2px 15px;
 }
 
+.about .image-container {
+  position: relative;
+  width: 500px; /* Set the desired width */
+  height: 400px; /* Set the height equal to the width to maintain 1:1 aspect ratio */
+}
+
+.about .image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
 .about #about-flters li {
   cursor: pointer;
   display: inline-block;
@@ -2285,7 +2299,7 @@ section {
   color: #fff;
 }
 
-.berita .card .card-body .child h2{
+/* .berita .card .card-body .child h2{
   font-size: 14px;
   
 }
@@ -2304,7 +2318,7 @@ section {
   text-align: center;
   font-size: 10px;
   color: #fff;
-}
+} */
 
 .berita .form-select {
   border-radius: 10px;
@@ -2368,8 +2382,8 @@ section {
 
 .berita .image-container {
   position: relative;
-  width: 140px; /* Set the desired width */
-  height: 140px; /* Set the height equal to the width to maintain 1:1 aspect ratio */
+  width: 110px; /* Set the desired width */
+  height: 110px; /* Set the height equal to the width to maintain 1:1 aspect ratio */
 }
 
 .berita .image-container img {
@@ -2379,6 +2393,27 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.berita .card .card-body-populer .child h2{
+  font-size: 14px;
+  
+}
+.berita .card .card-body-populer .child  p{
+  font-size: 12px;
+
+}
+.berita .card .card-body-populer .child  .category{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 7px;
+  width: 60px;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
 }
 /* .berita .img-1-1 {
   width: 180px;
@@ -2482,11 +2517,6 @@ section {
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
-}
-.img-1-1 {
-  width: 100px;
-  height: 100px;
-  object-fit: cover; /* Ensures the image covers the entire area, cropping if necessary */
 }
 
 .detailberita .image-container {
