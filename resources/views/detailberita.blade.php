@@ -9,10 +9,9 @@
                     <div class="col-md-8">
                         <div class="card mb-4">
                             <div class="image-container-current me-3">
-                                <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                <img src="../{{$berita->berita_img}}" class="img-fluid img-1-1 me-3" alt="..." style="">
                             </div>
                             {{-- <img src="assets/img/tentangkami/3.png" class="card-img-top" alt="Berita Image"> --}}
-                            <img src="../{{ $berita->berita_img }}" class="card-img-top" alt="Berita Image">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
                                     <i class="bi bi-calendar2 me-2"></i>
@@ -43,46 +42,13 @@
                         <div class="row mb-2">
                             <h3 style="font-size: 26px">Berita Populer</h3>
                         </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
                         @foreach ($listBerita as $b)
                             <a href="/detailberita/{{ $b->berita_slug }}">
                                 <div class="row mb-3">
                                     <div class="d-flex">
-                                        <img src="../{{ $b->berita_img }}" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                        <div class="image-container me-3">
+                                            <img src="../{{ $b->berita_img }}" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                        </div>
                                         <div class="card flex-grow-1">
                                             <div class="card-body-populer d-flex flex-column justify-content-between">
                                                 <div class="child">
@@ -100,122 +66,19 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
                             </a>
                         @endforeach
                     
                         <div class="row mt-4">
                             <h3 style="font-size: 26px">Berita Terkini</h3>
                         </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
                         @foreach ($listBerita as $b)
                             <a href="/detailberita/{{ $b->berita_slug }}">
                                 <div class="row mb-3">
                                     <div class="d-flex">
-                                        <img src="../{{ $b->berita_img }}" class="img-fluid img-1-1 me-3" alt="..." style="max-width: 130px; height: auto;">
+                                        <div class="image-container me-3">
+                                            <img src="../{{ $b->berita_img }}" class="img-fluid img-1-1 me-3" alt="..." style="">
+                                        </div>
                                         <div class="card flex-grow-1">
                                             <div class="card-body-populer d-flex flex-column justify-content-between">
                                                 <div class="child">
@@ -233,74 +96,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="d-flex">
-                                <div class="image-container me-3">
-                                    <img src="assets/img/tentangkami/3.png" class="img-fluid img-1-1 me-3" alt="..." style="">
-                                </div>
-                                <div class="card flex-grow-1">
-                                    <div class="card-body-populer d-flex flex-column justify-content-between">
-                                        <div class="child">
-                                            <div>
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <i class="bi bi-calendar2 me-2 mb-1" style="font-size: 14px"></i>
-                                                    <p class="mb-1">Tanggal</p>
-                                                    <div class="category mb-1 ms-auto">Kategori</div>
-                                                </div>
-                                                <h2 class="card-title mb-1">Judul</h2>
-                                                <p class="card-text mb-1">Deskripsi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                             </a>
                         @endforeach
                         
