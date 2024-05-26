@@ -94,24 +94,31 @@
             @if ($count%2==0)
                 <div class="row mb-3">
             @endif
-                <div class="col-md-6">
-                    <div class="d-flex">
-                        <img src="{{ $b->berita_img }}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
-                        <div class="card flex-grow-1">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div class="child">
-                                    <div>
-                                        <p class="mb-1">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y')}}</p>
-                                        <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
-                                        <div class="category mb-2">{{ $b->kategori->kategori_nama }}</div>
-                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <img src="{{ $b->berita_img }}" class="img-fluid me-3" alt="..." style="max-width: 130px; height: auto;">
+                    <div class="card flex-grow-1">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div class="child">
+                                <div>
+                                    <div class="d-flex align-items-center mb-1"> 
+                                        <i class="bi bi-calendar2 me-2"></i>
+                                        <p class="mb-0">{{ \Carbon\Carbon::parse($b->created_at)->format('d/m/Y') }}</p>
+                                        <p class="mb-0 ms-2 me-2" style="font-size: 14px">|</p>
+                                        <i class="bi bi-pen me-2"></i>
+                                        <p class="mb-0">Nama Penulis</p>
+                                        <div class="category mb-2 ms-auto">{{ $b->kategori->kategori_nama }}</div>
                                     </div>
-                                    
+                                    <a href="/detailberita"><h2 class="card-title mb-2">{{ $b->berita_judul }}</h2></a>
+                                    {{-- <h2 class="card-title mb-2">{{ $b->berita_judul }}</h2> --}}
+                                    <p class="card-text mb-1">{{ $b->berita_isi }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
             @if ($count%2==0)
                 @php
                     $count++;   

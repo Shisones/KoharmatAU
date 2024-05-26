@@ -36,6 +36,10 @@ Route::get('/strukturorganisasi', function () {
 
 Route::get('/berita', [BeritaController::class, 'index']);
 
+Route::get('/detailberita', function () {
+    return view('detailberita',['title' => 'Detail Berita']);
+});
+
 Route::get('/pesanmasyarakat', function () {
     return view('pesanmasyarakat',['title' => 'pesanmasyarakat']);
 });
