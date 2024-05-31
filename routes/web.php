@@ -29,6 +29,9 @@ Route::get('/kontak', function () {
 Route::get('/kasau', function () {
     return view('kasau',['title' => 'Kasau']);
 });
+Route::get('/wakasau', function () {
+    return view('wakasau',['title' => 'Wakasau']);
+});
 
 Route::get('/strukturorganisasi', function () {
     return view('strukturorganisasi',['title' => 'Struktur Organisasi']);
