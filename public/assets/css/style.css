@@ -50,11 +50,25 @@ a.link-black:hover{
   text-decoration: none;
 }
 
-.side-menu-container {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+.shift-content {
   transition: margin-left 0.3s;
 }
 
-.toggle-button {
+.side-menu .side-menu-container {
+  transition: margin-left 0.3s;
+}
+
+.side-menu .toggle-button {
   position: absolute;
   right: -20px;
   top: 50%;
@@ -67,17 +81,135 @@ a.link-black:hover{
   text-align: center;
 }
 
-.menu-content {
+.side-menu .menu-content {
   transition: max-height 0.3s;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto", sans-serif;
+.side-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Tidak perlu display: flex untuk ul */
+}
+
+.side-menu li {
+  position: relative;
+}
+
+.side-menu > ul > li {
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.side-menu a,
+.side-menu a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222222;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+.side-menu a i,
+.side-menu a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.side-menu > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--logo-color);
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.side-menu a:hover:before,
+.side-menu li:hover > a:before,
+.side-menu .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.side-menu a:hover,
+.side-menu .active,
+.side-menu .active:focus,
+.side-menu li:hover > a {
+  color: var(--logo-color);
+}
+
+/* Properti dropdown */
+.side-menu .dropdown ul {
+  display: block;
+  position: absolute; /* Pastikan ini adalah absolute */
+  left: calc(100% + 10px); /* Adjust positioning to your requirement */
+  top: 0;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+}
+
+.side-menu .dropdown ul li {
+  min-width: 200px;
+}
+
+.side-menu .dropdown ul a {
+  padding: 10px 20px;
+  font-weight: 400;
+}
+
+.side-menu .dropdown ul a i {
+  font-size: 12px;
+}
+
+.side-menu .dropdown ul a:hover,
+.side-menu .dropdown ul .active:hover,
+.side-menu .dropdown ul li:hover > a {
+  color: #B5CCAB;
+}
+
+/* Hover untuk menampilkan dropdown */
+.side-menu .dropdown:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sub-dropdown */
+.side-menu .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% + 10px);
+  visibility: hidden;
+}
+
+.side-menu .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .side-menu .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .side-menu .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -3605,3 +3737,46 @@ section {
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 
 }
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding-right: 30px; /* Menyesuaikan ruang untuk ikon dropdown */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%; /* Mengisi seluruh lebar elemen */
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.select-arrow i {
+  font-size: 1rem;
+  color: #37721e;
+}
+
+/* Gaya ketika mouse mengarah ke select */
+.custom-select:hover select {
+  border-color: #37721e;
+}
+
+/* Gaya ketika select aktif/fokus */
+.custom-select select:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem #56704b;
+}
+
+/* --primary-color: #97B789;
+--primary-color-hover: #56704b;
+--logo-color: #37721e; */

@@ -28,6 +28,9 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
+   <!-- Include CKEditor -->
+   <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
   <!-- =======================================================
   * Template Name: BizLand
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/

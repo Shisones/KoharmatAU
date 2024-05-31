@@ -60,3 +60,6 @@ Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasVi
 Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
 
 Route::get('/admin/strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
+Route::get('/CRUD/createberita', function () {
+    return view('/CRUD/createberita',['title' => 'Tambah Berita']);
+});
