@@ -32,6 +32,9 @@ Route::get('/kasau', function () {
 Route::get('/wakasau', function () {
     return view('wakasau',['title' => 'Wakasau']);
 });
+Route::get('/asetkoharmat', function () {
+    return view('asetkoharmat',['title' => 'Aset Koharmat']);
+});
 
 Route::get('/strukturorganisasi', function () {
     return view('strukturorganisasi',['title' => 'Struktur Organisasi']);

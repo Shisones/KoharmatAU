@@ -217,8 +217,8 @@
     </section><!-- End Counts Section -->
 
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <!-- ======= Kasau Section ======= -->
+    <section id="kasau" class="kasau section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -304,7 +304,7 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section><!-- End Kasau Section -->
 
     <!-- ======= Pricing Section ======= -->
     {{-- <section id="pricing" class="pricing">

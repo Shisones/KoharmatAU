@@ -3,7 +3,7 @@
 @section('content')
     <main id="main">
         <!-- ======= Kasau Section ======= -->
-        <section id="team" class="team section-bg">
+        <section id="kasau" class="kasau section-bg">
             <div class="container" data-aos="fade-up">
       
               <div class="section-title">

@@ -1606,26 +1606,26 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Team
+# Kasau
 --------------------------------------------------------------*/
-.team {
+.kasau {
   padding: 60px 0;
 }
 /* 
-.team .section-title {
+.kasau .section-title {
   margin-bottom: 15px; 
 } */
 
-/* .team .row {
+/* .kasau .row {
   margin-top: 30px;
 } */
 
-.team h2 {
+.kasau h2 {
   margin-top: 25px; /* Menghilangkan margin atas pada judul "Lihat Semua" */
 }
 
 
-.team .member {
+.kasau .member {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 4px;
@@ -1633,12 +1633,12 @@ section {
   box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
 }
 
-.team .member .member-img {
+.kasau .member .member-img {
   position: relative;
   overflow: hidden;
 }
 
-.team .member .social {
+.kasau .member .social {
   position: absolute;
   left: 0;
   bottom: 30px;
@@ -1648,7 +1648,7 @@ section {
   text-align: center;
 }
 
-.team .member .social a {
+.kasau .member .social a {
   transition: color 0.3s;
   color: #222222;
   margin: 0 3px;
@@ -1662,40 +1662,198 @@ section {
   color: #fff;
 }
 
-.team .member .social a:hover {
+.kasau .member .social a:hover {
   background: #B5CCAB;
 }
 
-.team .member .social i {
+.kasau .member .social i {
   font-size: 18px;
 }
 
-.team .member .member-info {
+.kasau .member .member-info {
   padding: 25px 15px;
 }
 
-.team .member .member-info h4 {
+.kasau .member .member-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
   color: #222222;
 }
 
-.team .member .member-info span {
+.kasau .member .member-info span {
   display: block;
   font-size: 13px;
   font-weight: 400;
   color: #aaaaaa;
 }
 
-.team .member .member-info p {
+.kasau .member .member-info p {
   font-style: italic;
   font-size: 14px;
   line-height: 26px;
   color: #777777;
 }
 
-.team .member:hover .social {
+.kasau .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Wakasau
+--------------------------------------------------------------*/
+.wakasau {
+  padding: 60px 0;
+}
+/* 
+.wakasau .section-title {
+  margin-bottom: 15px; 
+} */
+
+/* .wakasau .row {
+  margin-top: 30px;
+} */
+
+.wakasau h2 {
+  margin-top: 25px; /* Menghilangkan margin atas pada judul "Lihat Semua" */
+}
+
+
+.wakasau .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
+}
+
+.wakasau .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.wakasau .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.wakasau .member .social a {
+  transition: color 0.3s;
+  color: #222222;
+  margin: 0 3px;
+  padding-top: 7px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background: rgba(16, 110, 234, 0.8);
+  display: inline-block;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+
+.wakasau .member .social a:hover {
+  background: #B5CCAB;
+}
+
+.wakasau .member .social i {
+  font-size: 18px;
+}
+
+.wakasau .member .member-info {
+  padding: 25px 15px;
+}
+
+.wakasau .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #222222;
+}
+
+.wakasau .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.wakasau .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+
+.wakasau .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Aset Organisasi
+--------------------------------------------------------------*/
+.asetorganisasi {
+  padding: 60px 0;
+}
+/* 
+.asetorganisasi .section-title {
+  margin-bottom: 15px; 
+} */
+
+/* .asetorganisasi .row {
+  margin-top: 30px;
+} */
+
+.asetorganisasi h2 {
+  margin-top: 25px; /* Menghilangkan margin atas pada judul "Lihat Semua" */
+}
+
+
+.asetorganisasi .aset {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
+}
+
+.asetorganisasi .aset .aset-img {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .asetorganisasi .aset .aset-info {
+  padding: 25px 15px;
+} */
+
+.asetorganisasi .aset .aset-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #222222;
+}
+
+.asetorganisasi .aset .aset-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.asetorganisasi .aset .aset-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+
+.asetorganisasi .aset:hover .social {
   opacity: 1;
   bottom: 15px;
 }
