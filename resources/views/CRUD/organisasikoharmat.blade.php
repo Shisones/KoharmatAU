@@ -11,7 +11,7 @@
             <div class="row">
               <div class="col">
                 <div class="section-title">
-                  <h3>Tambahkan Struktur Organisasi Koharmat<span>AU</span></h3>
+                  <h3>Tambahkan Organisasi Koharmat<span>AU</span></h3>
                   {{-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> --}}
                 </div>
       
@@ -19,6 +19,7 @@
                   <ul>
                       <li data-node-predecessor='-1' id="add-node--1">
                           <button class="btn btn-primary add-node-btn">Tambah</button>
+                          
                       </li>
                   </ul>
                 </div>

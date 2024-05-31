@@ -3,9 +3,8 @@
                 <div class="side-menu my-3" style="height:calc(100vh - 70px);">
                     <button id="toggle-button" class="btn background-primary toggle-button"><i class='bx bx-chevron-left'></i></button>
                     <div id="menu-content">
-                        {{-- <li><a class="nav-link {{ ($title == "Aset Koharmat") ? "active" : "" }}" href="/asetkoharmat">Aset Koharmat</a></li> --}}
                         <ul>
-
+                            
                             <li class="dropdown"><a href="#"><span>Pertanyaan</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
                                     <li><a href="/admin" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang belum dibalas") ? "active" : "link-black" }}">Pertanyaan yang belum dibalas</a></li>
@@ -49,6 +48,8 @@
                                 </ul>
                             </li>
                         </ul>
+                        <hr>
+                        <ul><a class="nav-link" href="">Aset Koharmat</a></ul>
                         {{-- <a href="/admin" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang belum dibalas") ? "active" : "link-black" }}">Pertanyaan yang belum dibalas</a>
                         <hr>
                         <a href="/admin/pesan/dibalas" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang sudah dibalas") ? "active" : "link-black" }}">Pertanyaan yang sudah dibalas</a>

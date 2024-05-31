@@ -59,8 +59,15 @@ Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasView']);
 Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
 
-Route::get('/admin/strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
-Route::get('/admin/organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);
+// Route::get('strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
+// Route::get('organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);
+
+Route::get('/CRUD/strukturorganisasi', function () {
+    return view('/CRUD/strukturorganisasi',['title' => 'Tambah Struktur Organisasi']);
+});
+Route::get('/CRUD/organisasikoharmat', function () {
+    return view('/CRUD/organisasikoharmat',['title' => 'Tambah Organisasi Koharmat']);
+});
 Route::get('/CRUD/createberita', function () {
     return view('/CRUD/createberita',['title' => 'Tambah Berita']);
 });
