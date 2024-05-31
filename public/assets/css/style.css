@@ -1569,6 +1569,325 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Struktur Organisasi
+--------------------------------------------------------------*/
+
+.strukturorganisasi .tree {
+  display: flex;
+  flex-direction: column; /* Menetapkan tata letak vertikal */
+  justify-content: center;
+  }
+  
+  .strukturorganisasi .tree ul {
+    position: relative;
+    padding: 1em 0; 
+    white-space: nowrap;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .strukturorganisasi .tree ul::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .strukturorganisasi .tree li {
+    display: inline-block; /* need white-space fix */
+    vertical-align: top;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 1em .5em 0 .5em;
+  }
+  
+  .strukturorganisasi .tree li::before,
+  .strukturorganisasi .tree li::after {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%; 
+    height: 1em;
+  }
+  
+  .strukturorganisasi .tree li::after {
+    right: auto; 
+    left: 50%;
+    border-left: 1px solid #ccc;
+  }
+  
+  .strukturorganisasi .tree li::before {
+    /* right: auto; 
+    left: 50%; */
+    border-right: 1px solid #ccc;
+  }
+  
+  .strukturorganisasi .tree li:only-child::after,
+  .strukturorganisasi .tree li:only-child::before {
+    display: none;
+  }
+  
+  .strukturorganisasi .tree li:only-child {
+    padding-top: 0;
+  }
+  
+  .strukturorganisasi .tree li:first-child::before,
+  .strukturorganisasi .tree li:last-child::after {
+    border: 0 none;
+  }
+  
+  .strukturorganisasi .tree li:last-child::before {
+    border-radius: 0 5px 0 0;
+  }
+  
+  .strukturorganisasi .tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+  }
+  
+  .strukturorganisasi .tree ul ul::before {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0; 
+    height: 1em;
+  }
+  
+  .strukturorganisasi .tree li div{
+    border: 1px solid #ccc;
+    height: 100px; /* tinggi node */
+    /* width: 180px; */
+    /* padding: .5em .75em; */
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    color: #333;
+    position: relative;
+    top: 1px;
+  }
+
+  .strukturorganisasi .tree li a{
+    text-decoration: none;
+    color: #333;
+  }
+
+  .strukturorganisasi .tree-node {
+    display: flex; /* Mengatur tata letak menjadi flexbox */
+    /* flex-direction: ro; */
+    align-items: flex-start;
+    /* align-items: start; Mengatur teks dan gambar ke tengah vertikal */
+  }
+  
+  .strukturorganisasi .tree-image {
+    border-top-left-radius: 5px; /* Border radius di sisi kiri atas */
+    border-bottom-left-radius: 5px; /* Border radius di sisi kiri bawah */
+    /* align-items: self-star; */
+    /* width: 40%; Mengatur lebar gambar */
+    height: 100%; /* Mengatur tinggi gambar agar sesuai proporsi */
+  }
+  
+  .strukturorganisasi .tree-text {
+    flex: 1; /* Menyebarkan sisa ruang untuk teks */
+    padding-left: 10px; /* Menambahkan padding kiri untuk teks */
+    padding-right: 10px; /* Menambahkan padding kiri untuk teks */
+    font-size: small;
+  }
+  
+  /* .strukturorganisasi .tree-image {
+    /* Mengatur tinggi gambar menjadi 100% dari tinggi node tree */
+    /* height: 100%; */
+    /* width: 40%; */
+    /* Menghapus padding */
+    /* padding: 0;
+  } */
+
+  /* .strukturorganisasi .tree li a text {
+    padding: .5em .75em;
+  } */ 
+
+  /* .strukturorganisasi .tree li a:hover,
+  .strukturorganisasi .tree li a:hover+ul li a {
+    background: #e9453f;
+    color: #fff;
+    border: 1px solid #e9453f;
+  }
+  
+  .strukturorganisasi .tree li a:hover + ul li::after, 
+  .strukturorganisasi .tree li a:hover + ul li::before, 
+  .strukturorganisasi .tree li a:hover + ul::before, 
+  .strukturorganisasi .tree li a:hover + ul ul::before{
+    border-color: #e9453f;
+  }
+   */
+  
+   .strukturorganisasi .tree li div:hover {
+    transform: scale(1.1); /* Memperbesar node saat dihover */
+    z-index: 1; /* Mengatur node yang dihover menjadi paling atas */
+  }
+  
+  /*--------------------------------------------------------------
+  # Organisasi KoharmatAU
+  --------------------------------------------------------------*/
+  .organisasikoharmat .tree {
+    display: flex;
+    flex-direction: column; /* Menetapkan tata letak vertikal */
+    justify-content: center;
+    }
+    
+    .organisasikoharmat .tree ul {
+      position: relative;
+      padding: 1em 0; 
+      white-space: nowrap;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .organisasikoharmat .tree ul::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    
+    .organisasikoharmat .tree li {
+      display: inline-block; /* need white-space fix */
+      vertical-align: top;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 1em .5em 0 .5em;
+    }
+    
+    .organisasikoharmat .tree li::before,
+    .organisasikoharmat .tree li::after {
+      content: '';
+      position: absolute; 
+      top: 0; 
+      right: 50%;
+      border-top: 1px solid #ccc;
+      width: 50%; 
+      height: 1em;
+    }
+    
+    .organisasikoharmat .tree li::after {
+      right: auto; 
+      left: 50%;
+      border-left: 1px solid #ccc;
+    }
+    
+    .organisasikoharmat .tree li::before {
+      /* right: auto; 
+      left: 50%; */
+      border-right: 1px solid #ccc;
+    }
+    
+    .organisasikoharmat .tree li:only-child::after,
+    .organisasikoharmat .tree li:only-child::before {
+      display: none;
+    }
+    
+    .organisasikoharmat .tree li:only-child {
+      padding-top: 0;
+    }
+    
+    .organisasikoharmat .tree li:first-child::before,
+    .organisasikoharmat .tree li:last-child::after {
+      border: 0 none;
+    }
+    
+    .organisasikoharmat .tree li:last-child::before {
+      border-radius: 0 5px 0 0;
+    }
+    
+    .organisasikoharmat .tree li:first-child::after {
+      border-radius: 5px 0 0 0;
+    }
+    
+    .organisasikoharmat .tree ul ul::before {
+      content: '';
+      position: absolute; 
+      top: 0; 
+      left: 50%;
+      border-left: 1px solid #ccc;
+      width: 0; 
+      height: 1em;
+    }
+    
+    .organisasikoharmat .tree li div{
+      border: 1px solid #ccc;
+      height: 100px; /* tinggi node */
+      /* width: 180px; */
+      /* padding: .5em .75em; */
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+      color: #333;
+      position: relative;
+      top: 1px;
+    }
+  
+    .organisasikoharmat .tree li a{
+      text-decoration: none;
+      color: #333;
+    }
+  
+    .organisasikoharmat .tree-node {
+      display: flex; /* Mengatur tata letak menjadi flexbox */
+      /* flex-direction: ro; */
+      align-items: flex-start;
+      /* align-items: start; Mengatur teks dan gambar ke tengah vertikal */
+    }
+    
+    .organisasikoharmat .tree-image {
+      border-top-left-radius: 5px; /* Border radius di sisi kiri atas */
+      border-bottom-left-radius: 5px; /* Border radius di sisi kiri bawah */
+      /* align-items: self-star; */
+      /* width: 40%; Mengatur lebar gambar */
+      height: 100%; /* Mengatur tinggi gambar agar sesuai proporsi */
+    }
+    
+    .organisasikoharmat .tree-text {
+      flex: 1; /* Menyebarkan sisa ruang untuk teks */
+      padding-left: 10px; /* Menambahkan padding kiri untuk teks */
+      padding-right: 10px; /* Menambahkan padding kiri untuk teks */
+      font-size: small;
+    }
+    
+    /* .organisasikoharmat .tree-image {
+      /* Mengatur tinggi gambar menjadi 100% dari tinggi node tree */
+      /* height: 100%; */
+      /* width: 40%; */
+      /* Menghapus padding */
+      /* padding: 0;
+    } */
+  
+    /* .organisasikoharmat .tree li a text {
+      padding: .5em .75em;
+    } */ 
+  
+    /* .organisasikoharmat .tree li a:hover,
+    .organisasikoharmat .tree li a:hover+ul li a {
+      background: #e9453f;
+      color: #fff;
+      border: 1px solid #e9453f;
+    }
+    
+    .organisasikoharmat .tree li a:hover + ul li::after, 
+    .organisasikoharmat .tree li a:hover + ul li::before, 
+    .organisasikoharmat .tree li a:hover + ul::before, 
+    .organisasikoharmat .tree li a:hover + ul ul::before{
+      border-color: #e9453f;
+    }
+     */
+    
+     .organisasikoharmat .tree li div:hover {
+      transform: scale(1.1); /* Memperbesar node saat dihover */
+      z-index: 1; /* Mengatur node yang dihover menjadi paling atas */
+    }
+  
+/*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
 .pricing .box {
@@ -2235,14 +2554,15 @@ section {
     transform: scale(1.1); /* Memperbesar node saat dihover */
     z-index: 1; /* Mengatur node yang dihover menjadi paling atas */
   }
-  .berita .content h3 {
-    padding-top: 15px;
-    font-weight: 600;
-    font-size: 26px;
-  }
+  
+.berita .content h3 {
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 26px;
+}
 
-  .berita .containerbar {
-    display: flex;
+.berita .containerbar {
+  display: flex;
 }
 
 .berita .column {

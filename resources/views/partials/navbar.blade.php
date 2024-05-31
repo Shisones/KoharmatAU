@@ -30,7 +30,7 @@
                 </ul>
               </li>
               <li><a class="nav-link {{ ($title == "Struktur Organisasi") ? "active" : "" }}" href="/strukturorganisasi">Struktur Organisasi</a></li>
-              <li><a class="nav-link {{ ($title == "Organisasi Koharmat") ? "active" : "" }}" href="/strukturorganisasi">Organisasi Koharmat</a></li>
+              <li><a class="nav-link {{ ($title == "Organisasi Koharmat") ? "active" : "" }}" href="/organisasikoharmat">Organisasi Koharmat</a></li>
               {{-- <li class="dropdown"><a href="#"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>

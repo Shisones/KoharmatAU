@@ -2,13 +2,12 @@
 
 @section('content')
 <main id="main">
-  <!-- ======= Struktur Organisasi Section ======= -->
-  <section id="strukturorganisasi" class="strukturorganisasi section-bg">
+  <section id="organisasikoharmat" class="organisasikoharmat section-bg">
     <div class="container" data-aos="fade-up">
       <div class="row">
         <div class="col">
           <div class="section-title">
-            <h3>Struktur Organisasi <span>KoharmatAU</span></h3>
+            <h3>Organisasi <span>KoharmatAU</span></h3>
             <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
           </div>
 
@@ -17,7 +16,7 @@
               <li>
                 <div class="tree-node">
                   <a href="#">
-                    <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                    <img src="assets\img\testimonials-bg.jpg" class="tree-image">
                     <span class="tree-text">Nama</span>
                   </a>
                 </div>
@@ -41,7 +40,7 @@
                       <li>
                         <div class="tree-node">
                           <a href="#">
-                            <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
+                            <img src="assets\img\testimonials-bg.jpg" class="tree-image">
                             <span class="tree-text">Nama</span>
                           </a>
                         </div>
@@ -111,7 +110,7 @@
       </div>
 
     </div>
-  </section><!-- End Struktur Organisasi Section -->
-
+  </section>
 </main>
+
 @endsection
