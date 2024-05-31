@@ -37,6 +37,9 @@ Route::get('/strukturorganisasi', function () {
 Route::get('/organisasikoharmat', function () {
     return view('organisasikoharmat',['title' => 'Organisasi Koharmat']);
 });
+Route::get('/detailorganisasikoharmat', function () {
+    return view('detailorganisasikoharmat',['title' => 'Detail Organisasi']);
+});
 
 Route::get('/berita', [BeritaController::class, 'index']);
 

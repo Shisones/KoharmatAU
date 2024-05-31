@@ -957,6 +957,138 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Detail Organisasi KoharmatAU
+--------------------------------------------------------------*/
+
+.detailorganisasikoharmat .detail h2 {
+  font-size: 18px;
+}
+.detailorganisasikoharmat .detail p {
+  font-size: 16px;
+}
+.detailorganisasikoharmat #detailorganisasikoharmat-flters {
+  padding: 0;
+  margin: 0 auto 15px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.detailorganisasikoharmat .image-container {
+  position: relative;
+  width: 500px; /* Set the desired width */
+  height: 400px; /* Set the desired height */
+}
+
+.detailorganisasikoharmat .image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image fits within the container without being cropped */
+  border-radius: 5px; 
+}
+
+.detailorganisasikoharmat #detailorganisasikoharmat-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  /* line-height: 1; */
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  background: var(--primary-color); /*warna container sebelum diselect*/
+  border-radius: 15px;
+  margin-right: 15px; /*mengatur jarak setiap kontainer*/
+  width: 170px; /*mengatur lebar*/
+}
+
+.detailorganisasikoharmat #detailorganisasikoharmat-flters li:hover,
+.detailorganisasikoharmat #detailorganisasikoharmat-flters li.filter-active {
+  background: #B5CCAB;
+}
+/* 
+.detailorganisasikoharmat .container {
+  display: flex;
+  align-items: center;
+}
+
+.detailorganisasikoharmat .img-right {
+  margin-left: auto;
+}
+.detailorganisasikoharmat .img-left {
+  margin-right: auto;
+} */
+
+.detailorganisasikoharmat img{
+  /* width: 500px;  */
+  /* Sesuaikan dengan lebar yang diinginkan */
+  /* height: 500px; Sesuaikan dengan tinggi yang diinginkan */
+  object-fit: cover; /* Untuk menjaga proporsi asli gambar */
+}
+
+
+/* Sembunyikan semua konten kecuali yang sedang ditargetkan */
+/* .detailorganisasikoharmat .row {
+  padding-top: 50px;
+  /* display: none; */
+/* } */
+
+/* Tampilkan konten yang sedang ditargetkan */
+/* .detailorganisasikoharmat .row:target {
+  display: block;
+} */
+
+.detailorganisasikoharmat .content h3 {
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.detailorganisasikoharmat .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detailorganisasikoharmat .content ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.detailorganisasikoharmat .content ul li:first-child {
+  margin-top: 35px;
+}
+
+.detailorganisasikoharmat .content ul i {
+  background: #fff;
+  box-shadow: 0px 6px 15px #c7d7c0;
+  font-size: 24px;
+  padding: 20px;
+  margin-right: 15px;
+  color: var(--primary-color);
+  border-radius: 50px;
+}
+
+.detailorganisasikoharmat .content ul h5 {
+  font-size: 18px;
+  color: #555555;
+}
+
+.detailorganisasikoharmat .content ul p {
+  font-size: 15px;
+}
+
+.detailorganisasikoharmat .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
 .skills .progress {

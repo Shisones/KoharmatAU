@@ -15,7 +15,7 @@
             <ul>
               <li>
                 <div class="tree-node">
-                  <a href="#">
+                  <a href="/detailorganisasikoharmat">
                     <img src="assets\img\testimonials-bg.jpg" class="tree-image">
                     <span class="tree-text">Nama</span>
                   </a>
@@ -23,7 +23,7 @@
                 <ul>
                   <li>
                     <div class="tree-node">
-                      <a href="#">
+                      <a href="/detailorganisasikoharmat">
                         <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                         <span class="tree-text">Nama</span>
                       </a>
@@ -31,7 +31,7 @@
                     <ul>
                       <li>
                         <div class="tree-node">
-                          <a href="#">
+                          <a href="/detailorganisasikoharmat">
                             <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                             <span class="tree-text">Nama</span>
                           </a>
@@ -39,7 +39,7 @@
                       </li>
                       <li>
                         <div class="tree-node">
-                          <a href="#">
+                          <a href="/detailorganisasikoharmat">
                             <img src="assets\img\testimonials-bg.jpg" class="tree-image">
                             <span class="tree-text">Nama</span>
                           </a>
@@ -47,7 +47,7 @@
                         <ul>
                           <li>
                             <div class="tree-node">
-                              <a href="#">
+                              <a href="/detailorganisasikoharmat">
                                 <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                                 <span class="tree-text">Nama</span>
                               </a>
@@ -55,7 +55,7 @@
                           </li>
                           <li>
                             <div class="tree-node">
-                              <a href="#">
+                              <a href="/detailorganisasikoharmat">
                                 <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                                 <span class="tree-text">Nama</span>
                               </a>
@@ -67,7 +67,7 @@
                   </li>
                   <li>
                     <div class="tree-node">
-                      <a href="#">
+                      <a href="/detailorganisasikoharmat">
                         <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                         <span class="tree-text">Nama</span>
                       </a>
@@ -75,7 +75,7 @@
                     <ul>
                       <li>
                         <div class="tree-node">
-                          <a href="#">
+                          <a href="/detailorganisasikoharmat">
                             <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                             <span class="tree-text">Nama</span>
                           </a>
@@ -83,7 +83,7 @@
                         <ul>
                           <li>
                             <div class="tree-node">
-                              <a href="#">
+                              <a href="/detailorganisasikoharmat">
                                 <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                                 <span class="tree-text">Nama</span>
                               </a>
@@ -93,7 +93,7 @@
                       </li>
                       <li>
                         <div class="tree-node">
-                          <a href="#">
+                          <a href="/detailorganisasikoharmat">
                             <img src="assets/img/strukturorganisasi/1.png" class="tree-image">
                             <span class="tree-text">Nama</span>
                           </a>
