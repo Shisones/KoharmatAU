@@ -63,3 +63,9 @@ Route::get('/admin/strukturorganisasi', [AdminController::class, 'strukturOrgani
 Route::get('/CRUD/createberita', function () {
     return view('/CRUD/createberita',['title' => 'Tambah Berita']);
 });
+Route::get('/CRUD/addfoto', function () {
+    return view('/CRUD/addfoto',['title' => 'Tambah Foto']);
+});
+Route::get('/CRUD/addvideo', function () {
+    return view('/CRUD/addvideo',['title' => 'Tambah Video']);
+});

@@ -8,44 +8,25 @@
             <div class="col-md-8 offset-md-2 mt-4">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Tambahkan Berita Baru</h3>
+                        <h3>Tambahkan Video</h3>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="form-group mb-3">
-                                <label for="nama">Judul Berita</label>
-                                <input type="text" class="form-control" id="nama" placeholder="Masukkan Judul Berita">
+                                <label for="nama">Judul Video</label>
+                                <input type="text" class="form-control" id="nama" placeholder="Masukkan Judul Video">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="inputState1">Kategori Berita</label>
-                                <div class="custom-select">
-                                    <select id="inputState1" class="form-control">
-                                        <option selected>Pilih...</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                    </select>
-                                    <div class="select-arrow">
-                                        <i class="bi bi-chevron-down"></i>
+                                <label for="tanggal">Tanggal</label>
+                                <input type="date" class="form-control" id="tanggal" placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="imageUpload">Upload Video</label>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex">
+                                        <input type="file" class="form-control-file" id="imageUpload" name="">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="inputState1">Jenis Berita</label>
-                                <div class="custom-select">
-                                    <select id="inputState1" class="form-control">
-                                        <option selected>Pilih...</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                    </select>
-                                    <div class="select-arrow">
-                                        <i class="bi bi-chevron-down"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group mb-3">
-                                <label for="wysiwyg">Isi Berita</label>
-                                <textarea id="wysiwyg" name="wysiwyg"></textarea>
                             </div>
 
                             <div class="d-flex justify-content-end">
@@ -62,6 +43,8 @@
     </div>
 </main>
 <script>
+
+    // Initialize CKEditor
     CKEDITOR.replace('wysiwyg');
     document.addEventListener('DOMContentLoaded', (event) => {
         const navbar = document.querySelector('.navbar'); // Adjust the selector to match your navbar
@@ -72,16 +55,22 @@
 
         // Toggle side menu visibility
         toggleButton.addEventListener('click', function() {
-            if (menuContent.style.display === 'none') {
-                menuContent.style.display = 'block';
-                toggleButton.innerHTML = '<i class="bx bx-chevron-left"></i>';
-                sideMenuContainer.style.marginLeft = '0';
-            } else {
-                menuContent.style.display = 'none';
-                toggleButton.innerHTML = '<i class="bx bx-chevron-right"></i>';
-                sideMenuContainer.style.marginLeft = (sideMenuContainer.offsetWidth * -1 + 15) + "px"; // Adjust based on the width of your side menu
-            }
-        });
+    if (menuContent.style.display === 'none') {
+        // Sidebar ditutup
+        menuContent.style.display = 'block';
+        toggleButton.innerHTML = '<i class="bx bx-chevron-left"></i>';
+        sideMenuContainer.style.marginLeft = '0';
+        // Geser konten utama
+        mainContent.classList.add('shifted-content');
+    } else {
+        // Sidebar dibuka
+        menuContent.style.display = 'none';
+        toggleButton.innerHTML = '<i class="bx bx-chevron-right"></i>';
+        sideMenuContainer.style.marginLeft = (sideMenuContainer.offsetWidth * -1 + 15) + "px"; // Adjust based on the width of your side menu
+        // Reset geser konten utama
+        mainContent.classList.remove('shifted-content');
+    }
+});
 
         document.querySelectorAll('.reply-btn').forEach(button => {
             button.addEventListener('click', function() {
@@ -111,7 +100,7 @@
                 </div>
             `;
                     container.appendChild(form);
-                    
+
                     // Add event listener to the cancel button
                     form.querySelector('.cancel-btn').addEventListener('click', function() {
                         container.removeChild(form);
@@ -121,7 +110,7 @@
                 }
             });
         });
-        
+
         function refreshScript(src) {
     // Remove the existing script if it exists
     const existingScript = document.querySelector(`script[src="${src}"]`);
@@ -137,7 +126,7 @@
     // Append the new script element to the head
     document.head.appendChild(script);
 }
-});
-</script>
+    });
+</script> 
 
 @endsection
