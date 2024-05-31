@@ -60,6 +60,7 @@ Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasVi
 Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
 
 Route::get('/admin/strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
+Route::get('/admin/organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);
 Route::get('/CRUD/createberita', function () {
     return view('/CRUD/createberita',['title' => 'Tambah Berita']);
 });
@@ -68,4 +69,13 @@ Route::get('/CRUD/addfoto', function () {
 });
 Route::get('/CRUD/addvideo', function () {
     return view('/CRUD/addvideo',['title' => 'Tambah Video']);
+});
+Route::get('/CRUD/addkasau', function () {
+    return view('/CRUD/addkasau',['title' => 'Tambah Kasau']);
+});
+Route::get('/CRUD/addwakasau', function () {
+    return view('/CRUD/addwakasau',['title' => 'Tambah Wakasau']);
+});
+Route::get('/CRUD/addaset', function () {
+    return view('/CRUD/addaset',['title' => 'Tambah Aset']);
 });
