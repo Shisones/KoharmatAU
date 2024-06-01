@@ -29,9 +29,9 @@
                             </div>
                             {{-- <p class="mb-1">{{ \Carbon\Carbon::parse($featured[0]->created_at)->format('d/m/Y')}}</p> --}}
                             {{-- <h2 class="card-title">{{ $featured[0]->berita_judul }}</h2> --}}
-                            <a href="/detailberita"><h2 class="card-title mb-2">{{ $featured[0]->berita_judul }}</h2></a>
+                            <a href="/detailberita/{{$featured[0]->berita_slug}}"><h2 class="card-title mb-2">{{ $featured[0]->berita_judul }}</h2></a>
                             {{-- <div class="category mb-3">{{ $featured[0]->kategori->kategori_nama }}</div> --}}
-                            <p>{{ $featured[0]->berita_isi }}</p>
+                            <p>{!! $featured[0]->berita_isi !!}</p>
                         </div>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
                                             <p class="mb-1">Nama Penulis</p>
                                             <div class="category mb-2 ms-auto">{{ $b->kategori->kategori_nama }}</div>
                                         </div>
-                                        <a href="/detailberita"><h2 class="card-title mb-2">{{ $b->berita_judul }}</h2></a>
+                                        <a href="/detailberita/{{$b->berita_slug}}"><h2 class="card-title mb-2">{{ $b->berita_judul }}</h2></a>
                                         {{-- <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2> --}}
-                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p>
+                                        <p class="card-text mb-1">{!! $b->berita_isi !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,9 +125,9 @@
                                         <p class="mb-1">Nama Penulis</p>
                                         <div class="category mb-2 ms-auto">{{ $b->kategori->kategori_nama }}</div>
                                     </div>
-                                    <a href="/detailberita"><h2 class="card-title mb-2">{{ $b->berita_judul }}</h2></a>
+                                    <a href="/detailberita/{{$b->berita_slug}}"><h2 class="card-title mb-2">{{ $b->berita_judul }}</h2></a>
                                     {{-- <h2 class="card-title mb-2">{{ $b->berita_judul }}</h2> --}}
-                                    <p class="card-text mb-1">{{ $b->berita_isi }}</p>
+                                    <p class="card-text mb-1">{!! $b->berita_isi !!}</p>
                                 </div>
                             </div>
                         </div>

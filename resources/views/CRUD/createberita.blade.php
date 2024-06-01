@@ -11,18 +11,25 @@
                         <h3>Tambahkan Berita Baru</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="/CRUD/createberita" method="POST">
+                            @csrf
+                            <input type="hidden" name="berita_slug" id="berita_slug">
                             <div class="form-group mb-3">
-                                <label for="nama">Judul Berita</label>
-                                <input type="text" class="form-control" id="nama" placeholder="Masukkan Judul Berita">
+                                <label for="penulis_nama">Nama Penulis</label>
+                                <input type="text" class="form-control" name="penulis_nama" id="penulis_nama" placeholder="Masukkan Nama Penulis">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="inputState1">Kategori Berita</label>
+                                <label for="berita_judul">Judul Berita</label>
+                                <input type="text" class="form-control" name="berita_judul" id="berita_judul" placeholder="Masukkan Judul Berita">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="kategori_id">Kategori Berita</label>
                                 <div class="custom-select">
-                                    <select id="inputState1" class="form-control">
-                                        <option selected>Pilih...</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
+                                    <select name="kategori_id" id="kategori_id" class="form-control">
+                                        <option selected disabled hidden>Pilih...</option>
+                                        @foreach ($kategori as $item)
+                                            <option value="{{ $item['kategori_id'] }}">{{ $item['kategori_nama'] }} </option>
+                                        @endforeach
                                     </select>
                                     <div class="select-arrow">
                                         <i class="bi bi-chevron-down"></i>
@@ -30,12 +37,13 @@
                                 </div>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="inputState1">Jenis Berita</label>
+                                <label for="berita_type">Jenis Berita</label>
                                 <div class="custom-select">
-                                    <select id="inputState1" class="form-control">
-                                        <option selected>Pilih...</option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
+                                    <select name="berita_type" id="berita_type" class="form-control">
+                                        <option selected disabled hidden>Pilih...</option>
+                                        <option value="Utama">Berita Utama</option>
+                                        <option value="Koharmat">Berita Koharmat</option>
+                                        <option value="Lainnya">Berita Lainnya</option>
                                     </select>
                                     <div class="select-arrow">
                                         <i class="bi bi-chevron-down"></i>
@@ -45,7 +53,7 @@
 
                             <div class="form-group mb-3">
                                 <label for="wysiwyg">Isi Berita</label>
-                                <textarea id="wysiwyg" name="wysiwyg"></textarea>
+                                <textarea id="wysiwyg" name="berita_isi"></textarea>
                             </div>
 
                             <div class="d-flex justify-content-end">
@@ -123,21 +131,21 @@
         });
         
         function refreshScript(src) {
-    // Remove the existing script if it exists
-    const existingScript = document.querySelector(`script[src="${src}"]`);
-    if (existingScript) {
-        existingScript.remove();
-    }
+            // Remove the existing script if it exists
+            const existingScript = document.querySelector(`script[src="${src}"]`);
+            if (existingScript) {
+                existingScript.remove();
+            }
 
-    // Create a new script element
-    const script = document.createElement('script');
-    script.src = src;
-    script.type = 'text/javascript';
+            // Create a new script element
+            const script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
 
-    // Append the new script element to the head
-    document.head.appendChild(script);
-}
-});
+            // Append the new script element to the head
+            document.head.appendChild(script);
+        }
+    });
 </script>
 
 @endsection

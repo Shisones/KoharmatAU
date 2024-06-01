@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\BeritaModel;
+use App\Models\KategoriModel;
 use Illuminate\Http\Request;
 use App\Models\BeritaTagModel;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class BeritaController extends Controller
 {
@@ -31,5 +33,38 @@ class BeritaController extends Controller
         $tags = $this->beritaTagModel->readBeritaTag($berita->berita_id);
 
         return view('detailberita', ['title' => 'Detail Berita', 'listBerita' => $listBerita, 'berita' => $berita, 'tags' => $tags]);
+    }
+
+    public function create(){
+        return view('CRUD/createberita', [
+            'title' => 'Tambah Berita',
+            'kategori' => KategoriModel::all(),
+        ]);
+    }
+
+    public function addBerita(Request $request){
+        $validator = Validator::make($request->all(), [
+            'berita_judul' => 'required|string|max:255',
+            'berita_isi' => 'required|string|max:255',
+            'berita_type' => 'required',
+            'kategori_id' => 'required',
+            'penulis_nama' => 'required|string|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $result = $this->beritaModel->addBerita($request);
+
+        if ($result) {
+            return view('CRUD/createberita', [
+                'title' => 'Tambah Berita',
+                'kategori' => KategoriModel::all(),
+            ]);
+        } else {
+            return response()->json(['error' => 'Gagal membuat berita.'], 500);
+            
+        }
     }
 }

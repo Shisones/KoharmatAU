@@ -68,9 +68,10 @@ Route::get('/CRUD/strukturorganisasi', function () {
 Route::get('/CRUD/organisasikoharmat', function () {
     return view('/CRUD/organisasikoharmat',['title' => 'Tambah Organisasi Koharmat']);
 });
-Route::get('/CRUD/createberita', function () {
-    return view('/CRUD/createberita',['title' => 'Tambah Berita']);
-});
+
+Route::get('/CRUD/createberita', [BeritaController::class, 'create']);
+Route::post('/CRUD/createberita', [BeritaController::class, 'addBerita']);
+
 Route::get('/CRUD/addfoto', function () {
     return view('/CRUD/addfoto',['title' => 'Tambah Foto']);
 });

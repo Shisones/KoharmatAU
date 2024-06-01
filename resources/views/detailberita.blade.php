@@ -26,7 +26,7 @@
                                 </div>
                                 <h2 class="card-title mb-3">{{ $berita->berita_judul }}</h2>
                                 <p class="card-text">
-                                    {{ $berita->berita_isi }}
+                                    {!! $berita->berita_isi !!}
                                 </p>
                                 <div class="tags">
                                     <h5>Tag:</h5>
@@ -59,7 +59,7 @@
                                                             <div class="category mb-1 ms-auto">{{ $b->kategori->kategori_nama }}</div>
                                                         </div>
                                                         <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
-                                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p>
+                                                        <p class="card-text mb-1">{!! $b->berita_isi !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,7 +89,7 @@
                                                             <div class="category mb-1 ms-auto">{{ $b->kategori->kategori_nama }}</div>
                                                         </div>
                                                         <h2 class="card-title mb-1">{{ $b->berita_judul }}</h2>
-                                                        <p class="card-text mb-1">{{ $b->berita_isi }}</p>
+                                                        <p class="card-text mb-1">{!! $b->berita_isi !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
