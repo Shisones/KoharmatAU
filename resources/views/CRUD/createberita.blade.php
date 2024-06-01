@@ -11,7 +11,7 @@
                         <h3>Tambahkan Berita Baru</h3>
                     </div>
                     <div class="card-body">
-                        <form action="/CRUD/createberita" method="POST">
+                        <form action="/CRUD/createberita" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="berita_slug" id="berita_slug">
                             <div class="form-group mb-3">
@@ -54,6 +54,11 @@
                             <div class="form-group mb-3">
                                 <label for="wysiwyg">Isi Berita</label>
                                 <textarea id="wysiwyg" name="berita_isi"></textarea>
+                            </div>
+                            
+                            <div class="form-group mb-3">
+                                <label for="berita_img">Upload Gambar</label>
+                                <input type="file" class="form-control" id="berita_img" name="berita_img">
                             </div>
 
                             <div class="d-flex justify-content-end">

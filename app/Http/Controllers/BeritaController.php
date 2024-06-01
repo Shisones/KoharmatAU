@@ -49,6 +49,7 @@ class BeritaController extends Controller
             'berita_type' => 'required',
             'kategori_id' => 'required',
             'penulis_nama' => 'required|string|max:255',
+            'berita_img' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         if ($validator->fails()) {

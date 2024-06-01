@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class BeritaModel extends Model
 {
@@ -48,13 +49,21 @@ class BeritaModel extends Model
     }
 
     public function addBerita($request){
+        $imagePath = "assets/img/berita/1.png";
+        if ($request->hasFile('berita_img')) {
+            $image = $request->file('berita_img');
+            $imageName = time() . '_' . SlugService::createSlug(self::class, 'berita_slug', $request->berita_judul) . '.' . $image->getClientOriginalExtension();
+            $imagePath = $image->move(public_path('assets/img/berita'), $imageName);
+            $imagePath = 'assets/img/berita/' . $imageName;
+        }
+
         $pesan = self::create([
             'berita_judul' => $request->berita_judul,
             'berita_isi' => $request->berita_isi,
             'berita_type' => $request->berita_type,
             'kategori_id' => $request->kategori_id,
             'penulis_nama' => $request->penulis_nama,
-            'berita_img' => 'assets/img/tentangkami/1.png',
+            'berita_img' => $imagePath,
         ]);
     
         return $pesan ? 1 : 0;
