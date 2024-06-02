@@ -48,6 +48,7 @@ Route::get('/detailorganisasikoharmat', function () {
 });
 
 Route::get('/berita', [BeritaController::class, 'index']);
+Route::get('/berita', [BeritaController::class, 'search'])->name('berita.filter');
 
 Route::get('detailberita/{slug}',[BeritaController::class, 'detail']);
 
