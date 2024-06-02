@@ -24,7 +24,7 @@ class BeritaController extends Controller
         $berita = $this->beritaModel->readBerita();
         $featured = $this->beritaModel->readFeatured();
         
-        return view('berita',['title' => 'Berita', 'berita' => $berita, 'featured' => $featured]);
+        return view('berita',['title' => 'Berita', 'berita' => $berita, 'featured' => $featured, 'kategori' => KategoriModel::all()]);
     }
 
     public function detail($slug){
@@ -67,5 +67,18 @@ class BeritaController extends Controller
             return response()->json(['error' => 'Gagal membuat berita.'], 500);
             
         }
+    }
+
+    public function search(Request $request){
+        // dd($request);
+
+        if (!empty($request->kata_kunci) || $request->kategori != "all") {
+            $result = $this->beritaModel->search($request);
+        } else {
+            $result = $this->beritaModel->readBerita();
+        }
+        $featured = $this->beritaModel->readFeatured();
+
+        return view('berita',['title' => 'Berita', 'berita' => $result, 'featured' => $featured, 'kategori' => KategoriModel::all(), 'request' => $request]);
     }
 }

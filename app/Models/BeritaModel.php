@@ -69,6 +69,24 @@ class BeritaModel extends Model
         return $pesan ? 1 : 0;
     }
 
+    public function search($request){
+        $query = self::query();
+    
+        if($request->has('kategori') && $request->kategori != "all") {
+            $query->where('kategori_id', $request->kategori);
+        }
+    
+        if($request->has('kata_kunci')) {
+            $query->where(function($q) use ($request) {
+                $q->where('berita_judul', 'LIKE', "%$request->kata_kunci%")
+                  ->orWhere('berita_isi', 'LIKE', "%$request->kata_kunci%");
+            });
+        }
+    
+        return $query->get();
+    }
+    
+
     public function sluggable(): array
     {
         return [

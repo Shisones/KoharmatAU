@@ -31,6 +31,8 @@
    <!-- Include CKEditor -->
    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
   <!-- =======================================================
   * Template Name: BizLand
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
