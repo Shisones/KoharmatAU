@@ -5,20 +5,24 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\File;
+use Illuminate\Support\Facades\Storage;
 use App\Models\PesanModel;
 use App\Models\BalasanModel;
+use App\Models\StrukturOrganisasiModel;
 
 
 
 class AdminController extends Controller
 {
     //
-    private $pesanModel, $balasanModel;
+    private $pesanModel, $balasanModel, $strukturOrganisasiModel;
 
     public function __construct()
     {
         $this->pesanModel = new PesanModel();
         $this->balasanModel = new BalasanModel();
+        $this->strukturOrganisasiModel = new StrukturOrganisasiModel();
     }
 
     public function index(){
@@ -34,7 +38,34 @@ class AdminController extends Controller
     }
 
     public function strukturOrganisasiView(){
-        return view('adminStrukturOrganisasi',['title' => 'Admin | Struktur Organisasi']);
+        return view('CRUD/strukturorganisasi',['title' => 'Admin | Struktur Organisasi']);
+    }
+
+    public function addStrukturOrganisasiNode(Request $request){
+        $validator = Validator::make($request->all(), [
+            'node_id' => 'required|int',
+            'node_predecessor' => 'required|int',
+            'node_link' => 'required|string',
+            'node_img' => [
+                'required',
+                File::image()
+            ],
+            'node_nama' => "required|string",
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $nodeCreate = $this->strukturOrganisasiModel->addNode($request);
+
+        if($nodeCreate['success']){
+            $img_path = Storage::url($nodeCreate['img_path']);
+            return response()->json(['message' => "Berhasil menambah anggota", 'code' => 201, 'img_path' => $img_path], 201);
+        }
+        else{
+            return response()->json(['error' => "Gagal menambah anggota"], 500);
+        }
     }
 
     public function addBalasan(Request $request){ 

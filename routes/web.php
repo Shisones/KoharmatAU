@@ -62,12 +62,11 @@ Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
 // Route::get('strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
 // Route::get('organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);
 
-Route::get('/CRUD/strukturorganisasi', function () {
-    return view('/CRUD/strukturorganisasi',['title' => 'Tambah Struktur Organisasi']);
-});
+Route::get('/CRUD/strukturorganisasi', [AdminController::class,'strukturOrganisasiView']);
 Route::get('/CRUD/organisasikoharmat', function () {
     return view('/CRUD/organisasikoharmat',['title' => 'Tambah Organisasi Koharmat']);
 });
+Route::post('/CRUD/strukturorganisasi/addNode',[AdminController::class,'addStrukturOrganisasiNode']);
 
 Route::get('/CRUD/createberita', [BeritaController::class, 'create']);
 Route::post('/CRUD/createberita', [BeritaController::class, 'addBerita']);
