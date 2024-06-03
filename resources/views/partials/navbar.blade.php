@@ -62,7 +62,12 @@ f="#">Deep Drop Down 2</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto {{ ($title == "Galeri") ? "active" : "" }}" href="/galeri">Galeri</a></li>
-          <li><a class="nav-link scrollto {{ ($title == "Kontak") ? "active" : "" }}" href="/kontak">Kontak</a></li>
+          <li class="dropdown"><a href="#"><span>Kontak Kami</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="/kontak">Kirim Pesan</a></li>
+              <li><a href="/pesanmasyarakat">Lihat Balasan</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
