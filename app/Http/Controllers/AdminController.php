@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FaqModel;
+use App\Models\AdminModel;
 use App\Models\PesanModel;
 use App\Models\BalasanModel;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ use Illuminate\Validation\Rules\File;
 use App\Models\StrukturOrganisasiModel;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Hash;
 
 
 class AdminController extends Controller
@@ -171,4 +172,16 @@ class AdminController extends Controller
             return response()->json(['error' => 'Gagal menghapus FAQ.'], 500);
         }
     }
+
+    // public function hashPassword($id){
+    //     $result = AdminModel::firstWhere('admin_id', $id);
+
+    //     $faq = AdminModel::where('admin_id', $id)
+    //                  ->update([
+    //                     'admin_username' => $result->admin_username,
+    //                     'admin_password' => Hash::make($result->admin_password)
+    //                  ]);
+        
+    //                  return $faq ? 1 : 0;
+    // }
 }

@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
-use App\Http\Controllers\PesanController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BerandaController;
 
 Route::get('/', [BerandaController::class, 'index']);
@@ -100,7 +101,11 @@ Route::delete('/CRUD/deletefaq/{id}', [AdminController::class, 'deleteFaq']);
 
 Route::get('login', function () {
     return view('login',['title' => 'Login']);
-});
+})->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
+
+Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
 Route::get('/CRUD/resetpassword', function () {
     return view('/CRUD/resetpassword',['title' => 'Reset Password']);
 });
