@@ -13,7 +13,7 @@
                         <h3>Daftar Faq</h3>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <a href="/CRUD/addfaq" class="btn background-primary">Tambahkan FAQ</a>
+                        <a href="/CRUD/addfaq" class="btn background-primary">+ Tambahkan</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
