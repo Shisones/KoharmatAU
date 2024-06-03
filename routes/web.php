@@ -5,10 +5,9 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BerandaController;
 
-Route::get('/', function () {
-    return view('index',['title' => 'Beranda']);
-});
+Route::get('/', [BerandaController::class, 'index']);
 
 Route::post('/kirimPesan', [PesanController::class, 'addPesan']);
 

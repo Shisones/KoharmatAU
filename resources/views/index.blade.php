@@ -406,16 +406,18 @@
           <div class="col-xl-10">
             <ul class="faq-list">
 
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              </li>
+              @foreach ($faq as $item)
+                <li>
+                  <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">{{ $item->faq_pertanyaan }}<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                  <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                    <p>
+                      {{ $item->faq_jawaban }}
+                    </p>
+                  </div>
+                </li>
+              @endforeach
 
-              <li>
+              {{-- <li>
                 <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq2" class="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -458,7 +460,7 @@
                     Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
                   </p>
                 </div>
-              </li>
+              </li> --}}
 
             </ul>
           </div>
