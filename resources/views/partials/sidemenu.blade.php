@@ -3,6 +3,16 @@
                 <div class="side-menu my-3" style="height:calc(100vh - 70px);">
                     <button id="toggle-button" class="btn background-primary toggle-button"><i class='bx bx-chevron-left'></i></button>
                     <div id="menu-content">
+                        <div class="container mt-4">
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-person-circle fs-3 me-3"></i>
+                                    <a href="" style="font-weight: 700">Ubah Password</a>
+                                </li>
+                            </ul>
+                        </div>
+                        {{-- <ul><i class="bi bi-person-circle fs-3"></i> <a href="" style="font-weight: 700">Ubah Password</a></ul> --}}
+                        <hr>
                         <ul>
                             <li class="dropdown"><a href="#"><span>Pertanyaan</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
