@@ -86,3 +86,9 @@ Route::get('/CRUD/addwakasau', function () {
 Route::get('/CRUD/addaset', function () {
     return view('/CRUD/addaset',['title' => 'Tambah Aset']);
 });
+Route::get('/CRUD/viewfaq', function () {
+    return view('/CRUD/viewfaq',['title' => 'Tampilkan Faq']);
+});
+Route::get('/CRUD/addfaq', function () {
+    return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
+});

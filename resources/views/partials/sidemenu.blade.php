@@ -4,7 +4,6 @@
                     <button id="toggle-button" class="btn background-primary toggle-button"><i class='bx bx-chevron-left'></i></button>
                     <div id="menu-content">
                         <ul>
-                            
                             <li class="dropdown"><a href="#"><span>Pertanyaan</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
                                     <li><a href="/admin" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang belum dibalas") ? "active" : "link-black" }}">Pertanyaan yang belum dibalas</a></li>
@@ -12,6 +11,8 @@
                                 </ul>
                             </li>
                         </ul>
+                        <hr>
+                        <li><a class="nav-link" href="/addfaq">Aset Koharmat</a></li>
                         <hr>
                         <ul>
                             <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-right"></i></a>
@@ -41,15 +42,14 @@
                         </ul>
                         <hr>
                         <ul>
-                            <li class="dropdown"><a href="#" class="text-decoration-none {{ ($title == "Admin | Berita") ? "active" : "link-black" }}"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
+                            <li class="dropdown"><a href="#"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li><a href="/CRUD/strukturorganisasi" class="text-decoration-none {{ ($title == "Admin | Struktur Organisasi") ? "active" : "link-black" }}">Struktur Organisasi KoharmatAU</a></li>
+                                    <li><a href="/admin/strukturorganisasi" class="text-decoration-none {{ ($title == "Admin | Struktur Organisasi") ? "active" : "link-black" }}">Struktur Organisasi KoharmatAU</a></li>
                                     <li><a href="" class="text-decoration-none">Organisasi KoharmatAU</a></li>
                                 </ul>
                             </li>
                         </ul>
-                        <hr>
-                        <ul><a class="nav-link" href="">Aset Koharmat</a></ul>
+                        <li><a class="nav-link" href="/asetkoharmat">Aset Koharmat</a></li>
                         {{-- <a href="/admin" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang belum dibalas") ? "active" : "link-black" }}">Pertanyaan yang belum dibalas</a>
                         <hr>
                         <a href="/admin/pesan/dibalas" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang sudah dibalas") ? "active" : "link-black" }}">Pertanyaan yang sudah dibalas</a>
