@@ -12,7 +12,7 @@
                             </li>
                         </ul>
                         <hr>
-                        <ul><a class="nav-link" href="/CRUD/addfaq">Tambah FAQ</a></ul>
+                        <ul><a class="nav-link" href="/CRUD/viewfaq">FAQ</a></ul>
                         <hr>
                         <ul>
                             <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-right"></i></a>
