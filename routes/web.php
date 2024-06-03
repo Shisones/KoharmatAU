@@ -86,16 +86,14 @@ Route::get('/CRUD/addwakasau', function () {
 Route::get('/CRUD/addaset', function () {
     return view('/CRUD/addaset',['title' => 'Tambah Aset']);
 });
-Route::get('/CRUD/viewfaq', function () {
-    return view('/CRUD/viewfaq',['title' => 'Tampilkan Faq']);
-});
+Route::get('/CRUD/viewfaq', [AdminController::class, 'viewFaq']);
 
 Route::get('/CRUD/addfaq', function () {
     return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
 });
-
 Route::post('/CRUD/addfaq', [AdminController::class, 'addFaq']);
 
-Route::get('/CRUD/updatefaq', function () {
-    return view('/CRUD/updatefaq',['title' => 'Update Faq']);
-});
+Route::get('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaqPage']);
+Route::patch('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaq']);
+
+Route::delete('/CRUD/deletefaq/{id}', [AdminController::class, 'deleteFaq']);

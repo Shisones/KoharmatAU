@@ -25,15 +25,27 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $no = 1;
+                                @endphp
+                                @foreach ($faq as $item)
+                                    <form id="delete-form-{{ $item->faq_id }}" action="/CRUD/deletefaq/{{ $item->faq_id }}" method="POST" style="display: none;">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
                                     <tr>
-                                        <td>1</td>
-                                        <td>pertanyaan1</td>
-                                        <td>jawaban1</td>
+                                        <td>{{ $no }}</td>
+                                        <td>{{ $item->faq_pertanyaan }}</td>
+                                        <td>{{ $item->faq_jawaban }}</td>
                                         <td>
-                                            <a href="/CRUD/updatefaq" style="color: rgb(115, 209, 123); margin-right: 10px;">Update</a>
-                                            <a href="" style="color: rgb(217, 55, 55);">Delete</a>
+                                            <a href="/CRUD/updatefaq/{{ $item->faq_id }}" style="color: rgb(115, 209, 123); margin-right: 10px;">Update</a>
+                                            <a href="#" onclick="submitDeleteForm({{ $item->faq_id }})" style="color: rgb(217, 55, 55);">Delete</a>
                                         </td>
                                     </tr>
+                                    @php
+                                        $no++;
+                                    @endphp
+                                @endforeach 
                             </tbody>
                         </table>
                     </div>
@@ -147,5 +159,10 @@
             });
         });
     });
+
+    function submitDeleteForm(faqId) {
+        event.preventDefault();
+        document.getElementById('delete-form-' + faqId).submit();
+    }
 </script>
 @endsection

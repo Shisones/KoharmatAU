@@ -123,4 +123,52 @@ class AdminController extends Controller
             
         }
     }
+
+    public function viewFaq(){
+        $faq = $this->faqModel->readFaq();
+
+        return view('/CRUD/viewfaq',['title' => 'Tampilkan Faq', 'faq' => $faq]);
+    }
+
+    public function updateFaqPage($id){
+        $faq = $this->faqModel->readFaqById($id);
+
+        return view('/CRUD/updatefaq',['title' => 'Update Faq', 'faq' => $faq]);
+    }
+
+    public function updateFaq(Request $request, $id){
+        $validator = Validator::make($request->all(), [
+            'pertanyaan' => 'required|string|max:255',
+            'jawaban' => 'required|string|max:255',
+        ]);
+    
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+    
+        $result = $this->faqModel->updateFaq($request, $id);
+    
+        if ($result) {
+            $faq = $this->faqModel->readFaqById($id);
+            return view('/CRUD/updatefaq', ['title' => 'Perbarui FAQ', 'faq' => $faq]);
+        } else {
+            return response()->json(['error' => 'Gagal memperbarui FAQ.'], 500);
+        }
+    }    
+
+    public function deleteFaq($id){
+        $faq = $this->faqModel->find($id);
+
+        if (!$faq) {
+            return response()->json(['error' => 'FAQ tidak ditemukan.'], 404);
+        }
+
+        $result = $this->faqModel->deleteFaq($id);
+
+        if ($result) {
+            return self::viewFaq();
+        } else {
+            return response()->json(['error' => 'Gagal menghapus FAQ.'], 500);
+        }
+    }
 }
