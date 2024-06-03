@@ -93,6 +93,9 @@ Route::get('/CRUD/viewfaq', function () {
 Route::get('/CRUD/addfaq', function () {
     return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
 });
+
+Route::post('/CRUD/addfaq', [AdminController::class, 'addFaq']);
+
 Route::get('/CRUD/updatefaq', function () {
     return view('/CRUD/updatefaq',['title' => 'Update Faq']);
 });
