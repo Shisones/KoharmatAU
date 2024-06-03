@@ -12,7 +12,7 @@
                             </li>
                         </ul>
                         <hr>
-                        <li><a class="nav-link" href="/addfaq">Aset Koharmat</a></li>
+                        <ul><a class="nav-link" href="/addfaq">Aset Koharmat</a></ul>
                         <hr>
                         <ul>
                             <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-right"></i></a>
@@ -49,7 +49,8 @@
                                 </ul>
                             </li>
                         </ul>
-                        <li><a class="nav-link" href="/asetkoharmat">Aset Koharmat</a></li>
+                        <hr>
+                        <ul><a class="nav-ulnk" href="/asetkoharmat">Aset Koharmat</a></ul>
                         {{-- <a href="/admin" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang belum dibalas") ? "active" : "link-black" }}">Pertanyaan yang belum dibalas</a>
                         <hr>
                         <a href="/admin/pesan/dibalas" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang sudah dibalas") ? "active" : "link-black" }}">Pertanyaan yang sudah dibalas</a>
