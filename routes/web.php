@@ -93,9 +93,11 @@ Route::get('/CRUD/addfaq', function () {
 });
 Route::post('/CRUD/addfaq', [AdminController::class, 'addFaq']);
 
-Route::get('/CRUD/updatefaq', function () {
-    return view('/CRUD/updatefaq',['title' => 'Update Faq']);
-});
+Route::get('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaqPage']);
+Route::patch('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaq']);
+
+Route::delete('/CRUD/deletefaq/{id}', [AdminController::class, 'deleteFaq']);
+
 Route::get('login', function () {
     return view('login',['title' => 'Login']);
 });
