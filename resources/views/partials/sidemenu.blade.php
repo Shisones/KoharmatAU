@@ -7,7 +7,7 @@
                             <ul class="list-unstyled">
                                 <li class="d-flex align-items-center">
                                     <i class="bi bi-person-circle fs-3 me-3"></i>
-                                    <a href="" style="font-weight: 700">Ubah Password</a>
+                                    <a href="/CRUD/resetpassword" style="font-weight: 700">Ubah Password</a>
                                 </li>
                             </ul>
                         </div>

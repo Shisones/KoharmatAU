@@ -18,12 +18,12 @@
                     
                                     <div class="form-group">
                                         <label for="username" class="mb-3">Username</label>
-                                        <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username" required>
+                                        <input type="text" name="username" class="form-control" id="username" placeholder="Masukkan Username" required>
                                     </div>
                     
                                     <div class="form-group mt-3 mb-2">
                                         <label for="password" class="mb-3">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password" required>
                                     </div>
 
                                     <p style="font-size: 14px">Lupa password? <a href="">Atur Ulang</a></p>

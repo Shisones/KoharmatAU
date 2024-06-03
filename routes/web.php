@@ -102,3 +102,6 @@ Route::get('/CRUD/updatefaq', function () {
 Route::get('login', function () {
     return view('login',['title' => 'Login']);
 });
+Route::get('/CRUD/resetpassword', function () {
+    return view('/CRUD/resetpassword',['title' => 'Reset Password']);
+});
