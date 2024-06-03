@@ -89,6 +89,8 @@ Route::get('/CRUD/addaset', function () {
 Route::get('/CRUD/viewfaq', function () {
     return view('/CRUD/viewfaq',['title' => 'Tampilkan Faq']);
 });
+
 Route::get('/CRUD/addfaq', function () {
     return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
 });
+Route::post('/CRUD/addfaq', [AdminController::class, 'addFaq']);

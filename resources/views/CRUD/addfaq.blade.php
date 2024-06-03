@@ -11,14 +11,15 @@
                         <h3>Tambahkan Faq</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="/CRUD/addfaq" method="POST">
+                            @csrf
                             <div class="form-group mb-3">
                                 <label for="pertanyaan">Pertanyaan</label>
-                                <input type="text" class="form-control" id="pertanyaan" placeholder="Masukkan Pertanyaan">
+                                <input type="text" class="form-control" name="pertanyaan" id="pertanyaan" placeholder="Masukkan Pertanyaan">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="jawaban">Jawaban</label>
-                                <input type="textarea" class="form-control" id="jawaban" placeholder="">
+                                <input type="textarea" class="form-control" name="jawaban" id="jawaban" placeholder="Masukkan Jawaban">
                             </div>
 
                             <div class="d-flex justify-content-end">

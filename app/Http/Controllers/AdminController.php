@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rules\File;
-use Illuminate\Support\Facades\Storage;
+use App\Models\FaqModel;
 use App\Models\PesanModel;
 use App\Models\BalasanModel;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Validation\Rules\File;
 use App\Models\StrukturOrganisasiModel;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 
 
@@ -23,6 +24,7 @@ class AdminController extends Controller
         $this->pesanModel = new PesanModel();
         $this->balasanModel = new BalasanModel();
         $this->strukturOrganisasiModel = new StrukturOrganisasiModel();
+        $this->faqModel = new FaqModel();
     }
 
     public function index(){
@@ -99,6 +101,26 @@ class AdminController extends Controller
             }
         } else {
             return response()->json(['error' => 'Gagal mengirim balasan.'], 500);
+        }
+    }
+
+    public function addFaq(Request $request){
+        $validator = Validator::make($request->all(), [
+            'pertanyaan' => 'required|string|max:255',
+            'jawaban' => 'required|string|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $result = $this->faqModel->addFaq($request);
+
+        if ($result) {
+            return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
+        } else {
+            return response()->json(['error' => 'Gagal membuat berita.'], 500);
+            
         }
     }
 }
