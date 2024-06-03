@@ -92,3 +92,6 @@ Route::get('/CRUD/viewfaq', function () {
 Route::get('/CRUD/addfaq', function () {
     return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
 });
+Route::get('/CRUD/updatefaq', function () {
+    return view('/CRUD/updatefaq',['title' => 'Update Faq']);
+});

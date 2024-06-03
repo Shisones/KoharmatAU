@@ -19,8 +19,9 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Pertanyaan</th>
-                                    <th>Jawaban</th>
+                                    <th style="width: 40%">Pertanyaan</th>
+                                    <th style="width: 40%">Jawaban</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,6 +29,10 @@
                                         <td>1</td>
                                         <td>pertanyaan1</td>
                                         <td>jawaban1</td>
+                                        <td>
+                                            <a href="/CRUD/updatefaq" style="color: rgb(115, 209, 123); margin-right: 10px;">Update</a>
+                                            <a href="" style="color: rgb(217, 55, 55);">Delete</a>
+                                        </td>
                                     </tr>
                             </tbody>
                         </table>
