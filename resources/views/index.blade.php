@@ -224,7 +224,7 @@
         <div class="section-title">
           <h3><span>KASAU</span> dari masa ke masa</h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-          <a href="/kasau"><h2>Lihat Semua</h2></a>
+          <a href="/kasau"><h2 style="font-size: 18px">Lihat Semua</h2></a>
         </div>
         
         <div class="row mt-3">
