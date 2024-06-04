@@ -5,12 +5,14 @@
                     <div id="menu-content">
                         <div class="container mt-4">
                             <ul class="list-unstyled">
-                                <li class="d-flex align-items-center">
+                                <li class="d-flex align-items-center justify-content-between">
                                     <i class="bi bi-person-circle fs-3 me-3"></i>
                                     <a href="/CRUD/resetpassword" style="font-weight: 700">Ubah Password</a>
+                                    <button class="btn background-primary ms-auto">Log out</button>
                                 </li>
                             </ul>
                         </div>
+                        
                         {{-- <ul><i class="bi bi-person-circle fs-3"></i> <a href="" style="font-weight: 700">Ubah Password</a></ul> --}}
                         <hr>
                         <ul>
