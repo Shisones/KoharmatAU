@@ -98,7 +98,7 @@ Route::middleware('authenticated')->group(function () {
 
     Route::delete('/CRUD/deletefaq/{id}', [AdminController::class, 'deleteFaq']);
 
-    Route::get('/logout', [LoginController::class, 'logout']);
+    Route::post('/logout', [LoginController::class, 'logout']);
 
     Route::get('/CRUD/resetpassword', function () {
         return view('/CRUD/resetpassword',['title' => 'Reset Password']);
