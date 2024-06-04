@@ -43,6 +43,28 @@ class StrukturOrganisasiModel extends Model
         return $nodes;
     }
 
+    public function updateNode($request, $id){
+        $node = self::find($id);
+
+        $img_path = $node->struktur_img; // Current image path
+
+        if ($request->hasFile('node_img')) {
+            // Delete the old image
+            Storage::disk('public')->delete($node->struktur_img);
+            
+            // Store the new image
+            $img = $request->file('node_img');
+            $img_path = $img->store("strukturOrganisasi", "public");
+        }
+
+        $node->struktur_nama = $request->node_nama;
+        $node->struktur_img = $img_path;
+
+        $node->save();
+
+        return ['success' => $node ? 1 : 0, 'img_path' => $img_path];
+    }
+
     public function deleteNode($id){
         $node = self::find($id);
         if (!$node) {

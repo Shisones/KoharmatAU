@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // Function to add a new node
-  function addNode(event) {
+  function addNode() {
     const currentButton = this;
     const nodePredecessor = this.parentNode.getAttribute(
       "data-node-predecessor"
@@ -296,9 +296,81 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
-  function editNode() {
-    console.log("edit");
+  function editNode(event) {
+  const currentButton = this;
+  const nodeContainer = this.parentNode; //.tree-node
+  const nodeId = this.id.split("button-edit-")[1];
+  const nodeName = nodeContainer.querySelector(".tree-text").innerHTML;
+  const nodeImgPath = nodeContainer.querySelector(".tree-image").src;
+  let itemParentNode = nodeContainer.parentNode; //li
+  console.log(nodeContainer);
+
+  let nodeForm = nodeEditView(csrf, nodeId, nodeName, nodeImgPath);
+  itemParentNode.replaceChild(nodeForm, nodeContainer);
+
+  document.querySelectorAll(".add-node-btn").forEach((button) => {
+    button.disabled = true;
+  });
+  document.querySelectorAll('[id^="button-delete-"]').forEach((button) => {
+    button.disabled = true;
+  });
+  document.querySelectorAll('[id^="button-edit-"]').forEach((button) => {
+    button.disabled = true;
+  });
+
+  let canceled = false;
+  nodeForm.querySelector(".cancel-btn").addEventListener("click", () => {
+    document.querySelectorAll(".add-node-btn").forEach((button) => {
+      button.disabled = false;
+    });
+    document.querySelectorAll('[id^="button-delete-"]').forEach((button) => {
+      button.disabled = false;
+    });
+    document.querySelectorAll('[id^="button-edit-"]').forEach((button) => {
+      button.disabled = false;
+    });
+    itemParentNode.replaceChild(nodeContainer, nodeForm);
+    canceled = true;
+  });
+  nodeForm.querySelector(".save-btn").addEventListener("click", () => {
+    document.querySelectorAll(".add-node-btn").forEach((button) => {
+      button.disabled = false;
+    });
+    document.querySelectorAll('[id^="button-delete-"]').forEach((button) => {
+      button.disabled = false;
+    });
+    document.querySelectorAll('[id^="button-edit-"]').forEach((button) => {
+      button.disabled = false;
+    });
+  });
+
+  if (!canceled) {
+    nodeForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const resultSubmit = await ajaxSubmitForm(this);
+      if (resultSubmit.code == 201) {
+        alert("Berhasil mengedit anggota");
+
+        const formData = new FormData(this);
+        // const newNode = document.createElement("li");
+        // newNode.innerHTML = nodeDefaultView(
+        //   id,
+        //   resultSubmit.img_path,
+        //   formData.get("node_nama")
+        // );
+        // itemParentNode.replaceChild(newNode, nodeForm);
+        // attachEventListeners(newNode);
+        nodeContainer.querySelector(".tree-image").src = resultSubmit.img_path;
+        nodeContainer.querySelector(".tree-text").innerHTML = formData.get("node_nama");
+        console.log(itemParentNode);
+        console.log(nodeForm.parentNode);
+        nodeForm.replaceWith(nodeContainer);
+      }
+    });
   }
+
+  refreshScript(inputImagePreviewScript);
+}
 
   async function deleteNode() {
     const currentButton = this;
@@ -319,7 +391,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   function nodeAddView(csrf, id, nodePredecessor) {
     return `
-    <form action="/CRUD/strukturorganisasi/addNode" method="POST">
+    <form action="/CRUD/strukturorganisasi/addNode" method="POST" enctype="multipart/form-data">
       <div class="tree-node d-flex align-items-center">
         ${csrf}
         <input type="hidden" name="node_id" value="${id}">
@@ -340,6 +412,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
           </li>
       </ul>
   `;
+  }
+
+  function nodeEditView(csrf, id, name, img_src) {
+    let form = document.createElement("form");
+    form.setAttribute("action",`/CRUD/strukturorganisasi/updateNode/${id}`);
+    form.setAttribute("method","POST");
+    form.setAttribute("enctype", "multipart/form-data");
+    form.innerHTML = `
+    <input type="hidden" name="_method" value="PATCH">
+      <div class="tree-node d-flex align-items-center">
+        ${csrf}
+        <input type="hidden" name="node_id" value="${id}">
+        <input type="hidden" name="node_link" value="#">
+            <span>
+            <label for="input-image" style="height:100px;width:100px;border:1px dashed;" id="input-image-preview"><img src="${img_src}" class="h-100"></label>
+            <input type="file" accept=".jpg, .jpeg, .png" name="node_img" id="input-image" class="d-none"/>
+            </span>
+            <span class="tree-text"><input type="text" name="node_nama" class="form-control w-100" placeholder="Masukkan nama" value="${name}"></input></span>
+            <button type="submit" class="btn btn-success save-btn ms-2 me-1">Simpan</button>
+            <button type="cancel" class="btn btn-danger cancel-btn me-2">Batal</button>
+            </div>
+  `;
+  return form;
   }
 
   function nodeDefaultView(id, img_path, name) {

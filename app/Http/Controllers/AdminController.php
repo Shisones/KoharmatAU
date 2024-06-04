@@ -72,6 +72,28 @@ class AdminController extends Controller
         }
     }
 
+    public function updateStrukturOrganisasiNode(Request $request, $id){
+        $validator = Validator::make($request->all(), [
+            'node_id' => 'required|int',
+            'node_link' => 'required|string',
+            'node_nama' => "required|string",
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $nodeUpdate = $this->strukturOrganisasiModel->updateNode($request,$id);
+
+        if($nodeUpdate['success']){
+            $img_path = Storage::url($nodeUpdate['img_path']);
+            return response()->json(['message' => "Berhasil mengedit anggota", 'code' => 201, 'img_path' => $img_path], 201);
+        }
+        else{
+            return response()->json(['error' => "Gagal mengedit anggota"], 500);
+        }
+    }
+
     public function deleteStrukturOrganisasiNode($id){
         $deleteNode = $this->strukturOrganisasiModel->deleteNode($id);
 

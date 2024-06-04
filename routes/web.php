@@ -67,6 +67,7 @@ Route::middleware('authenticated')->group(function () {
         return view('/CRUD/organisasikoharmat',['title' => 'Tambah Organisasi Koharmat']);
     });
     Route::post('/CRUD/strukturorganisasi/addNode',[AdminController::class,'addStrukturOrganisasiNode']);
+    Route::patch('/CRUD/strukturorganisasi/updateNode/{id}',[AdminController::class,'updateStrukturOrganisasiNode']);
     Route::delete('/CRUD/strukturorganisasi/deleteNode/{id}',[AdminController::class,'deleteStrukturOrganisasiNode']);
 
     Route::get('/CRUD/createberita', [BeritaController::class, 'create']);
