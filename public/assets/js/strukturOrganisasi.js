@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         initAddButton.querySelector(".add-node-btn").addEventListener("click", addNode);
       }
       else{
-
         // Select containers matching the pattern "node-id-childs"
         let nodeContainers = document.querySelectorAll('[id^="node-"][id$="-childs"]');
         console.log(nodeContainers);
@@ -111,6 +110,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             deleteNodeButton.setAttribute("id",`button-delete-${nodeId}`);
             deleteNodeButton.innerHTML = "<i class='bx bx-trash'></i>";
   
+            editNodeButton.addEventListener("click",editNode);
+            deleteNodeButton.addEventListener("click",deleteNode);
             
             treeNodeContainer.appendChild(editNodeButton);
             treeNodeContainer.appendChild(deleteNodeButton);
@@ -248,6 +249,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (deleteButton) {
       deleteButton.addEventListener("click", deleteNode);
     }
+  }
+
+  function editNode(){
+    console.log("edit");
+  }
+
+  function deleteNode(){
+    const currentButton = this;
+    const nodeId = this.id.split("button-delete-")[1];
+    console.log(`deleted ${nodeId}`);
   }
 
   function nodeAddView(csrf, id, nodePredecessor) {
