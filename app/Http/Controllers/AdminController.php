@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     //
-    private $pesanModel, $balasanModel, $strukturOrganisasiModel;
+    private $pesanModel, $balasanModel, $strukturOrganisasiModel, $faqModel;
 
     public function __construct()
     {
@@ -66,6 +66,17 @@ class AdminController extends Controller
         if($nodeCreate['success']){
             $img_path = Storage::url($nodeCreate['img_path']);
             return response()->json(['message' => "Berhasil menambah anggota", 'code' => 201, 'img_path' => $img_path], 201);
+        }
+        else{
+            return response()->json(['error' => "Gagal menambah anggota"], 500);
+        }
+    }
+
+    public function deleteStrukturOrganisasiNode($id){
+        $deleteNode = $this->strukturOrganisasiModel->deleteNode($id);
+
+        if($deleteNode){
+            return response()->json(['message' => "Berhasil menghapus anggota", 'code' => 201], 201);
         }
         else{
             return response()->json(['error' => "Gagal menambah anggota"], 500);

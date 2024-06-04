@@ -52,7 +52,7 @@
             </ul>
             <hr>
             <ul>
-                <li class="dropdown"><a href="#"><span>Kasau dan Wakau</span> <i class="bi bi-chevron-right"></i></a>
+                <li class="dropdown"><a href="#"><span>Kasau dan Wakasau</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
                         <li><a href="" class="text-decoration-none">Kasau</a></li>
                         <li><a href="" class="text-decoration-none">Wakasau</a></li>

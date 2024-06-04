@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class StrukturOrganisasiModel extends Model
 {
@@ -38,5 +39,21 @@ class StrukturOrganisasiModel extends Model
     public function getAllNode(){
         $nodes = self::all();
         return $nodes;
+    }
+
+    public function deleteNode($id){
+        $parentNode = self::find($id);
+        $childNode = self::where('struktur_predecessor',$id)->get();
+        foreach($childNode as $child){
+            Storage::disk('public')->delete($child->struktur_img);
+            $deleteChild = $child->delete();
+            if(!$deleteChild){
+                return 0;
+            }
+        }
+        Storage::disk('public')->delete($parentNode->struktur_img);
+        $deleteParent = $parentNode->delete();
+
+        return $deleteParent ? 1 : 0;
     }
 }
