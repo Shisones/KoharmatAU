@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
-use App\Http\Controllers\PesanController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BerandaController;
 
 Route::get('/', [BerandaController::class, 'index']);
@@ -86,22 +87,25 @@ Route::get('/CRUD/addwakasau', function () {
 Route::get('/CRUD/addaset', function () {
     return view('/CRUD/addaset',['title' => 'Tambah Aset']);
 });
-Route::get('/CRUD/viewfaq', function () {
-    return view('/CRUD/viewfaq',['title' => 'Tampilkan Faq']);
-});
+Route::get('/CRUD/viewfaq', [AdminController::class, 'viewFaq']);
 
 Route::get('/CRUD/addfaq', function () {
     return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
 });
-
 Route::post('/CRUD/addfaq', [AdminController::class, 'addFaq']);
 
-Route::get('/CRUD/updatefaq', function () {
-    return view('/CRUD/updatefaq',['title' => 'Update Faq']);
-});
+Route::get('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaqPage']);
+Route::patch('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaq']);
+
+Route::delete('/CRUD/deletefaq/{id}', [AdminController::class, 'deleteFaq']);
+
 Route::get('login', function () {
     return view('login',['title' => 'Login']);
-});
+})->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
+
+Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
 Route::get('/CRUD/resetpassword', function () {
     return view('/CRUD/resetpassword',['title' => 'Reset Password']);
 });

@@ -11,14 +11,16 @@
                         <h3>Ubah FAQ</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="/CRUD/updatefaq/{{ $faq->faq_id }}" method="POST">
+                            @csrf
+                            @method('PATCH')
                             <div class="form-group mb-3">
                                 <label for="pertanyaan">Pertanyaan</label>
-                                <input type="text" class="form-control" id="pertanyaan" placeholder="Masukkan Pertanyaan">
+                                <input type="text" class="form-control" name="pertanyaan" id="pertanyaan" placeholder="Masukkan Pertanyaan" value="{{ $faq->faq_pertanyaan }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="jawaban">Jawaban</label>
-                                <input type="textarea" class="form-control" id="jawaban" placeholder="">
+                                <input type="textarea" class="form-control" name="jawaban" id="jawaban" placeholder="Masukkan Jawaban" value="{{ $faq->faq_jawaban }}">
                             </div>
 
                             <div class="d-flex justify-content-end">

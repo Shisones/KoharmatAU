@@ -13,17 +13,24 @@
                                 <div class="section-title">
                                     <h3>Login</h3>
                                 </div>
+
+                                @if(session()->has('loginError'))
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{ session('loginError') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                @endif
                     
-                                <form action="" method="POST" role="form" class="php-email-form">
-                    
+                                <form action="/login" method="POST" role="form" class="php-email-form">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="username" class="mb-3">Username</label>
-                                        <input type="text" name="username" class="form-control" id="username" placeholder="Masukkan Username" required>
+                                        <input type="text" name="admin_username" class="form-control" id="username" placeholder="Masukkan Username" required>
                                     </div>
                     
                                     <div class="form-group mt-3 mb-2">
                                         <label for="password" class="mb-3">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password" required>
+                                        <input type="password" class="form-control" name="admin_password" id="password" placeholder="Masukkan Password" required>
                                     </div>
 
                                     <p style="font-size: 14px">Lupa password? <a href="">Atur Ulang</a></p>

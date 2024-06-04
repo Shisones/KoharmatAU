@@ -161,7 +161,7 @@
   <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
-  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+  {{-- <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script> --}}
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
