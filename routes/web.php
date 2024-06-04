@@ -57,7 +57,10 @@ Route::get('/pesanmasyarakat', [PesanController::class, 'pesanMasyarakat']);
 Route::middleware('authenticated')->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
     Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasView']);
+    Route::get('/admin/pesan/disembunyikan', [AdminController::class, 'pesanDisembunyikanView']);
     Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
+    Route::patch('/admin/sembunyikanpesan/{id}', [AdminController::class, 'hidePesan']);
+    Route::patch('/admin/munculkanpesan/{id}', [AdminController::class, 'unhidePesan']);
 
     // Route::get('strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
     // Route::get('organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);

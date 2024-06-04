@@ -36,14 +36,15 @@ class PesanModel extends Model
         return $pesan ? 1 : 0;
     }
 
-    public function getPesan(){
-        $pesan = self::all();
+    public function getAllPesan(){
+        $pesan = self::where();
         return $pesan;
     }
 
 
     public function getPesanWithoutBalasan(){
         $pesan = self::where('is_replied',0)
+        ->where('is_hidden',0)
         ->get();
         return $pesan;
     }
@@ -51,6 +52,14 @@ class PesanModel extends Model
     public function getPesanWithBalasan(){
         $pesan = self::with('balasan')
         ->where('is_replied',1)
+        ->where('is_hidden',0)
+        ->get();
+        return $pesan;
+    }
+
+    public function getPesanDisembunyikan(){
+        $pesan = self::with('balasan')
+        ->where('is_hidden',1)
         ->get();
         return $pesan;
     }
@@ -59,6 +68,26 @@ class PesanModel extends Model
         $pesan = self::find($id);
         if ($pesan) {
             $pesan->is_replied = 1;
+            $isSaved = $pesan->save();
+            return $isSaved ? 1 : 0;
+        }
+        return 0;
+    }
+
+    public function updateHidden($id){
+        $pesan = self::find($id);
+        if ($pesan) {
+            $pesan->is_hidden = 1;
+            $isSaved = $pesan->save();
+            return $isSaved ? 1 : 0;
+        }
+        return 0;
+    }
+
+    public function updateUnhide($id){
+        $pesan = self::find($id);
+        if ($pesan) {
+            $pesan->is_hidden = 0;
             $isSaved = $pesan->save();
             return $isSaved ? 1 : 0;
         }

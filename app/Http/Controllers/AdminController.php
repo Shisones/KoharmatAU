@@ -37,7 +37,49 @@ class AdminController extends Controller
     public function pesanSudahDibalasView(){
         $messages = $this->pesanModel->getPesanWithBalasan();
 
-        return view('adminPesanSudahDibalas',['title' => 'Admin | Pertanyaan yang sudah dibalas', 'messages' => $messages]);
+        return view('adminpesansudahdibalas',['title' => 'Admin | Pertanyaan yang sudah dibalas', 'messages' => $messages]);
+    }
+
+    public function pesanDisembunyikanView(){
+        $messages = $this->pesanModel->getPesanDisembunyikan();
+
+        return view('adminpesandisembunyikan',['title' => 'Admin | Pertanyaan yang disembunyikan', 'messages' => $messages]);
+    }
+
+    public function hidePesan(Request $request, $id){
+        $validator = Validator::make($request->all(), [
+            'pesan_id' => 'required|int',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $pesan = $this->pesanModel->updateHidden($id);
+        if($pesan){
+            return response()->json(['message' => "Berhasil menyembunyikan pesan", 'code' => 201], 201);
+        }
+        else{
+            return response()->json(['error' => "Gagal menyembunyikan pesan", 'code' => 500], 500);
+        }
+    }
+
+    public function unhidePesan(Request $request, $id){
+        $validator = Validator::make($request->all(), [
+            'pesan_id' => 'required|int',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $pesan = $this->pesanModel->updateUnhide($id);
+        if($pesan){
+            return response()->json(['message' => "Berhasil menyembunyikan pesan", 'code' => 201], 201);
+        }
+        else{
+            return response()->json(['error' => "Gagal menyembunyikan pesan", 'code' => 500], 500);
+        }
     }
 
     public function strukturOrganisasiView(){

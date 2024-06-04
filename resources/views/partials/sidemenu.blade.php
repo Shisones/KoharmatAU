@@ -26,7 +26,8 @@
                 <li class="dropdown"><a href="#"><span>Pertanyaan</span> <i class="bi bi-chevron-right"></i></a>
                     <ul>
                         <li><a href="/admin" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang belum dibalas") ? "active" : "link-black" }}">Pertanyaan yang belum dibalas</a></li>
-                        <li><a href="/admin/pesan/dibalas" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang sudah dibalas") ? "active" : "link-black" }}">Organisasi Koharmat</a></li>
+                        <li><a href="/admin/pesan/dibalas" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang sudah dibalas") ? "active" : "link-black" }}">Pertanyaan yang sudah dibalas</a></li>
+                        <li><a href="/admin/pesan/disembunyikan" class="text-decoration-none {{ ($title == "Admin | Pertanyaan yang disembunyikan") ? "active" : "link-black" }}">Pertanyaan yang disembunyikan</a></li>
                     </ul>
                 </li>
             </ul>
