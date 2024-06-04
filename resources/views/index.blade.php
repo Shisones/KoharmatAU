@@ -224,7 +224,7 @@
         <div class="section-title">
           <h3><span>KASAU</span> dari masa ke masa</h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-          <a href="/kasau"><h2>Lihat Semua</h2></a>
+          <a href="/kasau"><h2 style="font-size: 18px">Lihat Semua</h2></a>
         </div>
         
         <div class="row mt-3">
@@ -405,8 +405,17 @@
         <div class="row justify-content-center">
           <div class="col-xl-10">
             <ul class="faq-list">
-
-              @foreach ($faq as $item)
+              @foreach ($faq as $index => $item)
+                <li>
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq{{ $index }}">{{ $item->faq_pertanyaan }}<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq{{ $index }}" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            {{ $item->faq_jawaban }}
+                        </p>
+                    </div>
+                </li>
+            @endforeach
+              {{-- @foreach ($faq as $item)
                 <li>
                   <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">{{ $item->faq_pertanyaan }}<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                   <div id="faq1" class="collapse" data-bs-parent=".faq-list">
@@ -415,7 +424,7 @@
                     </p>
                   </div>
                 </li>
-              @endforeach
+              @endforeach --}}
 
               {{-- <li>
                 <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
