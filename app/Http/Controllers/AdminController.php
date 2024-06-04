@@ -38,7 +38,8 @@ class AdminController extends Controller
     }
 
     public function strukturOrganisasiView(){
-        return view('CRUD/strukturorganisasi',['title' => 'Admin | Struktur Organisasi']);
+        $nodes = $this->strukturOrganisasiModel->getAllNode();
+        return view('CRUD/strukturorganisasi',['title' => 'Admin | Struktur Organisasi', 'nodes' => $nodes]);
     }
 
     public function addStrukturOrganisasiNode(Request $request){

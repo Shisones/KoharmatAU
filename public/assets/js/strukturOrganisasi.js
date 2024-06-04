@@ -1,5 +1,168 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   var id = 1;
+  if(nodes.length != 0) id = parseInt(nodes[nodes.length - 1].struktur_id) + 1;
+  
+  const treeContainer = document.getElementById("tree-root");
+  const nodesMap = {};
+
+  // Create a container for the tree structure
+
+
+  // Function to create a node element
+  function createNodeElement(node) {
+    const nodeElement = document.createElement("li");
+    nodeElement.setAttribute("data-node-id", node.struktur_id);
+    nodeElement.setAttribute(
+      "data-node-predecessor",
+      node.struktur_predecessor
+    );
+    nodeElement.innerHTML = `
+      <div class="tree-node">
+        <a href="${node.struktur_link}">
+          <img src="/storage/${node.struktur_img}" class="tree-image">
+          <span class="tree-text">${node.struktur_nama}</span>
+        </a>
+      </div>
+      <ul id="node-${node.struktur_id}-childs" class="d-none">
+      </ul>
+    `;
+
+    return nodeElement;
+  }
+
+  // Function to append a node to its predecessor
+  function appendNode(node) {
+    let container;
+    const nodeElement = createNodeElement(node);
+    nodesMap[node.struktur_id] = nodeElement;
+
+    if (node.struktur_predecessor === "-1") {
+      // If the node has no predecessor, append it to the root
+      treeContainer.appendChild(nodeElement);
+      container = treeContainer;
+    } else {
+      // Append the node to its predecessor's UL element
+      const predecessorElement = nodesMap[node.struktur_predecessor];
+      if (predecessorElement) {
+        const predecessorChilds = predecessorElement.querySelector(`#node-${node.struktur_predecessor}-childs`);
+        predecessorChilds.classList.remove("d-none");
+        predecessorChilds.appendChild(nodeElement);
+        container = predecessorChilds;
+      }
+    }
+    return container;
+  }
+
+  // Process each node to build the tree
+  if(nodes.length != 0){
+    nodes.forEach((node) => {appendNode(node);});
+  }
+
+
+  // Add event listeners to the buttons
+  function addEventListeners() {
+    document.querySelectorAll(".add-node-btn").forEach((button) => {
+      button.addEventListener("click", addNode);
+    });
+  }
+
+  // Call the function to add event listeners
+  addEventListeners();
+
+  var editStrukturButton = document.getElementById("edit-struktur-button");
+  editStrukturButton.addEventListener("click", editStruktur);
+  var isEditing = false;
+
+  function editStruktur() {
+    if (!isEditing) {
+      if(nodes.length === 0){
+        let initAddButton = document.createElement("li");
+        initAddButton.setAttribute("data-node-predecessor","-1");
+        initAddButton.setAttribute("id","add-node--1");
+        initAddButton.innerHTML = '<button class="btn btn-primary add-node-btn">Tambah</button>';
+        treeContainer.appendChild(initAddButton);
+        initAddButton.querySelector(".add-node-btn").addEventListener("click", addNode);
+      }
+      else{
+
+        // Select containers matching the pattern "node-id-childs"
+        let nodeContainers = document.querySelectorAll('[id^="node-"][id$="-childs"]');
+        console.log(nodeContainers);
+        nodeContainers.forEach((nodeContainer) => {
+          const nodeId = nodeContainer.id.split("node-")[1].split("-childs")[0];
+          let treeNodeContainer = nodeContainer.closest("li").querySelector(".tree-node");
+          if(treeNodeContainer){
+            let editNodeButton = document.createElement("button");
+            let deleteNodeButton = document.createElement("button");
+  
+            editNodeButton.classList.add("btn");
+            editNodeButton.classList.add("btn-primary");
+            editNodeButton.classList.add("me-1");
+            editNodeButton.setAttribute("type","Button");
+            editNodeButton.setAttribute("title","Edit");
+            editNodeButton.setAttribute("id",`button-edit-${nodeId}`);
+            editNodeButton.innerHTML = "<i class='bx bx-edit'></i>";
+  
+            deleteNodeButton.classList.add("btn");
+            deleteNodeButton.classList.add("btn-danger");
+            deleteNodeButton.classList.add("me-2");
+            deleteNodeButton.setAttribute("type","Button");
+            deleteNodeButton.setAttribute("title","Hapus");
+            deleteNodeButton.setAttribute("id",`button-delete-${nodeId}`);
+            deleteNodeButton.innerHTML = "<i class='bx bx-trash'></i>";
+  
+            
+            treeNodeContainer.appendChild(editNodeButton);
+            treeNodeContainer.appendChild(deleteNodeButton);
+        }
+          let addButton = document.createElement("li");
+          addButton.setAttribute("data-node-predecessor", nodeId);
+          addButton.setAttribute("id", `add-node-${id}`);
+          addButton.innerHTML = `
+            <button class="btn btn-primary add-node-btn">Tambah</button>
+          `;
+          nodeContainer.classList.remove("d-none");
+          nodeContainer.appendChild(addButton);
+          addButton.querySelector(".add-node-btn").addEventListener("click", addNode);
+        });
+        let addButton = document.createElement("li");
+        addButton.setAttribute("data-node-predecessor", -1);
+        addButton.setAttribute("id", `add-node--1`);
+        addButton.innerHTML = `
+          <button class="btn btn-primary add-node-btn">Tambah</button>
+        `;
+        treeContainer.appendChild(addButton);
+        addButton.querySelector(".add-node-btn").addEventListener("click", addNode);
+      }
+      editStrukturButton.innerHTML = "Selesai";
+      isEditing = true;
+    } else {
+      let nodeContainers = document.querySelectorAll('[id^="node-"][id$="-childs"]');
+      nodeContainers.forEach((nodeContainer) => {
+        const nodeId = nodeContainer.id.split("node-")[1].split("-childs")[0];
+        let treeNodeContainer = nodeContainer.closest("li").querySelector(".tree-node");
+        if(treeNodeContainer){
+          let treeNodeButtons = treeNodeContainer.querySelectorAll("button");
+          treeNodeButtons.forEach((button) => {
+            treeNodeContainer.removeChild(button);
+          })
+        }
+        let buttonContainer = nodeContainer.querySelectorAll('[id^="add-node-"]');
+        buttonContainer.forEach((container) => {
+          container.remove();
+        });
+        if(nodeContainer.childElementCount === 0){
+          nodeContainer.classList.add("d-none");
+        }
+      });
+      let treeButtonContainer = treeContainer.querySelectorAll('[id^="add-node-"]');
+      treeButtonContainer.forEach((container) => {
+        container.remove();
+      });
+      editStrukturButton.innerHTML = "Edit";
+      isEditing = false;
+    }
+  }
 
   // Function to add a new node
   function addNode(event) {
@@ -7,13 +170,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const nodePredecessor = this.parentNode.getAttribute(
       "data-node-predecessor"
     );
-    const nodeContainer = document.getElementById(
-      `add-node-${nodePredecessor}`
-    );
-    let itemParentNode = nodeContainer.parentNode;
+    const nodeContainer = this.parentNode; //li
+    let itemParentNode = nodeContainer.parentNode; //ul
 
     let childNodeForm = document.createElement("li");
-    childNodeForm.setAttribute("data-predecessor", nodePredecessor);
+    childNodeForm.setAttribute("data-node-predecessor", nodePredecessor);
     childNodeForm.setAttribute("data-node-id", id);
     childNodeForm.setAttribute("id", `node-item-${id}`);
     childNodeForm.innerHTML = nodeAddView(csrf, id, nodePredecessor);
@@ -47,10 +208,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
           );
           itemParentNode.replaceChild(newNode, childNodeForm);
           attachEventListeners(newNode);
+          id += 1;
         }
       });
-
-    id += 1;
 
     document.querySelectorAll(".add-node-btn").forEach((button) => {
       button.disabled = true;
@@ -89,10 +249,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       deleteButton.addEventListener("click", deleteNode);
     }
   }
-});
 
-function nodeAddView(csrf, id, nodePredecessor) {
-  return `
+  function nodeAddView(csrf, id, nodePredecessor) {
+    return `
     <form action="/CRUD/strukturorganisasi/addNode" method="POST">
       <div class="tree-node d-flex align-items-center">
         ${csrf}
@@ -113,10 +272,10 @@ function nodeAddView(csrf, id, nodePredecessor) {
           </li>
       </ul>
   `;
-}
+  }
 
-function nodeDefaultView(id, img_path, name) {
-  return `
+  function nodeDefaultView(id, img_path, name) {
+    return `
       <div class="tree-node">
         <a href="#">
         <img src="${img_path}" class="tree-image">
@@ -125,64 +284,49 @@ function nodeDefaultView(id, img_path, name) {
         <button type="button" class="btn btn-primary me-1" title="Edit" id="button-edit-${id}"><i class='bx bx-edit'></i></button>
         <button type="button" class="btn btn-danger me-2" title="Hapus" id="button-delete-${id}"><i class='bx bx-trash' ></i></button>
       </div>
-      <ul>
+      <ul id="node-${id}-childs">
           <li data-node-predecessor='${id}' id="add-node-${id}">
               <button class="btn btn-primary add-node-btn">Tambah</button>
           </li>
       </ul>
   `;
-}
-
-function refreshScript(src) {
-  // Remove the existing script if it exists
-  const existingScript = document.querySelector(`script[src="${src}"]`);
-  if (existingScript) {
-    existingScript.remove();
   }
 
-  // Create a new script element
-  const script = document.createElement("script");
-  script.src = src;
-  script.type = "text/javascript";
-
-  // Append the new script element to the head
-  document.body.appendChild(script);
-}
-
-function refreshCSS(href) {
-  // Remove the existing script if it exists
-  const existingCSS = document.querySelector(`link[href="${href}"]`);
-  if (existingCSS) {
-    existingCSS.remove();
-  }
-
-  // Create a new script element
-  const cssScript = document.createElement("link");
-  cssScript.href = href;
-  cssScript.rel = "stylesheet";
-
-  // Append the new script element to the head
-  document.head.appendChild(cssScript);
-}
-
-async function ajaxSubmitForm(form) {
-  const formData = new FormData(form);
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      headers: {
-        "X-CSRF-TOKEN": document
-          .querySelector('meta[name="csrf-token"]')
-          .getAttribute("content"),
-      },
-      body: formData,
-    });
-    const data = await response.json();
-    if (typeof data.message !== undefined) {
-      return data;
+  function refreshScript(src) {
+    // Remove the existing script if it exists
+    const existingScript = document.querySelector(`script[src="${src}"]`);
+    if (existingScript) {
+      existingScript.remove();
     }
-  } catch (error) {
-    console.error("Error:", error);
-    return false;
+
+    // Create a new script element
+    const script = document.createElement("script");
+    script.src = src;
+    script.type = "text/javascript";
+
+    // Append the new script element to the head
+    document.body.appendChild(script);
   }
-}
+
+  async function ajaxSubmitForm(form) {
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: {
+          "X-CSRF-TOKEN": document
+            .querySelector('meta[name="csrf-token"]')
+            .getAttribute("content"),
+        },
+        body: formData,
+      });
+      const data = await response.json();
+      if (typeof data.message !== undefined) {
+        return data;
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      return false;
+    }
+  }
+});

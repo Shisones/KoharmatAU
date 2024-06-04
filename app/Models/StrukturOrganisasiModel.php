@@ -34,4 +34,9 @@ class StrukturOrganisasiModel extends Model
 
         return ['success' => $node ? 1 : 0, 'img_path' => $img_path];
     }
+
+    public function getAllNode(){
+        $nodes = self::all();
+        return $nodes;
+    }
 }
