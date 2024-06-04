@@ -21,7 +21,7 @@
                                     </div>
                                 @endif
                     
-                                <form action="/login" method="POST" role="form" class="php-email-form">
+                                <form action="/login" method="POST" role="form">
                                     @csrf
                                     <div class="form-group">
                                         <label for="username" class="mb-3">Username</label>

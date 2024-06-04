@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\PesanModel;
+use App\Models\BalasanModel;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class PesanController extends Controller
@@ -15,6 +16,7 @@ class PesanController extends Controller
     public function __construct()
     {
         $this->pesanModel = new PesanModel();
+        $this->balasanModel = new BalasanModel();
     }
 
     public function addPesan(Request $request){ 
@@ -37,5 +39,11 @@ class PesanController extends Controller
             return response()->json(['error' => 'Gagal mengirim pesan.'], 500);
             
         }
+    }
+
+    public function pesanMasyarakat(){
+        $pesan = $this->pesanModel->getPesanWithBalasan();
+        
+        return view('pesanmasyarakat', ['title' => 'Pesan Masyarakat', 'pesan' => $pesan]);
     }
 }
