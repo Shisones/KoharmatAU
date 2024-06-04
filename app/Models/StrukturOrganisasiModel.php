@@ -15,45 +15,57 @@ class StrukturOrganisasiModel extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'struktur_id', 
-        'struktur_predecessor', 
-        'struktur_nama', 
-        'struktur_link', 
-        'struktur_img', 
+        'struktur_id',
+        'struktur_predecessor',
+        'struktur_nama',
+        'struktur_link',
+        'struktur_img',
     ];
 
-    public function addNode($request){
+    public function addNode($request)
+    {
         $img = $request->file('node_img');
         $img_path = $img->store("strukturOrganisasi", "public");
         $node = self::create([
-            'struktur_id' => $request->node_id, 
-            'struktur_predecessor' => $request->node_predecessor, 
-            'struktur_nama' => $request->node_nama, 
-            'struktur_link' => $request->node_link, 
+            'struktur_id' => $request->node_id,
+            'struktur_predecessor' => $request->node_predecessor,
+            'struktur_nama' => $request->node_nama,
+            'struktur_link' => $request->node_link,
             'struktur_img' => $img_path,
         ]);
 
         return ['success' => $node ? 1 : 0, 'img_path' => $img_path];
     }
 
-    public function getAllNode(){
+    public function getAllNode()
+    {
         $nodes = self::all();
         return $nodes;
     }
 
     public function deleteNode($id){
-        $parentNode = self::find($id);
-        $childNode = self::where('struktur_predecessor',$id)->get();
-        foreach($childNode as $child){
-            Storage::disk('public')->delete($child->struktur_img);
-            $deleteChild = $child->delete();
-            if(!$deleteChild){
-                return 0;
-            }
+        $node = self::find($id);
+        if (!$node) {
+            return 0; // Node not found
         }
-        Storage::disk('public')->delete($parentNode->struktur_img);
-        $deleteParent = $parentNode->delete();
 
-        return $deleteParent ? 1 : 0;
+        // Start the recursive deletion process from the parent node
+        $result = $this->deleteNodeAndChildren($node);
+
+        return $result ? 1 : 0;
+    }
+
+    private function deleteNodeAndChildren($node) {
+        $childNodes = self::where('struktur_predecessor', $node->struktur_id)->get();
+        
+        foreach ($childNodes as $child) {
+            $this->deleteNodeAndChildren($child); // Recursive call to delete child node and its children
+        }
+        
+        // Delete the node's image from storage
+        Storage::disk('public')->delete($node->struktur_img);
+        
+        // Delete the node itself
+        return $node->delete();
     }
 }
