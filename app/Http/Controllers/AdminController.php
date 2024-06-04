@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rules\File;
-use Illuminate\Support\Facades\Storage;
+use App\Models\FaqModel;
+use App\Models\AdminModel;
 use App\Models\PesanModel;
 use App\Models\BalasanModel;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Validation\Rules\File;
 use App\Models\StrukturOrganisasiModel;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 
 class AdminController extends Controller
@@ -23,6 +25,7 @@ class AdminController extends Controller
         $this->pesanModel = new PesanModel();
         $this->balasanModel = new BalasanModel();
         $this->strukturOrganisasiModel = new StrukturOrganisasiModel();
+        $this->faqModel = new FaqModel();
     }
 
     public function index(){
@@ -102,4 +105,84 @@ class AdminController extends Controller
             return response()->json(['error' => 'Gagal mengirim balasan.'], 500);
         }
     }
+
+    public function addFaq(Request $request){
+        $validator = Validator::make($request->all(), [
+            'pertanyaan' => 'required|string|max:255',
+            'jawaban' => 'required|string|max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+
+        $result = $this->faqModel->addFaq($request);
+
+        if ($result) {
+            return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
+        } else {
+            return response()->json(['error' => 'Gagal membuat berita.'], 500);
+            
+        }
+    }
+
+    public function viewFaq(){
+        $faq = $this->faqModel->readFaq();
+
+        return view('/CRUD/viewfaq',['title' => 'Tampilkan Faq', 'faq' => $faq]);
+    }
+
+    public function updateFaqPage($id){
+        $faq = $this->faqModel->readFaqById($id);
+
+        return view('/CRUD/updatefaq',['title' => 'Update Faq', 'faq' => $faq]);
+    }
+
+    public function updateFaq(Request $request, $id){
+        $validator = Validator::make($request->all(), [
+            'pertanyaan' => 'required|string|max:255',
+            'jawaban' => 'required|string|max:255',
+        ]);
+    
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()], 400);
+        }
+    
+        $result = $this->faqModel->updateFaq($request, $id);
+    
+        if ($result) {
+            $faq = $this->faqModel->readFaqById($id);
+            return view('/CRUD/updatefaq', ['title' => 'Perbarui FAQ', 'faq' => $faq]);
+        } else {
+            return response()->json(['error' => 'Gagal memperbarui FAQ.'], 500);
+        }
+    }    
+
+    public function deleteFaq($id){
+        $faq = $this->faqModel->find($id);
+
+        if (!$faq) {
+            return response()->json(['error' => 'FAQ tidak ditemukan.'], 404);
+        }
+
+        $result = $this->faqModel->deleteFaq($id);
+
+        if ($result) {
+            return self::viewFaq();
+        } else {
+            return response()->json(['error' => 'Gagal menghapus FAQ.'], 500);
+        }
+    }
+
+    // public function hashPassword($id){
+    //     $result = AdminModel::firstWhere('admin_id', $id);
+
+    //     $faq = AdminModel::where('admin_id', $id)
+    //                  ->update([
+    //                     'admin_username' => $result->admin_username,
+    //                     'admin_password' => Hash::make($result->admin_password)
+    //                  ]);
+        
+    //                  return $faq ? 1 : 0;
+    // }
 }

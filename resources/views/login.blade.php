@@ -1,0 +1,51 @@
+@extends('layouts.main')
+
+@section('content')
+    <main id="main">
+        <!-- ======= Login Section ======= -->
+        <section id="login" class="login section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="card mt-5">
+                            <div class="card-body">
+                                <div class="section-title">
+                                    <h3>Login</h3>
+                                </div>
+
+                                @if(session()->has('loginError'))
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{ session('loginError') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                @endif
+                    
+                                <form action="/login" method="POST" role="form">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="username" class="mb-3">Username</label>
+                                        <input type="text" name="admin_username" class="form-control" id="username" placeholder="Masukkan Username" required>
+                                    </div>
+                    
+                                    <div class="form-group mt-3 mb-2">
+                                        <label for="password" class="mb-3">Password</label>
+                                        <input type="password" class="form-control" name="admin_password" id="password" placeholder="Masukkan Password" required>
+                                    </div>
+
+                                    <p style="font-size: 14px">Lupa password? <a href="">Atur Ulang</a></p>
+                    
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="submit" class="btn background-primary">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </section><!-- End Login Section -->
+    </main>
+@endsection

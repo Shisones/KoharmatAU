@@ -34,85 +34,35 @@
           {{-- <div class="row d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200" style="align-content: center;"> --}}
           <div class="row d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <ul class="pesanmasyarakat-list">
-
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
-                  <h2>Question Subject</h2>
-                  <p>The question...</p>
-                  {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
-                </div>
-                <div id="faq1" class="collapse" data-bs-parent=".pesanmasyarakat-list">
-                  <h2>Balasan Koharmat<span>AU</span></h2>
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              <li>
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq2">
-                  <h2>Question Subject</h2>
-                  <p>The question...</p>
-                  {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
-                </div>
-                <div id="faq2" class="collapse" data-bs-parent=".pesanmasyarakat-list">
-                  <h2>Balasan Koharmat<span>AU</span></h2>
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              <li>
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq3">
-                  <h2>Question Subject</h2>
-                  <p>The question...</p>
-                  {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
-                </div>
-                <div id="faq3" class="collapse" data-bs-parent=".pesanmasyarakat-list">
-                  <h2>Balasan Koharmat<span>AU</span></h2>
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              <li>
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq4">
-                  <h2>Question Subject</h2>
-                  <p>The question...</p>
-                  {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
-                </div>
-                <div id="faq4" class="collapse" data-bs-parent=".pesanmasyarakat-list">
-                  <h2>Balasan Koharmat<span>AU</span></h2>
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              <li>
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq5">
-                  <h2>Question Subject</h2>
-                  <p>The question...</p>
-                  {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
-                </div>
-                <div id="faq5" class="collapse" data-bs-parent=".pesanmasyarakat-list">
-                  <h2>Balasan Koharmat<span>AU</span></h2>
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              <li>
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq6">
-                  <h2>Question Subject</h2>
-                  <p>The question...</p>
-                  {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
-                </div>
-                <div id="faq6" class="collapse" data-bs-parent=".pesanmasyarakat-list">
-                  <h2>Balasan Koharmat<span>AU</span></h2>
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              <li>
+              @php
+                $pesanNo = 1;
+              @endphp
+              @foreach ($pesan as $item)
+                <li>
+                  <div data-bs-toggle="collapse" class="collapsed question" href="#faq{{$pesanNo}}">
+                    <h2>{{ $item->pesan_subjek }}</h2>
+                    <p>{{ $item->pesan_isi }}</p>
+                    {{-- <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i> --}}
+                  </div>
+                  @php
+                    $balasanNo = 1;
+                  @endphp
+                  @foreach ($item->balasan as $balasan)
+                    <div id="faq{{$pesanNo}}" class="collapse" data-bs-parent=".pesanmasyarakat-list">
+                      <h2>Balasan Koharmat<span>AU</span> {{ $balasanNo }}</h2>
+                      <p>
+                        {{ $balasan->balasan_isi }}
+                      </p>
+                    </div>
+                    @php
+                      $balasanNo++;
+                    @endphp
+                  @endforeach
+                <li>
+                  @php
+                    $pesanNo++;
+                  @endphp
+              @endforeach
               
             </ul>
 

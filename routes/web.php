@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
-use App\Http\Controllers\PesanController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BerandaController;
 
-Route::get('/', function () {
-    return view('index',['title' => 'Beranda']);
-});
+Route::get('/', [BerandaController::class, 'index']);
 
 Route::post('/kirimPesan', [PesanController::class, 'addPesan']);
 
@@ -52,38 +52,60 @@ Route::get('/berita', [BeritaController::class, 'search'])->name('berita.filter'
 
 Route::get('detailberita/{slug}',[BeritaController::class, 'detail']);
 
-Route::get('/pesanmasyarakat', function () {
-    return view('pesanmasyarakat',['title' => 'pesanmasyarakat']);
+Route::get('/pesanmasyarakat', [PesanController::class, 'pesanMasyarakat']);
+
+Route::middleware('authenticated')->group(function () {
+    Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasView']);
+    Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
+
+    // Route::get('strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
+    // Route::get('organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);
+
+    Route::get('/CRUD/strukturorganisasi', [AdminController::class,'strukturOrganisasiView']);
+    Route::get('/CRUD/organisasikoharmat', function () {
+        return view('/CRUD/organisasikoharmat',['title' => 'Tambah Organisasi Koharmat']);
+    });
+    Route::post('/CRUD/strukturorganisasi/addNode',[AdminController::class,'addStrukturOrganisasiNode']);
+
+    Route::get('/CRUD/createberita', [BeritaController::class, 'create']);
+    Route::post('/CRUD/createberita', [BeritaController::class, 'addBerita']);
+
+    Route::get('/CRUD/addfoto', function () {
+        return view('/CRUD/addfoto',['title' => 'Tambah Foto']);
+    });
+    Route::get('/CRUD/addvideo', function () {
+        return view('/CRUD/addvideo',['title' => 'Tambah Video']);
+    });
+    Route::get('/CRUD/addkasau', function () {
+        return view('/CRUD/addkasau',['title' => 'Tambah Kasau']);
+    });
+    Route::get('/CRUD/addwakasau', function () {
+        return view('/CRUD/addwakasau',['title' => 'Tambah Wakasau']);
+    });
+    Route::get('/CRUD/addaset', function () {
+        return view('/CRUD/addaset',['title' => 'Tambah Aset']);
+    });
+    Route::get('/CRUD/viewfaq', [AdminController::class, 'viewFaq']);
+
+    Route::get('/CRUD/addfaq', function () {
+        return view('/CRUD/addfaq',['title' => 'Tambah Faq']);
+    });
+    Route::post('/CRUD/addfaq', [AdminController::class, 'addFaq']);
+
+    Route::get('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaqPage']);
+    Route::patch('/CRUD/updatefaq/{id}', [AdminController::class, 'updateFaq']);
+
+    Route::delete('/CRUD/deletefaq/{id}', [AdminController::class, 'deleteFaq']);
+
+    Route::post('/logout', [LoginController::class, 'logout']);
+
+    Route::get('/CRUD/resetpassword', function () {
+        return view('/CRUD/resetpassword',['title' => 'Reset Password']);
+    });
 });
 
-Route::get('/admin', [AdminController::class, 'index']);
-Route::get('/admin/pesan/dibalas', [AdminController::class, 'pesanSudahDibalasView']);
-Route::post('/admin/kirimbalasan', [AdminController::class, 'addBalasan']);
-
-// Route::get('strukturorganisasi', [AdminController::class, 'strukturOrganisasiView']);
-// Route::get('organisasikoharmat', [AdminController::class, 'organisasikoharmatView']);
-
-Route::get('/CRUD/strukturorganisasi', [AdminController::class,'strukturOrganisasiView']);
-Route::get('/CRUD/organisasikoharmat', function () {
-    return view('/CRUD/organisasikoharmat',['title' => 'Tambah Organisasi Koharmat']);
-});
-Route::post('/CRUD/strukturorganisasi/addNode',[AdminController::class,'addStrukturOrganisasiNode']);
-
-Route::get('/CRUD/createberita', [BeritaController::class, 'create']);
-Route::post('/CRUD/createberita', [BeritaController::class, 'addBerita']);
-
-Route::get('/CRUD/addfoto', function () {
-    return view('/CRUD/addfoto',['title' => 'Tambah Foto']);
-});
-Route::get('/CRUD/addvideo', function () {
-    return view('/CRUD/addvideo',['title' => 'Tambah Video']);
-});
-Route::get('/CRUD/addkasau', function () {
-    return view('/CRUD/addkasau',['title' => 'Tambah Kasau']);
-});
-Route::get('/CRUD/addwakasau', function () {
-    return view('/CRUD/addwakasau',['title' => 'Tambah Wakasau']);
-});
-Route::get('/CRUD/addaset', function () {
-    return view('/CRUD/addaset',['title' => 'Tambah Aset']);
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'index']);
+    Route::post('/login', [LoginController::class, 'authenticate']);
 });
