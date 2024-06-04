@@ -10,6 +10,10 @@ use App\Http\Controllers\AdminController;
 
 class LoginController extends Controller
 {
+    public function index(){
+        return view('login',['title' => 'Login']);
+    }
+
     public function authenticate(Request $request){
         $credentials = $request->validate([
             'admin_username' => 'required',
