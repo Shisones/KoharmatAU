@@ -12,16 +12,16 @@
               </div>
 
               <div class="row" data-aos="fade-up" data-aos-delay="100">
-                  <div class="col-lg-12 d-flex justify-content-center">
-                      <ul id="portfolio-flters">
-                          <li data-filter="*" class="filter-active">All</li>
-                          <li data-filter=".filter-foto">Foto</li>
-                          <li data-filter=".filter-video">Video</li>
-                      </ul>
-                  </div>
-              </div>
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-foto">Foto</li>
+                        <li data-filter=".filter-video">Video</li>
+                    </ul>
+                </div>
+            </div>
 
-              <div class="row portfolio-containergaleri d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200" style="align-content: center;">
+              <div class="row portfolio-containergaleri" id="portfolio-wrapper" data-aos="fade-up" data-aos-delay="200">
                   
                   @foreach($image as $img)
                       <div class="col-lg-4 col-md-6 portfolio-item filter-foto" style="width: 300px; height: 300px;">
@@ -51,29 +51,29 @@
     </main>
 
     <script>
-      // Portfolio filter
-      document.addEventListener('DOMContentLoaded', () => {
-          const portfolioContainer = document.querySelector('.portfolio-containergaleri');
-          if (portfolioContainer) {
-              const portfolioFilters = document.querySelectorAll('#portfolio-flters li');
-              const portfolioItems = portfolioContainer.querySelectorAll('.portfolio-item');
-
-              portfolioFilters.forEach(filter => {
-                  filter.addEventListener('click', () => {
-                      portfolioFilters.forEach(el => el.classList.remove('filter-active'));
-                      filter.classList.add('filter-active');
-
-                      const filterValue = filter.getAttribute('data-filter');
-                      portfolioItems.forEach(item => {
-                          if (filterValue === '*' || item.classList.contains(filterValue.replace('.', ''))) {
-                              item.style.display = 'block';
-                          } else {
-                              item.style.display = 'none';
-                          }
-                      });
-                  });
-              });
-          }
+      // Galeri filter
+      document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelector('.portfolio-containergaleri');
+      var iso = new Isotope(elem, {
+          itemSelector: '.portfolio-item',
+          layoutMode: 'fitRows'
       });
+
+      // Bind filter button click
+      var filtersElem = document.querySelector('#portfolio-flters');
+      filtersElem.addEventListener('click', function (event) {
+          if (!matchesSelector(event.target, 'li')) {
+              return;
+          }
+          var filterValue = event.target.getAttribute('data-filter');
+          iso.arrange({ filter: filterValue });
+
+          // Change active class
+          var activeElem = filtersElem.querySelector('.filter-active');
+          activeElem.classList.remove('filter-active');
+          event.target.classList.add('filter-active');
+      });
+  });
+
   </script>
 @endsection

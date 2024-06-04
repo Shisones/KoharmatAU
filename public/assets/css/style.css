@@ -1535,12 +1535,10 @@ section {
   display: flex;
 }
 .portfolio .portfolio-item {
-  margin-bottom: -60px;
-  display: flex; /* Menjadikan item portofolio menjadi flex */
-  justify-content: center; /* Menjadikan item portofolio menjadi flex */
-  align-items: center; /* Menjadikan item portofolio menjadi flex */
-  /* position: relative;
-  margin-bottom: 30px; */
+  flex: 1 1 calc(33.33% - 20px); /* Mengatur lebar kolom menjadi sepertiga dengan margin */
+    max-width: calc(33.33% - 20px); /* Mengatur lebar maksimum kolom menjadi sepertiga dengan margin */
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 .portfolio .portfolio-item {
@@ -1729,6 +1727,18 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
+.portfolio .portfolio-containergaleri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio .portfolio-item {
+  flex: 1 1 300px; /* Adjust based on your layout needs */
+  margin: 10px;
+}
+
 
 /*--------------------------------------------------------------
 # YouTube
