@@ -59,7 +59,7 @@
                         <ul>
                             <li class="dropdown"><a href="#"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li><a href="/admin/strukturorganisasi" class="text-decoration-none {{ ($title == "Admin | Struktur Organisasi") ? "active" : "link-black" }}">Struktur Organisasi KoharmatAU</a></li>
+                                    <li><a href="/CRUD/strukturorganisasi" class="text-decoration-none {{ ($title == "Admin | Struktur Organisasi") ? "active" : "link-black" }}">Struktur Organisasi KoharmatAU</a></li>
                                     <li><a href="" class="text-decoration-none">Organisasi KoharmatAU</a></li>
                                 </ul>
                             </li>
