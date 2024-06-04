@@ -35,34 +35,11 @@
               {{-- <li><a class="nav-link {{ ($title == "Struktur Organisasi") ? "active" : "" }}" href="/strukturorganisasi">Struktur Organisasi</a></li>
               <li><a class="nav-link {{ ($title == "Organisasi Koharmat") ? "active" : "" }}" href="/organisasikoharmat">Organisasi Koharmat</a></li> --}}
               <li><a class="nav-link {{ ($title == "Aset Koharmat") ? "active" : "" }}" href="/asetkoharmat">Aset Koharmat</a></li>
-              {{-- <li class="dropdown"><a href="#"><span>Organisasi</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a hre.detailorganisasikoharmat .image-container {
-  position: relative;
-  width: 500px; /* Set the desired width */
-  height: 400px; /* Set the desired height */
-}
-
-.detailorganisasikoharmat .image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Ensures the image fits within the container without being cropped */
-  border-radius: 5px; /* Optional: to make the corners rounded */
-}
-f="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> --}}
+              
             </ul>
           </li>
           <li><a class="nav-link scrollto {{ ($title == "Galeri") ? "active" : "" }}" href="/galeri">Galeri</a></li>
-          <li class="dropdown"><a href="#"><span>Kontak Kami</span> <i class="bi bi-chevron-right"></i></a>
+          <li class="dropdown"><a href="#"><span>Kontak Kami</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/kontak">Kirim Pesan</a></li>
               <li><a href="/pesanmasyarakat">Lihat Balasan</a></li>
