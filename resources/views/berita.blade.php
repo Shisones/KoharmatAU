@@ -42,7 +42,7 @@
                 <div class="row mb-2">
                     <h3 style="font-size: 24px">Berita Terkini</h3>
                 </div>
-                @foreach($berita as $b)
+                @foreach($terkini as $b)
                 <div class="row mb-3">
                     <div class="d-flex w-100">
                         <div class="image-container-terkini me-3">

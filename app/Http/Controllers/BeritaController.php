@@ -30,9 +30,10 @@ class BeritaController extends Controller
     public function detail($slug){
         $listBerita = $this->beritaModel->readBerita();
         $berita = $this->beritaModel->readBeritaBySlug($slug);
+        $terkini = $this->beritaModel->readBeritaTerkini($slug);
         $tags = $this->beritaTagModel->readBeritaTag($berita->berita_id);
 
-        return view('detailberita', ['title' => 'Detail Berita', 'listBerita' => $listBerita, 'berita' => $berita, 'tags' => $tags]);
+        return view('detailberita', ['title' => 'Detail Berita', 'listBerita' => $listBerita, 'berita' => $berita, 'terkini' => $terkini, 'tags' => $tags]);
     }
 
     public function create(){
@@ -78,7 +79,8 @@ class BeritaController extends Controller
             $result = $this->beritaModel->readBerita();
         }
         $featured = $this->beritaModel->readFeatured();
+        $terkini = $this->beritaModel->readBeritaTerkini();
 
-        return view('berita',['title' => 'Berita', 'berita' => $result, 'featured' => $featured, 'kategori' => KategoriModel::all(), 'request' => $request]);
+        return view('berita',['title' => 'Berita', 'berita' => $result, 'featured' => $featured, 'terkini' => $terkini, 'kategori' => KategoriModel::all(), 'request' => $request]);
     }
 }

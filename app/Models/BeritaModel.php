@@ -34,6 +34,15 @@ class BeritaModel extends Model
         return $berita;
     }
 
+    public function readBeritaTerkini() {
+        $berita = self::with('kategori')
+                        ->orderBy('created_at', 'desc')
+                        ->limit(4)
+                        ->get();
+        
+        return $berita;
+    }
+
     public function readFeatured() {
         $featuredBeritas = self::with('kategori')
                                 ->where('is_featured', 1)
