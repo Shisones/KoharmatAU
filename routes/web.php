@@ -53,6 +53,7 @@ Route::get('/berita', [BeritaController::class, 'search'])->name('berita.filter'
 Route::get('detailberita/{slug}',[BeritaController::class, 'detail']);
 
 Route::get('/pesanmasyarakat', [PesanController::class, 'pesanMasyarakat']);
+Route::get('/pesanmasyarakat', [PesanController::class, 'search'])->name('pesanmasyarakat.filter');
 
 Route::middleware('authenticated')->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);

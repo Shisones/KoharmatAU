@@ -57,6 +57,17 @@ class PesanModel extends Model
         return $pesan;
     }
 
+    public function getPesanByKeyword($request){
+        $query = self::query();
+
+        $query->where(function($q) use ($request) {
+            $q->where('pesan_subjek', 'LIKE', "%$request->kata_kunci%")
+                ->orWhere('pesan_isi', 'LIKE', "%$request->kata_kunci%");
+        });
+    
+        return $query->get();
+    }
+
     public function getPesanDisembunyikan(){
         $pesan = self::with('balasan')
         ->where('is_hidden',1)

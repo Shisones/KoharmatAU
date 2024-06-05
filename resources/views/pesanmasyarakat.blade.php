@@ -16,12 +16,12 @@
               {{-- <div class="card mb-4"> --}}
                 <div class="search-bar">
                   
-                  <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Cari Pertanyaan Anda" aria-label="Cari Pertanyaan Anda" aria-describedby="button-search" />
-                    {{-- <div class="input-group-append"> --}}
-                      <button class="btn btn-primary" id="button-search" type="button">Cari</button>
-                      {{-- </div> --}}
+                  <form action="{{ route('pesanmasyarakat.filter') }}" method="GET">
+                    <div class="input-group">
+                      <input class="form-control" name="kata_kunci" type="text" placeholder="Cari Pertanyaan Anda" aria-label="Cari Pertanyaan Anda" aria-describedby="button-search" value="{{ $request->kata_kunci }}" />
+                      <button class="btn btn-primary" id="button-search" type="submit">Cari</button>
                     </div>
+                  </form>
                 </div>
               {{-- </div> --}}
           </div><br><br>

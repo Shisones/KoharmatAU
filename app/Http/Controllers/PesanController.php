@@ -46,4 +46,14 @@ class PesanController extends Controller
         
         return view('pesanmasyarakat', ['title' => 'Pesan Masyarakat', 'pesan' => $pesan]);
     }
+
+    public function search(Request $request){
+        if ($request->has('kata_kunci')) {
+            $result = $this->pesanModel->getPesanByKeyword($request);
+        } else {
+            $result = $this->pesanModel->getPesanWithBalasan();
+        }
+
+        return view('pesanmasyarakat', ['title' => 'Pesan Masyarakat', 'pesan' => $result, 'request' => $request]);
+    }
 }
